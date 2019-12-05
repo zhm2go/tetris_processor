@@ -81,7 +81,7 @@ module skeleton(resetn,
 	reg [width - 1 : 0] a[height - 1 : 0];
 	reg [4:0] x1, x2, x3, x0;
 	reg [4:0] y1, y2, y3, y0;
-	reg [31:0] terType, terType1;
+	reg [31:0] terType, terType1, terTypeChange;
 	output count;
 	reg [3:0] curr;
 	reg [3:0] game_state, next;
@@ -92,13 +92,15 @@ module skeleton(resetn,
 	reg [4:0] my;
 	reg [4:0] mz;
 	reg [4:0] mk, mp, mq;
-	reg [4:0] overi, overj;
+	reg [4:0] overi, overj, overk;
 	reg n, m, isover, x;
 	reg [4:0] speedup;
 	reg [31:0] score;
 	reg [width_score - 1 : 0] num1[height_score - 1 : 0];
 	reg [width_score - 1 : 0] num2[height_score - 1 : 0];
 	reg [31:0] time_count;
+	reg [31:0] press_count;
+	reg gameover;
 	
 	//for test
 	reg [7:0] ledReg;
@@ -122,12 +124,13 @@ module skeleton(resetn,
 		speedup = 1;
 		d = 10000000;
 		terType = 0;
+		gameover = 0;
 	end
-	//ClkDividerNew (clock, count, d);
-	ClkDivider (clock, count);
+	ClkDividerNew (clock, count, d);
+	//ClkDivider (clock, count);
 	
 	wire ps2;
-	ps2my ps(clock, ps2_key_pressed, ps2);
+	ps2my ps(clock, ps2_key_pressed, ps2, speedup);
 	
 //	always @(posedge clock) begin
 //		if(score >= 10) speedup = 2;
@@ -144,13 +147,27 @@ module skeleton(resetn,
 		time_count = time_count + 1;
 	end
 	
+	always @(posedge ps2_key_pressed) begin
+		press_count = press_count + 1;
+	end
+	
+	reg signal, tsignal;
+	reg [31:0] scoreadd;
+	
+	always @(posedge signal) begin
+		score = scoreadd;
+		if(gameover == 1) score = 0;
+	end
+	
 	always @(posedge count) 
 	begin
 		case(curr)
 			Snew: begin
-				score = score + 1;
-				if(terType == 13) terType = 0;
-				terType = terType + 1;
+				//score = score + 1;
+				gameover = 1'b0;
+				signal = 1'b1;
+				terType = (press_count + time_count) % 14; 
+				if(terType == 0) terType = 1;
 				case (terType)
 					1: begin
 						a[0][width / 2] = 1'b1;
@@ -339,6 +356,7 @@ module skeleton(resetn,
 			end
 			
 			ScheckKey:begin
+				signal = 1'b0;
 				if(ps2_out == 8'h6b && ps2 == 1 && y0 >= 1 && y1 >= 1 && y2 >= 1 && y3 >= 1) begin
 					case(terType)
 					1: begin
@@ -554,19 +572,107 @@ module skeleton(resetn,
 					endcase
 				end
 				//else if(ps2_out == 8'h72)
-				else if(rot == 0) begin
+				else if(ps2_out == 8'h75 && ps2 == 1) begin
 					case(terType)
 					1: begin
-						next = Srot;
-					end
-					2: begin
-						if(a[x2 + 1][y2] == 1) begin
 							next = ScheckFall;
 						end
-						else begin
-							next = Srot;
+						2: begin
+							if(a[x0 + 1][y0] == 0 && a[x1 - 1][y1] == 0 && x0 > 0)begin
+								next = Srot;
+							end
+							else begin
+								next = ScheckFall;
+							end
 						end
-					end
+						3: begin
+							if(y2 <= width - 2 && a[x2 + 1][y2] == 0 && a[x2 + 1][y2 + 1] == 0)begin
+								next = Srot;
+							end
+							else begin
+								next = ScheckFall;
+							end
+						end
+						4: begin
+							if(x1 >= 1 && x1 <= height - 3 && a[x1 - 1][y1] == 0 && a[x1 + 1][y1] == 0 && a[x1 + 2][y1] == 0)begin
+								next = Srot;
+							end
+							else begin
+								next = ScheckFall;
+							end
+						end
+						5: begin
+							if(y1 >= 1 && y1 <= width - 3 && a[x1][y1 - 1] == 0 && a[x1][y1 + 1] == 0 && a[x1][y1 + 2] == 0)begin
+								next = Srot;
+							end
+							else begin
+								next = ScheckFall;
+							end
+						end
+						6: begin
+							if(x1 <= height - 3 && a[x1 + 1][y1] == 0 && a[x1 + 2][y1] == 0)begin
+								next = Srot;
+							end
+							else begin
+								next = ScheckFall;
+							end
+						end
+						7: begin
+							if(y0 >= 2 && a[x0][y0 - 1] == 0 && a[x0][y0 - 2] == 0)begin
+								next = Srot;
+							end
+							else begin
+								next = ScheckFall;
+							end
+						end
+						8: begin
+							if(x2 >= 2 && a[x2 - 1][y2] == 0 & a[x2 - 2][y2] == 0)begin
+								next = Srot;
+							end
+							else begin
+								next = ScheckFall;
+							end
+						end
+						9: begin
+							if(y3 <= width - 3 && a[x3][y3 + 1] == 0&& a[x3][y3 + 2] == 0)begin
+								next = Srot;
+							end
+							else begin
+								next = ScheckFall;
+							end
+						end
+						10: begin
+							if(x1 >= 1 && a[x1 - 1][y1] == 0)begin
+								next = Srot;
+							end
+							else begin
+								next = ScheckFall;
+							end
+						end
+						11: begin
+							if(y2 <= width - 2 && a[x2][y2 + 1] == 0)begin
+								next = Srot;
+							end
+							else begin
+								next = ScheckFall;
+							end
+						end
+						12: begin
+							if(x2 <= height - 2 && a[x2 + 1][y2] == 0)begin
+								next = Srot;
+							end
+							else begin
+								next = ScheckFall;
+							end
+						end
+						13: begin
+							if(y1 >= 1 && a[x1][y1 - 1] == 0)begin
+								next = Srot;
+							end
+							else begin
+								next = ScheckFall;
+							end
+						end
 					endcase
 				end
 				else begin
@@ -767,42 +873,224 @@ module skeleton(resetn,
 			
 			Sover: begin
 				next = Sover;
-//				for(overj = 0; overj < height; overj = overj + 1) begin
-//					for(overk = 0; overk < width; overk = overk + 1) begin
-//					end	
-//				end
+				if(ps2_out == 8'h5A && ps2 == 1) begin
+					for(overj = 0; overj < height; overj = overj + 1) begin
+						for(overk = 0; overk < width; overk = overk + 1) begin
+							a[overj][overk] = 1'b0;
+						end
+					end
+					//score = 0;
+					next = Snew;
+					gameover = 1'b1;
+				end
 			end
 					
 			Srot: begin
 				case(terType)
-					1: begin
+					2:begin
+						a[x1][y1] = 0;
+						a[x2][y2] = 0;
+						a[x3][y3] = 0;
+						x1 = x0 - 1;
+						x2 = x0;
+						x3 = x0 + 1;
+						y1 = y0 + 1;
+						y2 = y0 + 1;
+						y3 = y0;
+						a[x1][y1] = 1;
+						a[x2][y2] = 1;
+						a[x3][y3] = 1;
+						terType = 3;
 						next = ScheckFall;
 					end
-//					2: begin
-//						if(a[x2 + 1][y2] == 1) begin
-							
+					3:begin
+						a[x1][y1] = 0;
+						a[x2][y2] = 0;
+						a[x3][y3] = 0;
+						x1 = x0;
+						x2 = x0 + 1;
+						x3 = x0 + 1;
+						y1 = y0 + 1;
+						y2 = y0 + 1;
+						y3 = y0 + 2;
+						a[x1][y1] = 1;
+						a[x2][y2] = 1;
+						a[x3][y3] = 1;
+						terType = 2;
+						next = ScheckFall;
+					end
+					4:begin
+						a[x0][y0] = 0;
+						a[x2][y2] = 0;
+						a[x3][y3] = 0;
+						x0 = x1 - 1;
+						x2 = x1 + 1;
+						x3 = x1 + 2;
+						y0 = y1;
+						y2 = y1;
+						y3 = y1;
+						a[x0][y0] = 1;
+						a[x2][y2] = 1;
+						a[x3][y3] = 1;
+						terType = 5;
+						next = ScheckFall;
+					end
+					5:begin
+						a[x0][y0] = 0;
+						a[x2][y2] = 0;
+						a[x3][y3] = 0;
+						x0 = x1;
+						x2 = x1;
+						x3 = x1;
+						y0 = y1 - 1;
+						y2 = y1 + 1;
+						y3 = y1 + 2;
+						a[x0][y0] = 1;
+						a[x2][y2] = 1;
+						a[x3][y3] = 1;
+						terType = 4;
+						next = ScheckFall;
+					end
+					6:begin
+						a[x0][y0] = 0;
+						a[x1][y1] = 0;
+						a[x2][y2] = 0;
+						a[x3][y3] = 0;
+						x0 = x0 + 1;
+						x1 = x0;
+						x2 = x0 + 1;
+						x3 = x0 + 2;
+						y1 = y0 + 1;
+						y2 = y0;
+						y3 = y0;
+						a[x0][y0] = 1;
+						a[x1][y1] = 1;
+						a[x2][y2] = 1;
+						a[x3][y3] = 1;
+						terType = 7;
+						next = ScheckFall;
+					end
+					7:begin
+						a[x0][y0] = 0;
+						a[x1][y1] = 0;
+						a[x2][y2] = 0;
+						a[x3][y3] = 0;
+						x2 = x0;
+						y2 = y0;
+						x0 = x2;
+						x1 = x2;
+						x3 = x2 + 1;
+						y0 = y2 - 2;
+						y1 = y2 - 1;
+						y3 = y2;
+						a[x0][y0] = 1;
+						a[x1][y1] = 1;
+						a[x2][y2] = 1;
+						a[x3][y3] = 1;
+						terType = 8;
+						next = ScheckFall;
+					end
+					8:begin
+						a[x0][y0] = 0;
+						a[x1][y1] = 0;
+						a[x2][y2] = 0;
+						a[x3][y3] = 0;
+						x3 = x2;
+						y3 = y2;
+						x0 = x3;
+						x1 = x3 - 2;
+						x2 = x3 - 1;
+						y0 = y3 - 1;
+						y1 = y3;
+						y2 = y3;
+						a[x0][y0] = 1;
+						a[x1][y1] = 1;
+						a[x2][y2] = 1;
+						a[x3][y3] = 1;
+						terType = 9;
+						next = ScheckFall;
+					end
+					9:begin
+						a[x0][y0] = 0;
+						a[x1][y1] = 0;
+						a[x2][y2] = 0;
+						a[x3][y3] = 0;
+						x1 = x3;
+						y1 = y3;
+						x0 = x1 - 1;
+						x2 = x1;
+						x3 = x1;
+						y0 = y1;
+						y2 = y1 + 1;
+						y3 = y1 + 2;
+						a[x0][y0] = 1;
+						a[x1][y1] = 1;
+						a[x2][y2] = 1;
+						a[x3][y3] = 1;
+						terType = 6;
+						next = ScheckFall;
+					end
+					10:begin
+						a[x0][y0] = 0;
+						a[x1][y1] = 0;
+						a[x2][y2] = 0;
+						a[x3][y3] = 0;
+						x2 = x1;
+						y2 = y1;
+						x1 = x2 - 1;
+						x3 = x2 + 1;
+						x0 = x2;
+						y0 = y2 - 1;
+						y1 = y2;
+						y3 = y2;
+						a[x0][y0] = 1;
+						a[x1][y1] = 1;
+						a[x2][y2] = 1;
+						a[x3][y3] = 1;
+						terType = 11;
+						next = ScheckFall;
+					end
+					11:begin
+						a[x3][y3] = 0;
+						x3 = x2;
+						y3 = y2 + 1;
+						a[x3][y3] = 1;
+						terType = 12;
+						next = ScheckFall;
+					end
+					12:begin
+						a[x0][y0] = 0;
+						a[x1][y1] = 0;
+						a[x2][y2] = 0;
+						a[x3][y3] = 0;
+						x1 = x2;
+						y1 = y2;
+						x0 = x1 - 1;
+						x2 = x1;
+						x3 = x1 + 1;
+						y0 = y1;
+						y2 = y1 + 1;
+						y3 = y1;
+						a[x0][y0] = 1;
+						a[x1][y1] = 1;
+						a[x2][y2] = 1;
+						a[x3][y3] = 1;
+						terType = 13;
+						next = ScheckFall;
+					end
+					13:begin
+						a[x0][y0] = 0;
+						x0 = x1;
+						y0 = y1 - 1;
+						a[x0][y0] = 1;
+						terType = 10;
+						next = ScheckFall;
+					end
 				endcase
 			end
 				
-endcase
+	endcase  //case curr
 end						
-				
-//			Sidle: begin
-//				next <= Sidle;
-//			end
-//				
-//			default: begin
-//				next <= Sidle;
-//			end
-//		endcase
-//	end
-
-//	always @(posedge count) begin
-//		a[0][0] = 1'b1;
-//		a[0][9] = 1'b1;
-//		a[19][9] = 1'b1;
-//		a[19][0] = 1'b1;
-//	end
 	
 	always @(posedge count) begin
 		if(left == 1'b0)
@@ -815,8 +1103,87 @@ end
 	
 	assign leds = ledReg;
 	
+	
+	
 	// your processor
-	processor myprocessor(clock, ~resetn, /*ps2_key_pressed, ps2_out, lcd_write_en, lcd_write_data,*/ debug_data_in, debug_addr);
+	 wire clk1;
+	 clk_div_4 mydiv(clk1, clock);
+	 assign imem_clock = clock;
+	 assign dmem_clock = ~clk1;
+	 assign processor_clock = clk1;
+	 assign regfile_clock = clk1;
+	 
+	 wire [11:0] address_imem;
+    wire [31:0] q_imem;
+    imem my_imem(
+        .address    (address_imem),            // address of data
+        .clock      (imem_clock),                  // you may need to invert the clock
+        .q          (q_imem)                   // the raw instruction
+    );
+	 
+	 wire [11:0] address_dmem;
+    wire [31:0] data;
+    wire wren;
+    wire [31:0] q_dmem;
+    dmem my_dmem(
+        .address    (address_dmem),       // address of data
+        .clock      (dmem_clock),                  // may need to invert the clock
+        .data	     (data),    // data you want to write
+        .wren	     (wren),      // write enable
+        .q          (q_dmem)    // data from dmem
+    );
+	 
+	  /** REGFILE **/
+    // Instantiate your regfile
+    wire ctrl_writeEnable;
+    wire [4:0] ctrl_writeReg, ctrl_readRegA, ctrl_readRegB;
+    wire [31:0] data_writeReg;
+    wire [31:0] data_readRegA, data_readRegB;
+    regfile my_regfile(
+        regfile_clock,
+        ctrl_writeEnable,
+		  reset,
+        ctrl_writeReg,
+        ctrl_readRegA,
+        ctrl_readRegB,
+        data_writeReg,
+        data_readRegA,
+        data_readRegB, 
+		  score, 
+		  scoreadd
+		  
+    );
+	 
+	 processor my_processor(
+        // Control signals
+        processor_clock,                          // I: The master clock
+        reset,                          // I: A reset signal
+
+        // Imem
+        address_imem,                   // O: The address of the data to get from imem
+        q_imem,                         // I: The data from imem
+
+        // Dmem
+        address_dmem,                   // O: The address of the data to get or put from/to dmem
+        data,                           // O: The data to write to dmem
+        wren,                           // O: Write enable for dmem
+        q_dmem,                         // I: The data from dmem
+
+        // Regfile
+        ctrl_writeEnable,               // O: Write enable for regfile
+        ctrl_writeReg,                  // O: Register to write to in regfile
+        ctrl_readRegA,                  // O: Register to read from port A of regfile
+        ctrl_readRegB,                  // O: Register to read from port B of regfile
+        data_writeReg,                  // O: Data to write to for regfile
+        data_readRegA,                  // I: Data from port A of regfile
+        data_readRegB,                    // I: Data from port B of regfile
+		  
+		  //for test
+ );
+	 
+	 
+	 
+	 //processor myprocessor(clock, ~resetn, /*ps2_key_pressed, ps2_out, lcd_write_en, lcd_write_data,*/ debug_data_in, debug_addr);
 	
 	// keyboard controller
 	//PS2_Interface myps2(clock, resetn, ps2_clock, ps2_data, ps2_key_data, ps2_key_pressed, ps2_out);
