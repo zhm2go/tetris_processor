@@ -1,0 +1,6056 @@
+$comment
+	File created using the following command:
+		vcd file skeleton.msim.vcd -direction
+$end
+$date
+	Tue Dec 03 13:07:32 2019
+$end
+$version
+	ModelSim Version 10.4d
+$end
+$timescale
+	1ps
+$end
+
+$scope module skeleton_vlg_vec_tst $end
+$var reg 1 ! CLOCK_50 $end
+$var reg 1 " treg_ps2_clock $end
+$var reg 1 # treg_ps2_data $end
+$var reg 1 $ resetn $end
+$var wire 1 % VGA_B [7] $end
+$var wire 1 & VGA_B [6] $end
+$var wire 1 ' VGA_B [5] $end
+$var wire 1 ( VGA_B [4] $end
+$var wire 1 ) VGA_B [3] $end
+$var wire 1 * VGA_B [2] $end
+$var wire 1 + VGA_B [1] $end
+$var wire 1 , VGA_B [0] $end
+$var wire 1 - VGA_BLANK $end
+$var wire 1 . VGA_CLK $end
+$var wire 1 / VGA_G [7] $end
+$var wire 1 0 VGA_G [6] $end
+$var wire 1 1 VGA_G [5] $end
+$var wire 1 2 VGA_G [4] $end
+$var wire 1 3 VGA_G [3] $end
+$var wire 1 4 VGA_G [2] $end
+$var wire 1 5 VGA_G [1] $end
+$var wire 1 6 VGA_G [0] $end
+$var wire 1 7 VGA_HS $end
+$var wire 1 8 VGA_R [7] $end
+$var wire 1 9 VGA_R [6] $end
+$var wire 1 : VGA_R [5] $end
+$var wire 1 ; VGA_R [4] $end
+$var wire 1 < VGA_R [3] $end
+$var wire 1 = VGA_R [2] $end
+$var wire 1 > VGA_R [1] $end
+$var wire 1 ? VGA_R [0] $end
+$var wire 1 @ VGA_SYNC $end
+$var wire 1 A VGA_VS $end
+$var wire 1 B count $end
+$var wire 1 C debug_addr [11] $end
+$var wire 1 D debug_addr [10] $end
+$var wire 1 E debug_addr [9] $end
+$var wire 1 F debug_addr [8] $end
+$var wire 1 G debug_addr [7] $end
+$var wire 1 H debug_addr [6] $end
+$var wire 1 I debug_addr [5] $end
+$var wire 1 J debug_addr [4] $end
+$var wire 1 K debug_addr [3] $end
+$var wire 1 L debug_addr [2] $end
+$var wire 1 M debug_addr [1] $end
+$var wire 1 N debug_addr [0] $end
+$var wire 1 O debug_data_in [31] $end
+$var wire 1 P debug_data_in [30] $end
+$var wire 1 Q debug_data_in [29] $end
+$var wire 1 R debug_data_in [28] $end
+$var wire 1 S debug_data_in [27] $end
+$var wire 1 T debug_data_in [26] $end
+$var wire 1 U debug_data_in [25] $end
+$var wire 1 V debug_data_in [24] $end
+$var wire 1 W debug_data_in [23] $end
+$var wire 1 X debug_data_in [22] $end
+$var wire 1 Y debug_data_in [21] $end
+$var wire 1 Z debug_data_in [20] $end
+$var wire 1 [ debug_data_in [19] $end
+$var wire 1 \ debug_data_in [18] $end
+$var wire 1 ] debug_data_in [17] $end
+$var wire 1 ^ debug_data_in [16] $end
+$var wire 1 _ debug_data_in [15] $end
+$var wire 1 ` debug_data_in [14] $end
+$var wire 1 a debug_data_in [13] $end
+$var wire 1 b debug_data_in [12] $end
+$var wire 1 c debug_data_in [11] $end
+$var wire 1 d debug_data_in [10] $end
+$var wire 1 e debug_data_in [9] $end
+$var wire 1 f debug_data_in [8] $end
+$var wire 1 g debug_data_in [7] $end
+$var wire 1 h debug_data_in [6] $end
+$var wire 1 i debug_data_in [5] $end
+$var wire 1 j debug_data_in [4] $end
+$var wire 1 k debug_data_in [3] $end
+$var wire 1 l debug_data_in [2] $end
+$var wire 1 m debug_data_in [1] $end
+$var wire 1 n debug_data_in [0] $end
+$var wire 1 o lcd_blon $end
+$var wire 1 p lcd_data [7] $end
+$var wire 1 q lcd_data [6] $end
+$var wire 1 r lcd_data [5] $end
+$var wire 1 s lcd_data [4] $end
+$var wire 1 t lcd_data [3] $end
+$var wire 1 u lcd_data [2] $end
+$var wire 1 v lcd_data [1] $end
+$var wire 1 w lcd_data [0] $end
+$var wire 1 x lcd_en $end
+$var wire 1 y lcd_on $end
+$var wire 1 z lcd_rs $end
+$var wire 1 { lcd_rw $end
+$var wire 1 | leds [7] $end
+$var wire 1 } leds [6] $end
+$var wire 1 ~ leds [5] $end
+$var wire 1 !! leds [4] $end
+$var wire 1 "! leds [3] $end
+$var wire 1 #! leds [2] $end
+$var wire 1 $! leds [1] $end
+$var wire 1 %! leds [0] $end
+$var wire 1 &! ps2_clock $end
+$var wire 1 '! ps2_data $end
+$var wire 1 (! seg1 [6] $end
+$var wire 1 )! seg1 [5] $end
+$var wire 1 *! seg1 [4] $end
+$var wire 1 +! seg1 [3] $end
+$var wire 1 ,! seg1 [2] $end
+$var wire 1 -! seg1 [1] $end
+$var wire 1 .! seg1 [0] $end
+$var wire 1 /! seg2 [6] $end
+$var wire 1 0! seg2 [5] $end
+$var wire 1 1! seg2 [4] $end
+$var wire 1 2! seg2 [3] $end
+$var wire 1 3! seg2 [2] $end
+$var wire 1 4! seg2 [1] $end
+$var wire 1 5! seg2 [0] $end
+$var wire 1 6! seg3 [6] $end
+$var wire 1 7! seg3 [5] $end
+$var wire 1 8! seg3 [4] $end
+$var wire 1 9! seg3 [3] $end
+$var wire 1 :! seg3 [2] $end
+$var wire 1 ;! seg3 [1] $end
+$var wire 1 <! seg3 [0] $end
+$var wire 1 =! seg4 [6] $end
+$var wire 1 >! seg4 [5] $end
+$var wire 1 ?! seg4 [4] $end
+$var wire 1 @! seg4 [3] $end
+$var wire 1 A! seg4 [2] $end
+$var wire 1 B! seg4 [1] $end
+$var wire 1 C! seg4 [0] $end
+$var wire 1 D! seg5 [6] $end
+$var wire 1 E! seg5 [5] $end
+$var wire 1 F! seg5 [4] $end
+$var wire 1 G! seg5 [3] $end
+$var wire 1 H! seg5 [2] $end
+$var wire 1 I! seg5 [1] $end
+$var wire 1 J! seg5 [0] $end
+$var wire 1 K! seg6 [6] $end
+$var wire 1 L! seg6 [5] $end
+$var wire 1 M! seg6 [4] $end
+$var wire 1 N! seg6 [3] $end
+$var wire 1 O! seg6 [2] $end
+$var wire 1 P! seg6 [1] $end
+$var wire 1 Q! seg6 [0] $end
+$var wire 1 R! seg7 [6] $end
+$var wire 1 S! seg7 [5] $end
+$var wire 1 T! seg7 [4] $end
+$var wire 1 U! seg7 [3] $end
+$var wire 1 V! seg7 [2] $end
+$var wire 1 W! seg7 [1] $end
+$var wire 1 X! seg7 [0] $end
+$var wire 1 Y! seg8 [6] $end
+$var wire 1 Z! seg8 [5] $end
+$var wire 1 [! seg8 [4] $end
+$var wire 1 \! seg8 [3] $end
+$var wire 1 ]! seg8 [2] $end
+$var wire 1 ^! seg8 [1] $end
+$var wire 1 _! seg8 [0] $end
+
+$scope module i1 $end
+$var wire 1 `! gnd $end
+$var wire 1 a! vcc $end
+$var wire 1 b! unknown $end
+$var tri1 1 c! devclrn $end
+$var tri1 1 d! devpor $end
+$var tri1 1 e! devoe $end
+$var wire 1 f! p1|altpll_component|_clk0 $end
+$var wire 1 g! p1|altpll_component|_clk1 $end
+$var wire 1 h! p1|altpll_component|pll~CLK3 $end
+$var wire 1 i! p1|altpll_component|pll~CLK4 $end
+$var wire 1 j! CLOCK_50~input_o $end
+$var wire 1 k! mycounter|Add0~0_combout $end
+$var wire 1 l! mycounter|Add0~1 $end
+$var wire 1 m! mycounter|Add0~2_combout $end
+$var wire 1 n! mycounter|cnt~1_combout $end
+$var wire 1 o! mycounter|Add0~3 $end
+$var wire 1 p! mycounter|Add0~4_combout $end
+$var wire 1 q! mycounter|cnt~0_combout $end
+$var wire 1 r! mycounter|Add0~5 $end
+$var wire 1 s! mycounter|Add0~6_combout $end
+$var wire 1 t! mycounter|Equal0~0_combout $end
+$var wire 1 u! mycounter|Add0~7 $end
+$var wire 1 v! mycounter|Add0~8_combout $end
+$var wire 1 w! mycounter|Add0~9 $end
+$var wire 1 x! mycounter|Add0~10_combout $end
+$var wire 1 y! mycounter|Add0~11 $end
+$var wire 1 z! mycounter|Add0~12_combout $end
+$var wire 1 {! mycounter|Add0~13 $end
+$var wire 1 |! mycounter|Add0~14_combout $end
+$var wire 1 }! mycounter|Equal0~1_combout $end
+$var wire 1 ~! mycounter|Add0~15 $end
+$var wire 1 !" mycounter|Add0~16_combout $end
+$var wire 1 "" mycounter|Add0~17 $end
+$var wire 1 #" mycounter|Add0~18_combout $end
+$var wire 1 $" mycounter|Add0~19 $end
+$var wire 1 %" mycounter|Add0~20_combout $end
+$var wire 1 &" mycounter|Add0~21 $end
+$var wire 1 '" mycounter|Add0~22_combout $end
+$var wire 1 (" mycounter|Equal0~2_combout $end
+$var wire 1 )" mycounter|Add0~23 $end
+$var wire 1 *" mycounter|Add0~24_combout $end
+$var wire 1 +" mycounter|Add0~25 $end
+$var wire 1 ," mycounter|Add0~26_combout $end
+$var wire 1 -" mycounter|Add0~27 $end
+$var wire 1 ." mycounter|Add0~28_combout $end
+$var wire 1 /" mycounter|Add0~29 $end
+$var wire 1 0" mycounter|Add0~30_combout $end
+$var wire 1 1" mycounter|Equal0~3_combout $end
+$var wire 1 2" mycounter|Equal0~4_combout $end
+$var wire 1 3" mycounter|Add0~31 $end
+$var wire 1 4" mycounter|Add0~32_combout $end
+$var wire 1 5" mycounter|Add0~33 $end
+$var wire 1 6" mycounter|Add0~34_combout $end
+$var wire 1 7" mycounter|Add0~35 $end
+$var wire 1 8" mycounter|Add0~36_combout $end
+$var wire 1 9" mycounter|Add0~37 $end
+$var wire 1 :" mycounter|Add0~38_combout $end
+$var wire 1 ;" mycounter|Equal0~5_combout $end
+$var wire 1 <" mycounter|Add0~39 $end
+$var wire 1 =" mycounter|Add0~40_combout $end
+$var wire 1 >" mycounter|Add0~41 $end
+$var wire 1 ?" mycounter|Add0~42_combout $end
+$var wire 1 @" mycounter|Add0~43 $end
+$var wire 1 A" mycounter|Add0~44_combout $end
+$var wire 1 B" mycounter|Add0~45 $end
+$var wire 1 C" mycounter|Add0~46_combout $end
+$var wire 1 D" mycounter|Equal0~6_combout $end
+$var wire 1 E" mycounter|Add0~47 $end
+$var wire 1 F" mycounter|Add0~48_combout $end
+$var wire 1 G" mycounter|Add0~49 $end
+$var wire 1 H" mycounter|Add0~50_combout $end
+$var wire 1 I" mycounter|Equal0~7_combout $end
+$var wire 1 J" mycounter|Equal0~8_combout $end
+$var wire 1 K" mycounter|out~q $end
+$var wire 1 L" resetn~input_o $end
+$var wire 1 M" ps2_data~input_o $end
+$var wire 1 N" myps2|PS2|ps2_data_reg~0_combout $end
+$var wire 1 O" myps2|PS2|ps2_data_reg~q $end
+$var wire 1 P" myps2|PS2|PS2_Data_In|data_shift_reg~1_combout $end
+$var wire 1 Q" ps2_clock~input_o $end
+$var wire 1 R" myps2|PS2|ps2_clk_reg~0_combout $end
+$var wire 1 S" myps2|PS2|ps2_clk_reg~q $end
+$var wire 1 T" myps2|PS2|last_ps2_clk~0_combout $end
+$var wire 1 U" myps2|PS2|last_ps2_clk~q $end
+$var wire 1 V" myps2|PS2|Selector1~0_combout $end
+$var wire 1 W" myps2|PS2|PS2_Data_In|data_count~0_combout $end
+$var wire 1 X" myps2|PS2|PS2_Data_In|data_count~3_combout $end
+$var wire 1 Y" myps2|PS2|PS2_Data_In|data_count[3]~2_combout $end
+$var wire 1 Z" myps2|PS2|PS2_Data_In|data_count~4_combout $end
+$var wire 1 [" myps2|PS2|PS2_Data_In|data_count~1_combout $end
+$var wire 1 \" myps2|PS2|PS2_Data_In|Add0~0_combout $end
+$var wire 1 ]" myps2|PS2|PS2_Data_In|data_count~5_combout $end
+$var wire 1 ^" myps2|PS2|PS2_Data_In|always1~0_combout $end
+$var wire 1 _" myps2|PS2|ps2_clk_posedge~combout $end
+$var wire 1 `" myps2|PS2|PS2_Data_In|Selector3~0_combout $end
+$var wire 1 a" myps2|PS2|PS2_Data_In|s_ps2_receiver.PS2_STATE_3_PARITY_IN~q $end
+$var wire 1 b" myps2|PS2|PS2_Data_In|Selector4~0_combout $end
+$var wire 1 c" myps2|PS2|PS2_Data_In|s_ps2_receiver.PS2_STATE_4_STOP_IN~q $end
+$var wire 1 d" myps2|PS2|PS2_Data_In|always5~0_combout $end
+$var wire 1 e" myps2|PS2|PS2_Data_In|received_data_en~q $end
+$var wire 1 f" myps2|PS2|s_ps2_transceiver~9_combout $end
+$var wire 1 g" myps2|PS2|s_ps2_transceiver.PS2_STATE_0_IDLE~q $end
+$var wire 1 h" myps2|PS2|Selector1~1_combout $end
+$var wire 1 i" myps2|PS2|s_ps2_transceiver.PS2_STATE_1_DATA_IN~q $end
+$var wire 1 j" myps2|PS2|PS2_Data_In|s_ps2_receiver~9_combout $end
+$var wire 1 k" myps2|PS2|PS2_Data_In|s_ps2_receiver~10_combout $end
+$var wire 1 l" myps2|PS2|PS2_Data_In|s_ps2_receiver.PS2_STATE_0_IDLE~q $end
+$var wire 1 m" myps2|PS2|PS2_Data_In|Selector2~0_combout $end
+$var wire 1 n" myps2|PS2|PS2_Data_In|Selector2~1_combout $end
+$var wire 1 o" myps2|PS2|PS2_Data_In|s_ps2_receiver.PS2_STATE_2_DATA_IN~q $end
+$var wire 1 p" myps2|PS2|PS2_Data_In|data_shift_reg[2]~0_combout $end
+$var wire 1 q" myps2|PS2|PS2_Data_In|received_data~5_combout $end
+$var wire 1 r" myps2|PS2|PS2_Data_In|received_data~6_combout $end
+$var wire 1 s" myps2|PS2|PS2_Data_In|received_data~7_combout $end
+$var wire 1 t" myps2|PS2|PS2_Data_In|received_data~8_combout $end
+$var wire 1 u" myps2|PS2|PS2_Data_In|received_data~0_combout $end
+$var wire 1 v" myps2|PS2|PS2_Data_In|received_data~2_combout $end
+$var wire 1 w" myps2|PS2|PS2_Data_In|received_data~3_combout $end
+$var wire 1 x" myps2|PS2|PS2_Data_In|received_data~4_combout $end
+$var wire 1 y" myps2|PS2|PS2_Data_In|received_data[0]~1_combout $end
+$var wire 1 z" myps2|last_data_received~4_combout $end
+$var wire 1 {" myps2|last_data_received[7]~1_combout $end
+$var wire 1 |" myps2|last_data_received~5_combout $end
+$var wire 1 }" myps2|last_data_received~6_combout $end
+$var wire 1 ~" myps2|last_data_received~7_combout $end
+$var wire 1 !# mylcd|always0~0_combout $end
+$var wire 1 "# myps2|last_data_received~2_combout $end
+$var wire 1 ## myps2|last_data_received~8_combout $end
+$var wire 1 $# mylcd|Equal0~0_combout $end
+$var wire 1 %# myps2|last_data_received~0_combout $end
+$var wire 1 &# myps2|last_data_received~3_combout $end
+$var wire 1 '# mylcd|Equal0~1_combout $end
+$var wire 1 (# mylcd|ptr[0]~3_combout $end
+$var wire 1 )# mylcd|Decoder0~5_combout $end
+$var wire 1 *# mylcd|Equal0~2_combout $end
+$var wire 1 +# mylcd|ptr[1]~1_combout $end
+$var wire 1 ,# mylcd|Add0~0_combout $end
+$var wire 1 -# mylcd|ptr[2]~0_combout $end
+$var wire 1 .# mylcd|Add0~1_combout $end
+$var wire 1 /# mylcd|ptr[3]~2_combout $end
+$var wire 1 0# mylcd|Decoder0~15_combout $end
+$var wire 1 1# mylcd|line2~26_combout $end
+$var wire 1 2# mylcd|printed_crlf~0_combout $end
+$var wire 1 3# mylcd|printed_crlf~q $end
+$var wire 1 4# mylcd|always1~0_combout $end
+$var wire 1 5# mylcd|always1~1_combout $end
+$var wire 1 6# mylcd|always1~2_combout $end
+$var wire 1 7# mylcd|line2[1][1]~27_combout $end
+$var wire 1 8# mylcd|line2[1][0]~q $end
+$var wire 1 9# mylcd|line1[1][0]~q $end
+$var wire 1 :# mylcd|Add4~0_combout $end
+$var wire 1 ;# mylcd|Add4~3 $end
+$var wire 1 <# mylcd|Add4~4_combout $end
+$var wire 1 =# mylcd|LessThan3~1_combout $end
+$var wire 1 ># mylcd|index[2]~5_combout $end
+$var wire 1 ?# mylcd|Add4~5 $end
+$var wire 1 @# mylcd|Add4~6_combout $end
+$var wire 1 A# mylcd|index[3]~6_combout $end
+$var wire 1 B# mylcd|Add4~7 $end
+$var wire 1 C# mylcd|Add4~8_combout $end
+$var wire 1 D# mylcd|index[4]~7_combout $end
+$var wire 1 E# mylcd|LessThan3~0_combout $end
+$var wire 1 F# mylcd|Add4~9 $end
+$var wire 1 G# mylcd|Add4~10_combout $end
+$var wire 1 H# mylcd|index[5]~8_combout $end
+$var wire 1 I# mylcd|buf_changed_ack~0_combout $end
+$var wire 1 J# mylcd|buf_changed_ack~q $end
+$var wire 1 K# mylcd|buf_changed~0_combout $end
+$var wire 1 L# mylcd|buf_changed~q $end
+$var wire 1 M# mylcd|Add5~0_combout $end
+$var wire 1 N# mylcd|Add5~10_combout $end
+$var wire 1 O# mylcd|Selector38~0_combout $end
+$var wire 1 P# mylcd|Selector40~0_combout $end
+$var wire 1 Q# mylcd|delay[0]~18_combout $end
+$var wire 1 R# mylcd|delay[17]~22_combout $end
+$var wire 1 S# mylcd|delay[0]~19 $end
+$var wire 1 T# mylcd|delay[1]~20_combout $end
+$var wire 1 U# mylcd|delay[1]~21 $end
+$var wire 1 V# mylcd|delay[2]~23_combout $end
+$var wire 1 W# mylcd|delay[2]~24 $end
+$var wire 1 X# mylcd|delay[3]~25_combout $end
+$var wire 1 Y# mylcd|delay[3]~26 $end
+$var wire 1 Z# mylcd|delay[4]~27_combout $end
+$var wire 1 [# mylcd|LessThan4~0_combout $end
+$var wire 1 \# mylcd|delay[4]~28 $end
+$var wire 1 ]# mylcd|delay[5]~29_combout $end
+$var wire 1 ^# mylcd|delay[5]~30 $end
+$var wire 1 _# mylcd|delay[6]~31_combout $end
+$var wire 1 `# mylcd|delay[6]~32 $end
+$var wire 1 a# mylcd|delay[7]~33_combout $end
+$var wire 1 b# mylcd|delay[7]~34 $end
+$var wire 1 c# mylcd|delay[8]~35_combout $end
+$var wire 1 d# mylcd|LessThan4~1_combout $end
+$var wire 1 e# mylcd|delay[8]~36 $end
+$var wire 1 f# mylcd|delay[9]~37_combout $end
+$var wire 1 g# mylcd|delay[9]~38 $end
+$var wire 1 h# mylcd|delay[10]~39_combout $end
+$var wire 1 i# mylcd|delay[10]~40 $end
+$var wire 1 j# mylcd|delay[11]~41_combout $end
+$var wire 1 k# mylcd|delay[11]~42 $end
+$var wire 1 l# mylcd|delay[12]~43_combout $end
+$var wire 1 m# mylcd|LessThan4~2_combout $end
+$var wire 1 n# mylcd|delay[12]~44 $end
+$var wire 1 o# mylcd|delay[13]~45_combout $end
+$var wire 1 p# mylcd|delay[13]~46 $end
+$var wire 1 q# mylcd|delay[14]~47_combout $end
+$var wire 1 r# mylcd|delay[14]~48 $end
+$var wire 1 s# mylcd|delay[15]~49_combout $end
+$var wire 1 t# mylcd|delay[15]~50 $end
+$var wire 1 u# mylcd|delay[16]~51_combout $end
+$var wire 1 v# mylcd|LessThan4~3_combout $end
+$var wire 1 w# mylcd|LessThan4~4_combout $end
+$var wire 1 x# mylcd|delay[16]~52 $end
+$var wire 1 y# mylcd|delay[17]~53_combout $end
+$var wire 1 z# mylcd|LessThan4~5_combout $end
+$var wire 1 {# mylcd|Selector32~0_combout $end
+$var wire 1 |# mylcd|Selector0~0_combout $end
+$var wire 1 }# mylcd|cstart~q $end
+$var wire 1 ~# mylcd|prestart~q $end
+$var wire 1 !$ mylcd|mstart~1_combout $end
+$var wire 1 "$ mylcd|mstart~q $end
+$var wire 1 #$ mylcd|Add5~1 $end
+$var wire 1 $$ mylcd|Add5~2_combout $end
+$var wire 1 %$ mylcd|Selector39~0_combout $end
+$var wire 1 &$ mylcd|Add5~3 $end
+$var wire 1 '$ mylcd|Add5~4_combout $end
+$var wire 1 ($ mylcd|Selector38~1_combout $end
+$var wire 1 )$ mylcd|Add5~5 $end
+$var wire 1 *$ mylcd|Add5~6_combout $end
+$var wire 1 +$ mylcd|Selector37~0_combout $end
+$var wire 1 ,$ mylcd|Add5~7 $end
+$var wire 1 -$ mylcd|Add5~8_combout $end
+$var wire 1 .$ mylcd|Selector36~0_combout $end
+$var wire 1 /$ mylcd|Selector34~0_combout $end
+$var wire 1 0$ mylcd|state2[1]~0_combout $end
+$var wire 1 1$ mylcd|mstart~0_combout $end
+$var wire 1 2$ mylcd|cdone~0_combout $end
+$var wire 1 3$ mylcd|cdone~q $end
+$var wire 1 4$ mylcd|Selector31~0_combout $end
+$var wire 1 5$ mylcd|index~2_combout $end
+$var wire 1 6$ mylcd|index[0]~4_combout $end
+$var wire 1 7$ mylcd|Add4~1 $end
+$var wire 1 8$ mylcd|Add4~2_combout $end
+$var wire 1 9$ mylcd|index[1]~3_combout $end
+$var wire 1 :$ mylcd|Add1~0_combout $end
+$var wire 1 ;$ mylcd|Decoder0~9_combout $end
+$var wire 1 <$ mylcd|line2~14_combout $end
+$var wire 1 =$ mylcd|line2[7][3]~15_combout $end
+$var wire 1 >$ mylcd|line2[7][0]~q $end
+$var wire 1 ?$ mylcd|line1[7][0]~q $end
+$var wire 1 @$ mylcd|Add1~1_combout $end
+$var wire 1 A$ mylcd|Decoder0~6_combout $end
+$var wire 1 B$ mylcd|line2~8_combout $end
+$var wire 1 C$ mylcd|line2[3][6]~9_combout $end
+$var wire 1 D$ mylcd|line2[3][0]~q $end
+$var wire 1 E$ mylcd|line1[3][0]~q $end
+$var wire 1 F$ mylcd|curbuf[0]~0_combout $end
+$var wire 1 G$ mylcd|Decoder0~17_combout $end
+$var wire 1 H$ mylcd|line2~30_combout $end
+$var wire 1 I$ mylcd|line2[5][3]~31_combout $end
+$var wire 1 J$ mylcd|line2[5][0]~q $end
+$var wire 1 K$ mylcd|line1[5][0]~q $end
+$var wire 1 L$ mylcd|curbuf[0]~1_combout $end
+$var wire 1 M$ mylcd|Add1~2_combout $end
+$var wire 1 N$ mylcd|Decoder0~0_combout $end
+$var wire 1 O$ mylcd|Decoder0~11_combout $end
+$var wire 1 P$ mylcd|line2~18_combout $end
+$var wire 1 Q$ mylcd|line2[14][7]~19_combout $end
+$var wire 1 R$ mylcd|line2[14][0]~q $end
+$var wire 1 S$ mylcd|line1[14][0]~q $end
+$var wire 1 T$ mylcd|Decoder0~3_combout $end
+$var wire 1 U$ mylcd|line2~4_combout $end
+$var wire 1 V$ mylcd|line2[8][4]~5_combout $end
+$var wire 1 W$ mylcd|line2[8][0]~q $end
+$var wire 1 X$ mylcd|line1[8][0]~q $end
+$var wire 1 Y$ mylcd|Decoder0~12_combout $end
+$var wire 1 Z$ mylcd|line2~20_combout $end
+$var wire 1 [$ mylcd|line2[10][2]~21_combout $end
+$var wire 1 \$ mylcd|line2[10][0]~q $end
+$var wire 1 ]$ mylcd|line1[10][0]~q $end
+$var wire 1 ^$ mylcd|curbuf[0]~2_combout $end
+$var wire 1 _$ mylcd|Decoder0~1_combout $end
+$var wire 1 `$ mylcd|line2~0_combout $end
+$var wire 1 a$ mylcd|line2[12][0]~1_combout $end
+$var wire 1 b$ mylcd|line2[12][0]~q $end
+$var wire 1 c$ mylcd|line1[12][0]~q $end
+$var wire 1 d$ mylcd|curbuf[0]~3_combout $end
+$var wire 1 e$ mylcd|Decoder0~7_combout $end
+$var wire 1 f$ mylcd|line2~10_combout $end
+$var wire 1 g$ mylcd|line2[15][1]~11_combout $end
+$var wire 1 h$ mylcd|line2[15][0]~q $end
+$var wire 1 i$ mylcd|line1[15][0]~q $end
+$var wire 1 j$ mylcd|Decoder0~16_combout $end
+$var wire 1 k$ mylcd|line2~28_combout $end
+$var wire 1 l$ mylcd|line2[9][0]~29_combout $end
+$var wire 1 m$ mylcd|line2[9][0]~q $end
+$var wire 1 n$ mylcd|line1[9][0]~q $end
+$var wire 1 o$ mylcd|Decoder0~8_combout $end
+$var wire 1 p$ mylcd|line2~12_combout $end
+$var wire 1 q$ mylcd|line2[11][0]~13_combout $end
+$var wire 1 r$ mylcd|line2[11][0]~q $end
+$var wire 1 s$ mylcd|line1[11][0]~q $end
+$var wire 1 t$ mylcd|curbuf[0]~4_combout $end
+$var wire 1 u$ mylcd|Decoder0~14_combout $end
+$var wire 1 v$ mylcd|line2~24_combout $end
+$var wire 1 w$ mylcd|line2[13][7]~25_combout $end
+$var wire 1 x$ mylcd|line2[13][0]~q $end
+$var wire 1 y$ mylcd|line1[13][0]~q $end
+$var wire 1 z$ mylcd|curbuf[0]~5_combout $end
+$var wire 1 {$ mylcd|curbuf[0]~6_combout $end
+$var wire 1 |$ mylcd|Decoder0~2_combout $end
+$var wire 1 }$ mylcd|line2~2_combout $end
+$var wire 1 ~$ mylcd|line2[0][1]~3_combout $end
+$var wire 1 !% mylcd|line2[0][0]~q $end
+$var wire 1 "% mylcd|line1[0][0]~q $end
+$var wire 1 #% mylcd|Decoder0~13_combout $end
+$var wire 1 $% mylcd|line2~22_combout $end
+$var wire 1 %% mylcd|line2[6][1]~23_combout $end
+$var wire 1 &% mylcd|line2[6][0]~q $end
+$var wire 1 '% mylcd|line1[6][0]~q $end
+$var wire 1 (% mylcd|Decoder0~10_combout $end
+$var wire 1 )% mylcd|line2~16_combout $end
+$var wire 1 *% mylcd|line2[2][3]~17_combout $end
+$var wire 1 +% mylcd|line2[2][0]~q $end
+$var wire 1 ,% mylcd|line1[2][0]~q $end
+$var wire 1 -% mylcd|curbuf[0]~7_combout $end
+$var wire 1 .% mylcd|Decoder0~4_combout $end
+$var wire 1 /% mylcd|line2~6_combout $end
+$var wire 1 0% mylcd|line2[4][1]~7_combout $end
+$var wire 1 1% mylcd|line2[4][0]~q $end
+$var wire 1 2% mylcd|line1[4][0]~q $end
+$var wire 1 3% mylcd|curbuf[0]~8_combout $end
+$var wire 1 4% mylcd|curbuf[0]~9_combout $end
+$var wire 1 5% mylcd|Add2~0_combout $end
+$var wire 1 6% mylcd|Add2~1_combout $end
+$var wire 1 7% mylcd|curbuf[0]~10_combout $end
+$var wire 1 8% mylcd|curbuf[0]~11_combout $end
+$var wire 1 9% mylcd|curbuf[0]~12_combout $end
+$var wire 1 :% mylcd|curbuf[0]~13_combout $end
+$var wire 1 ;% mylcd|curbuf[0]~14_combout $end
+$var wire 1 <% mylcd|curbuf[0]~15_combout $end
+$var wire 1 =% mylcd|curbuf[0]~16_combout $end
+$var wire 1 >% mylcd|curbuf[0]~17_combout $end
+$var wire 1 ?% mylcd|curbuf[0]~18_combout $end
+$var wire 1 @% mylcd|curbuf[0]~19_combout $end
+$var wire 1 A% mylcd|LessThan2~0_combout $end
+$var wire 1 B% mylcd|LessThan2~1_combout $end
+$var wire 1 C% mylcd|Equal6~0_combout $end
+$var wire 1 D% mylcd|Equal2~0_combout $end
+$var wire 1 E% mylcd|lcd_data[0]~0_combout $end
+$var wire 1 F% mylcd|lcd_data[0]~1_combout $end
+$var wire 1 G% mylcd|lcd_data[0]~2_combout $end
+$var wire 1 H% mylcd|curbuf[0]~20_combout $end
+$var wire 1 I% mylcd|curbuf[0]~21_combout $end
+$var wire 1 J% mylcd|lcd_data[0]~3_combout $end
+$var wire 1 K% mylcd|line2~45_combout $end
+$var wire 1 L% mylcd|line2[1][1]~q $end
+$var wire 1 M% mylcd|line1[1][1]~q $end
+$var wire 1 N% mylcd|line2~44_combout $end
+$var wire 1 O% mylcd|line2[13][1]~q $end
+$var wire 1 P% mylcd|line1[13][1]~q $end
+$var wire 1 Q% mylcd|line2~46_combout $end
+$var wire 1 R% mylcd|line2[9][1]~q $end
+$var wire 1 S% mylcd|line1[9][1]~q $end
+$var wire 1 T% mylcd|curbuf[1]~22_combout $end
+$var wire 1 U% mylcd|line2~47_combout $end
+$var wire 1 V% mylcd|line2[5][1]~q $end
+$var wire 1 W% mylcd|line1[5][1]~q $end
+$var wire 1 X% mylcd|curbuf[1]~23_combout $end
+$var wire 1 Y% mylcd|line2~36_combout $end
+$var wire 1 Z% mylcd|line2[3][1]~q $end
+$var wire 1 [% mylcd|line1[3][1]~q $end
+$var wire 1 \% mylcd|line2~37_combout $end
+$var wire 1 ]% mylcd|line2[15][1]~q $end
+$var wire 1 ^% mylcd|line1[15][1]~q $end
+$var wire 1 _% mylcd|line2~38_combout $end
+$var wire 1 `% mylcd|line2[11][1]~q $end
+$var wire 1 a% mylcd|line1[11][1]~q $end
+$var wire 1 b% mylcd|curbuf[1]~24_combout $end
+$var wire 1 c% mylcd|line2~39_combout $end
+$var wire 1 d% mylcd|line2[7][1]~q $end
+$var wire 1 e% mylcd|line1[7][1]~q $end
+$var wire 1 f% mylcd|curbuf[1]~25_combout $end
+$var wire 1 g% mylcd|line2~40_combout $end
+$var wire 1 h% mylcd|line2[2][1]~q $end
+$var wire 1 i% mylcd|line1[2][1]~q $end
+$var wire 1 j% mylcd|line2~41_combout $end
+$var wire 1 k% mylcd|line2[14][1]~q $end
+$var wire 1 l% mylcd|line1[14][1]~q $end
+$var wire 1 m% mylcd|line2~42_combout $end
+$var wire 1 n% mylcd|line2[10][1]~q $end
+$var wire 1 o% mylcd|line1[10][1]~q $end
+$var wire 1 p% mylcd|curbuf[1]~26_combout $end
+$var wire 1 q% mylcd|line2~43_combout $end
+$var wire 1 r% mylcd|line2[6][1]~q $end
+$var wire 1 s% mylcd|line1[6][1]~q $end
+$var wire 1 t% mylcd|curbuf[1]~27_combout $end
+$var wire 1 u% mylcd|curbuf[1]~28_combout $end
+$var wire 1 v% mylcd|line2~33_combout $end
+$var wire 1 w% mylcd|line2[0][1]~q $end
+$var wire 1 x% mylcd|line1[0][1]~q $end
+$var wire 1 y% mylcd|line2~32_combout $end
+$var wire 1 z% mylcd|line2[12][1]~q $end
+$var wire 1 {% mylcd|line1[12][1]~q $end
+$var wire 1 |% mylcd|line2~34_combout $end
+$var wire 1 }% mylcd|line2[8][1]~q $end
+$var wire 1 ~% mylcd|line1[8][1]~q $end
+$var wire 1 !& mylcd|curbuf[1]~29_combout $end
+$var wire 1 "& mylcd|line2~35_combout $end
+$var wire 1 #& mylcd|line2[4][1]~q $end
+$var wire 1 $& mylcd|line1[4][1]~q $end
+$var wire 1 %& mylcd|curbuf[1]~30_combout $end
+$var wire 1 && mylcd|curbuf[1]~31_combout $end
+$var wire 1 '& mylcd|curbuf[1]~32_combout $end
+$var wire 1 (& mylcd|curbuf[1]~33_combout $end
+$var wire 1 )& mylcd|curbuf[1]~34_combout $end
+$var wire 1 *& mylcd|curbuf[1]~35_combout $end
+$var wire 1 +& mylcd|curbuf[1]~36_combout $end
+$var wire 1 ,& mylcd|curbuf[1]~37_combout $end
+$var wire 1 -& mylcd|curbuf[1]~38_combout $end
+$var wire 1 .& mylcd|curbuf[1]~39_combout $end
+$var wire 1 /& mylcd|curbuf[1]~40_combout $end
+$var wire 1 0& mylcd|curbuf[1]~41_combout $end
+$var wire 1 1& mylcd|curbuf[1]~42_combout $end
+$var wire 1 2& mylcd|curbuf[1]~43_combout $end
+$var wire 1 3& mylcd|line2~60_combout $end
+$var wire 1 4& mylcd|line2[13][2]~q $end
+$var wire 1 5& mylcd|line1[13][2]~q $end
+$var wire 1 6& mylcd|line2~55_combout $end
+$var wire 1 7& mylcd|line2[7][2]~q $end
+$var wire 1 8& mylcd|line1[7][2]~q $end
+$var wire 1 9& mylcd|line2~53_combout $end
+$var wire 1 :& mylcd|line2[15][2]~q $end
+$var wire 1 ;& mylcd|line1[15][2]~q $end
+$var wire 1 <& mylcd|curbuf[2]~44_combout $end
+$var wire 1 =& mylcd|line2~63_combout $end
+$var wire 1 >& mylcd|line2[5][2]~q $end
+$var wire 1 ?& mylcd|line1[5][2]~q $end
+$var wire 1 @& mylcd|curbuf[2]~45_combout $end
+$var wire 1 A& mylcd|line2~56_combout $end
+$var wire 1 B& mylcd|line2[2][2]~q $end
+$var wire 1 C& mylcd|line1[2][2]~q $end
+$var wire 1 D& mylcd|line2~50_combout $end
+$var wire 1 E& mylcd|line2[8][2]~q $end
+$var wire 1 F& mylcd|line1[8][2]~q $end
+$var wire 1 G& mylcd|line2~58_combout $end
+$var wire 1 H& mylcd|line2[10][2]~q $end
+$var wire 1 I& mylcd|line1[10][2]~q $end
+$var wire 1 J& mylcd|curbuf[2]~46_combout $end
+$var wire 1 K& mylcd|line2~49_combout $end
+$var wire 1 L& mylcd|line2[0][2]~q $end
+$var wire 1 M& mylcd|line1[0][2]~q $end
+$var wire 1 N& mylcd|curbuf[2]~47_combout $end
+$var wire 1 O& mylcd|line2~52_combout $end
+$var wire 1 P& mylcd|line2[3][2]~q $end
+$var wire 1 Q& mylcd|line1[3][2]~q $end
+$var wire 1 R& mylcd|line2~62_combout $end
+$var wire 1 S& mylcd|line2[9][2]~q $end
+$var wire 1 T& mylcd|line1[9][2]~q $end
+$var wire 1 U& mylcd|line2~54_combout $end
+$var wire 1 V& mylcd|line2[11][2]~q $end
+$var wire 1 W& mylcd|line1[11][2]~q $end
+$var wire 1 X& mylcd|curbuf[2]~48_combout $end
+$var wire 1 Y& mylcd|line2~61_combout $end
+$var wire 1 Z& mylcd|line2[1][2]~q $end
+$var wire 1 [& mylcd|line1[1][2]~q $end
+$var wire 1 \& mylcd|curbuf[2]~49_combout $end
+$var wire 1 ]& mylcd|curbuf[2]~50_combout $end
+$var wire 1 ^& mylcd|line2~48_combout $end
+$var wire 1 _& mylcd|line2[12][2]~q $end
+$var wire 1 `& mylcd|line1[12][2]~q $end
+$var wire 1 a& mylcd|line2~59_combout $end
+$var wire 1 b& mylcd|line2[6][2]~q $end
+$var wire 1 c& mylcd|line1[6][2]~q $end
+$var wire 1 d& mylcd|line2~57_combout $end
+$var wire 1 e& mylcd|line2[14][2]~q $end
+$var wire 1 f& mylcd|line1[14][2]~q $end
+$var wire 1 g& mylcd|curbuf[2]~51_combout $end
+$var wire 1 h& mylcd|line2~51_combout $end
+$var wire 1 i& mylcd|line2[4][2]~q $end
+$var wire 1 j& mylcd|line1[4][2]~q $end
+$var wire 1 k& mylcd|curbuf[2]~52_combout $end
+$var wire 1 l& mylcd|curbuf[2]~53_combout $end
+$var wire 1 m& mylcd|curbuf[2]~54_combout $end
+$var wire 1 n& mylcd|curbuf[2]~55_combout $end
+$var wire 1 o& mylcd|curbuf[2]~56_combout $end
+$var wire 1 p& mylcd|curbuf[2]~57_combout $end
+$var wire 1 q& mylcd|curbuf[2]~58_combout $end
+$var wire 1 r& mylcd|curbuf[2]~59_combout $end
+$var wire 1 s& mylcd|curbuf[2]~60_combout $end
+$var wire 1 t& mylcd|curbuf[2]~61_combout $end
+$var wire 1 u& mylcd|curbuf[2]~62_combout $end
+$var wire 1 v& mylcd|curbuf[2]~63_combout $end
+$var wire 1 w& mylcd|curbuf[2]~64_combout $end
+$var wire 1 x& mylcd|curbuf[2]~65_combout $end
+$var wire 1 y& mylcd|line2~64_combout $end
+$var wire 1 z& mylcd|line2[12][3]~q $end
+$var wire 1 {& mylcd|line2~65_combout $end
+$var wire 1 |& mylcd|line2[0][3]~q $end
+$var wire 1 }& mylcd|line2~66_combout $end
+$var wire 1 ~& mylcd|line2[8][3]~q $end
+$var wire 1 !' mylcd|curbuf[3]~66_combout $end
+$var wire 1 "' mylcd|line2~67_combout $end
+$var wire 1 #' mylcd|line2[4][3]~q $end
+$var wire 1 $' mylcd|curbuf[3]~67_combout $end
+$var wire 1 %' mylcd|line2~68_combout $end
+$var wire 1 &' mylcd|line2[3][3]~q $end
+$var wire 1 '' mylcd|line2~69_combout $end
+$var wire 1 (' mylcd|line2[15][3]~q $end
+$var wire 1 )' mylcd|line2~70_combout $end
+$var wire 1 *' mylcd|line2[11][3]~q $end
+$var wire 1 +' mylcd|curbuf[3]~68_combout $end
+$var wire 1 ,' mylcd|line2~71_combout $end
+$var wire 1 -' mylcd|line2[7][3]~q $end
+$var wire 1 .' mylcd|curbuf[3]~69_combout $end
+$var wire 1 /' mylcd|line2~72_combout $end
+$var wire 1 0' mylcd|line2[2][3]~q $end
+$var wire 1 1' mylcd|line2~73_combout $end
+$var wire 1 2' mylcd|line2[14][3]~q $end
+$var wire 1 3' mylcd|line2~74_combout $end
+$var wire 1 4' mylcd|line2[10][3]~q $end
+$var wire 1 5' mylcd|curbuf[3]~70_combout $end
+$var wire 1 6' mylcd|line2~75_combout $end
+$var wire 1 7' mylcd|line2[6][3]~q $end
+$var wire 1 8' mylcd|curbuf[3]~71_combout $end
+$var wire 1 9' mylcd|curbuf[3]~72_combout $end
+$var wire 1 :' mylcd|line2~76_combout $end
+$var wire 1 ;' mylcd|line2[13][3]~q $end
+$var wire 1 <' mylcd|line2~77_combout $end
+$var wire 1 =' mylcd|line2[1][3]~q $end
+$var wire 1 >' mylcd|line2~78_combout $end
+$var wire 1 ?' mylcd|line2[9][3]~q $end
+$var wire 1 @' mylcd|curbuf[3]~73_combout $end
+$var wire 1 A' mylcd|line2~79_combout $end
+$var wire 1 B' mylcd|line2[5][3]~q $end
+$var wire 1 C' mylcd|curbuf[3]~74_combout $end
+$var wire 1 D' mylcd|curbuf[3]~75_combout $end
+$var wire 1 E' mylcd|curbuf[3]~76_combout $end
+$var wire 1 F' mylcd|curbuf[3]~77_combout $end
+$var wire 1 G' mylcd|line1[7][3]~q $end
+$var wire 1 H' mylcd|line1[1][3]~q $end
+$var wire 1 I' mylcd|line1[3][3]~q $end
+$var wire 1 J' mylcd|curbuf[3]~78_combout $end
+$var wire 1 K' mylcd|line1[5][3]~q $end
+$var wire 1 L' mylcd|curbuf[3]~79_combout $end
+$var wire 1 M' mylcd|line1[14][3]~q $end
+$var wire 1 N' mylcd|line1[8][3]~q $end
+$var wire 1 O' mylcd|line1[10][3]~q $end
+$var wire 1 P' mylcd|curbuf[3]~80_combout $end
+$var wire 1 Q' mylcd|line1[12][3]~q $end
+$var wire 1 R' mylcd|curbuf[3]~81_combout $end
+$var wire 1 S' mylcd|line1[15][3]~q $end
+$var wire 1 T' mylcd|line1[9][3]~q $end
+$var wire 1 U' mylcd|line1[11][3]~q $end
+$var wire 1 V' mylcd|curbuf[3]~82_combout $end
+$var wire 1 W' mylcd|line1[13][3]~q $end
+$var wire 1 X' mylcd|curbuf[3]~83_combout $end
+$var wire 1 Y' mylcd|curbuf[3]~84_combout $end
+$var wire 1 Z' mylcd|line1[0][3]~q $end
+$var wire 1 [' mylcd|line1[6][3]~q $end
+$var wire 1 \' mylcd|line1[2][3]~q $end
+$var wire 1 ]' mylcd|curbuf[3]~85_combout $end
+$var wire 1 ^' mylcd|line1[4][3]~q $end
+$var wire 1 _' mylcd|curbuf[3]~86_combout $end
+$var wire 1 `' mylcd|curbuf[3]~87_combout $end
+$var wire 1 a' mylcd|curbuf[3]~88_combout $end
+$var wire 1 b' mylcd|Equal2~1_combout $end
+$var wire 1 c' mylcd|line2~80_combout $end
+$var wire 1 d' mylcd|line2[12][4]~q $end
+$var wire 1 e' mylcd|line2~81_combout $end
+$var wire 1 f' mylcd|line2[0][4]~q $end
+$var wire 1 g' mylcd|line2~82_combout $end
+$var wire 1 h' mylcd|line2[8][4]~q $end
+$var wire 1 i' mylcd|curbuf[4]~89_combout $end
+$var wire 1 j' mylcd|line2~83_combout $end
+$var wire 1 k' mylcd|line2[4][4]~q $end
+$var wire 1 l' mylcd|curbuf[4]~90_combout $end
+$var wire 1 m' mylcd|line2~84_combout $end
+$var wire 1 n' mylcd|line2[3][4]~q $end
+$var wire 1 o' mylcd|line2~85_combout $end
+$var wire 1 p' mylcd|line2[15][4]~q $end
+$var wire 1 q' mylcd|line2~86_combout $end
+$var wire 1 r' mylcd|line2[11][4]~q $end
+$var wire 1 s' mylcd|curbuf[4]~91_combout $end
+$var wire 1 t' mylcd|line2~87_combout $end
+$var wire 1 u' mylcd|line2[7][4]~q $end
+$var wire 1 v' mylcd|curbuf[4]~92_combout $end
+$var wire 1 w' mylcd|line2~88_combout $end
+$var wire 1 x' mylcd|line2[2][4]~q $end
+$var wire 1 y' mylcd|line2~89_combout $end
+$var wire 1 z' mylcd|line2[14][4]~q $end
+$var wire 1 {' mylcd|line2~90_combout $end
+$var wire 1 |' mylcd|line2[10][4]~q $end
+$var wire 1 }' mylcd|curbuf[4]~93_combout $end
+$var wire 1 ~' mylcd|line2~91_combout $end
+$var wire 1 !( mylcd|line2[6][4]~q $end
+$var wire 1 "( mylcd|curbuf[4]~94_combout $end
+$var wire 1 #( mylcd|curbuf[4]~95_combout $end
+$var wire 1 $( mylcd|line2~92_combout $end
+$var wire 1 %( mylcd|line2[13][4]~q $end
+$var wire 1 &( mylcd|line2~93_combout $end
+$var wire 1 '( mylcd|line2[1][4]~q $end
+$var wire 1 (( mylcd|line2~94_combout $end
+$var wire 1 )( mylcd|line2[9][4]~q $end
+$var wire 1 *( mylcd|curbuf[4]~96_combout $end
+$var wire 1 +( mylcd|line2~95_combout $end
+$var wire 1 ,( mylcd|line2[5][4]~q $end
+$var wire 1 -( mylcd|curbuf[4]~97_combout $end
+$var wire 1 .( mylcd|curbuf[4]~98_combout $end
+$var wire 1 /( mylcd|curbuf[4]~99_combout $end
+$var wire 1 0( mylcd|line1[1][4]~q $end
+$var wire 1 1( mylcd|line1[13][4]~q $end
+$var wire 1 2( mylcd|line1[9][4]~q $end
+$var wire 1 3( mylcd|curbuf[4]~100_combout $end
+$var wire 1 4( mylcd|line1[5][4]~q $end
+$var wire 1 5( mylcd|curbuf[4]~101_combout $end
+$var wire 1 6( mylcd|line1[3][4]~q $end
+$var wire 1 7( mylcd|line1[15][4]~q $end
+$var wire 1 8( mylcd|line1[11][4]~q $end
+$var wire 1 9( mylcd|curbuf[4]~102_combout $end
+$var wire 1 :( mylcd|line1[7][4]~q $end
+$var wire 1 ;( mylcd|curbuf[4]~103_combout $end
+$var wire 1 <( mylcd|line1[2][4]~q $end
+$var wire 1 =( mylcd|line1[14][4]~q $end
+$var wire 1 >( mylcd|line1[10][4]~q $end
+$var wire 1 ?( mylcd|curbuf[4]~104_combout $end
+$var wire 1 @( mylcd|line1[6][4]~q $end
+$var wire 1 A( mylcd|curbuf[4]~105_combout $end
+$var wire 1 B( mylcd|curbuf[4]~106_combout $end
+$var wire 1 C( mylcd|line1[0][4]~q $end
+$var wire 1 D( mylcd|line1[12][4]~q $end
+$var wire 1 E( mylcd|line1[8][4]~q $end
+$var wire 1 F( mylcd|curbuf[4]~107_combout $end
+$var wire 1 G( mylcd|line1[4][4]~q $end
+$var wire 1 H( mylcd|curbuf[4]~108_combout $end
+$var wire 1 I( mylcd|curbuf[4]~109_combout $end
+$var wire 1 J( mylcd|curbuf[4]~110_combout $end
+$var wire 1 K( mylcd|line2~96_combout $end
+$var wire 1 L( mylcd|line2[9][5]~q $end
+$var wire 1 M( mylcd|line2~97_combout $end
+$var wire 1 N( mylcd|line2[11][5]~q $end
+$var wire 1 O( mylcd|line2~98_combout $end
+$var wire 1 P( mylcd|line2[15][5]~q $end
+$var wire 1 Q( mylcd|curbuf[5]~111_combout $end
+$var wire 1 R( mylcd|line2~99_combout $end
+$var wire 1 S( mylcd|line2[13][5]~q $end
+$var wire 1 T( mylcd|curbuf[5]~112_combout $end
+$var wire 1 U( mylcd|line2~100_combout $end
+$var wire 1 V( mylcd|line2[0][5]~q $end
+$var wire 1 W( mylcd|line2~101_combout $end
+$var wire 1 X( mylcd|line2[2][5]~q $end
+$var wire 1 Y( mylcd|line2~102_combout $end
+$var wire 1 Z( mylcd|line2[6][5]~q $end
+$var wire 1 [( mylcd|curbuf[5]~113_combout $end
+$var wire 1 \( mylcd|line2~103_combout $end
+$var wire 1 ]( mylcd|line2[4][5]~q $end
+$var wire 1 ^( mylcd|curbuf[5]~114_combout $end
+$var wire 1 _( mylcd|line2~104_combout $end
+$var wire 1 `( mylcd|line2[8][5]~q $end
+$var wire 1 a( mylcd|line2~105_combout $end
+$var wire 1 b( mylcd|line2[10][5]~q $end
+$var wire 1 c( mylcd|line2~106_combout $end
+$var wire 1 d( mylcd|line2[14][5]~q $end
+$var wire 1 e( mylcd|curbuf[5]~115_combout $end
+$var wire 1 f( mylcd|line2~107_combout $end
+$var wire 1 g( mylcd|line2[12][5]~q $end
+$var wire 1 h( mylcd|curbuf[5]~116_combout $end
+$var wire 1 i( mylcd|curbuf[5]~117_combout $end
+$var wire 1 j( mylcd|line2~108_combout $end
+$var wire 1 k( mylcd|line2[1][5]~q $end
+$var wire 1 l( mylcd|line2~109_combout $end
+$var wire 1 m( mylcd|line2[3][5]~q $end
+$var wire 1 n( mylcd|line2~110_combout $end
+$var wire 1 o( mylcd|line2[7][5]~q $end
+$var wire 1 p( mylcd|curbuf[5]~118_combout $end
+$var wire 1 q( mylcd|line2~111_combout $end
+$var wire 1 r( mylcd|line2[5][5]~q $end
+$var wire 1 s( mylcd|curbuf[5]~119_combout $end
+$var wire 1 t( mylcd|curbuf[5]~120_combout $end
+$var wire 1 u( mylcd|curbuf[5]~121_combout $end
+$var wire 1 v( mylcd|line1[13][5]~q $end
+$var wire 1 w( mylcd|line1[7][5]~q $end
+$var wire 1 x( mylcd|line1[15][5]~q $end
+$var wire 1 y( mylcd|curbuf[5]~122_combout $end
+$var wire 1 z( mylcd|line1[5][5]~q $end
+$var wire 1 {( mylcd|curbuf[5]~123_combout $end
+$var wire 1 |( mylcd|line1[8][5]~q $end
+$var wire 1 }( mylcd|line1[2][5]~q $end
+$var wire 1 ~( mylcd|line1[10][5]~q $end
+$var wire 1 !) mylcd|curbuf[5]~124_combout $end
+$var wire 1 ") mylcd|line1[0][5]~q $end
+$var wire 1 #) mylcd|curbuf[5]~125_combout $end
+$var wire 1 $) mylcd|line1[9][5]~q $end
+$var wire 1 %) mylcd|line1[3][5]~q $end
+$var wire 1 &) mylcd|line1[11][5]~q $end
+$var wire 1 ') mylcd|curbuf[5]~126_combout $end
+$var wire 1 () mylcd|line1[1][5]~q $end
+$var wire 1 )) mylcd|curbuf[5]~127_combout $end
+$var wire 1 *) mylcd|curbuf[5]~128_combout $end
+$var wire 1 +) mylcd|line1[6][5]~q $end
+$var wire 1 ,) mylcd|line1[12][5]~q $end
+$var wire 1 -) mylcd|line1[14][5]~q $end
+$var wire 1 .) mylcd|curbuf[5]~129_combout $end
+$var wire 1 /) mylcd|line1[4][5]~q $end
+$var wire 1 0) mylcd|curbuf[5]~130_combout $end
+$var wire 1 1) mylcd|curbuf[5]~131_combout $end
+$var wire 1 2) mylcd|curbuf[5]~132_combout $end
+$var wire 1 3) mylcd|line2~118_combout $end
+$var wire 1 4) mylcd|line2[14][6]~q $end
+$var wire 1 5) mylcd|line1[14][6]~q $end
+$var wire 1 6) mylcd|line2~120_combout $end
+$var wire 1 7) mylcd|line2[8][6]~q $end
+$var wire 1 8) mylcd|line1[8][6]~q $end
+$var wire 1 9) mylcd|line2~122_combout $end
+$var wire 1 :) mylcd|line2[10][6]~q $end
+$var wire 1 ;) mylcd|line1[10][6]~q $end
+$var wire 1 <) mylcd|curbuf[6]~133_combout $end
+$var wire 1 =) mylcd|line2~116_combout $end
+$var wire 1 >) mylcd|line2[12][6]~q $end
+$var wire 1 ?) mylcd|line1[12][6]~q $end
+$var wire 1 @) mylcd|curbuf[6]~134_combout $end
+$var wire 1 A) mylcd|line2~125_combout $end
+$var wire 1 B) mylcd|line2[7][6]~q $end
+$var wire 1 C) mylcd|line1[7][6]~q $end
+$var wire 1 D) mylcd|line2~115_combout $end
+$var wire 1 E) mylcd|line2[1][6]~q $end
+$var wire 1 F) mylcd|line1[1][6]~q $end
+$var wire 1 G) mylcd|line2~113_combout $end
+$var wire 1 H) mylcd|line2[3][6]~q $end
+$var wire 1 I) mylcd|line1[3][6]~q $end
+$var wire 1 J) mylcd|curbuf[6]~135_combout $end
+$var wire 1 K) mylcd|line2~127_combout $end
+$var wire 1 L) mylcd|line2[5][6]~q $end
+$var wire 1 M) mylcd|line1[5][6]~q $end
+$var wire 1 N) mylcd|curbuf[6]~136_combout $end
+$var wire 1 O) mylcd|line2~126_combout $end
+$var wire 1 P) mylcd|line2[15][6]~q $end
+$var wire 1 Q) mylcd|line1[15][6]~q $end
+$var wire 1 R) mylcd|line2~112_combout $end
+$var wire 1 S) mylcd|line2[9][6]~q $end
+$var wire 1 T) mylcd|line1[9][6]~q $end
+$var wire 1 U) mylcd|line2~114_combout $end
+$var wire 1 V) mylcd|line2[11][6]~q $end
+$var wire 1 W) mylcd|line1[11][6]~q $end
+$var wire 1 X) mylcd|curbuf[6]~137_combout $end
+$var wire 1 Y) mylcd|line2~124_combout $end
+$var wire 1 Z) mylcd|line2[13][6]~q $end
+$var wire 1 [) mylcd|line1[13][6]~q $end
+$var wire 1 \) mylcd|curbuf[6]~138_combout $end
+$var wire 1 ]) mylcd|curbuf[6]~139_combout $end
+$var wire 1 ^) mylcd|line2~117_combout $end
+$var wire 1 _) mylcd|line2[6][6]~q $end
+$var wire 1 `) mylcd|line1[6][6]~q $end
+$var wire 1 a) mylcd|line2~123_combout $end
+$var wire 1 b) mylcd|line2[0][6]~q $end
+$var wire 1 c) mylcd|line1[0][6]~q $end
+$var wire 1 d) mylcd|line2~121_combout $end
+$var wire 1 e) mylcd|line2[2][6]~q $end
+$var wire 1 f) mylcd|line1[2][6]~q $end
+$var wire 1 g) mylcd|curbuf[6]~140_combout $end
+$var wire 1 h) mylcd|line2~119_combout $end
+$var wire 1 i) mylcd|line2[4][6]~q $end
+$var wire 1 j) mylcd|line1[4][6]~q $end
+$var wire 1 k) mylcd|curbuf[6]~141_combout $end
+$var wire 1 l) mylcd|curbuf[6]~142_combout $end
+$var wire 1 m) mylcd|curbuf[6]~143_combout $end
+$var wire 1 n) mylcd|curbuf[6]~144_combout $end
+$var wire 1 o) mylcd|curbuf[6]~145_combout $end
+$var wire 1 p) mylcd|curbuf[6]~146_combout $end
+$var wire 1 q) mylcd|curbuf[6]~147_combout $end
+$var wire 1 r) mylcd|curbuf[6]~148_combout $end
+$var wire 1 s) mylcd|curbuf[6]~149_combout $end
+$var wire 1 t) mylcd|curbuf[6]~150_combout $end
+$var wire 1 u) mylcd|curbuf[6]~151_combout $end
+$var wire 1 v) mylcd|curbuf[6]~152_combout $end
+$var wire 1 w) mylcd|curbuf[6]~153_combout $end
+$var wire 1 x) mylcd|curbuf[0]~154_combout $end
+$var wire 1 y) mylcd|Equal6~1_combout $end
+$var wire 1 z) mylcd|curbuf[6]~155_combout $end
+$var wire 1 {) mylcd|lcd_en~0_combout $end
+$var wire 1 |) mylcd|lcd_en~q $end
+$var wire 1 }) mylcd|lcd_rs~q $end
+$var wire 1 ~) hex1|seven_seg_display[0]~9_combout $end
+$var wire 1 !* hex1|seven_seg_display[1]~4_combout $end
+$var wire 1 "* hex1|seven_seg_display[2]~5_combout $end
+$var wire 1 #* hex1|seven_seg_display[3]~10_combout $end
+$var wire 1 $* hex1|seven_seg_display[4]~6_combout $end
+$var wire 1 %* hex1|seven_seg_display[5]~7_combout $end
+$var wire 1 &* hex1|seven_seg_display[6]~8_combout $end
+$var wire 1 '* hex2|seven_seg_display[0]~9_combout $end
+$var wire 1 (* hex2|seven_seg_display[1]~4_combout $end
+$var wire 1 )* hex2|seven_seg_display[2]~5_combout $end
+$var wire 1 ** hex2|seven_seg_display[3]~10_combout $end
+$var wire 1 +* hex2|seven_seg_display[4]~6_combout $end
+$var wire 1 ,* hex2|seven_seg_display[5]~7_combout $end
+$var wire 1 -* hex2|seven_seg_display[6]~8_combout $end
+$var wire 1 .* r0|Cont[0]~57_combout $end
+$var wire 1 /* r0|Cont[1]~19_combout $end
+$var wire 1 0* r0|Cont[1]~20 $end
+$var wire 1 1* r0|Cont[2]~21_combout $end
+$var wire 1 2* r0|Cont[2]~22 $end
+$var wire 1 3* r0|Cont[3]~23_combout $end
+$var wire 1 4* r0|Cont[3]~24 $end
+$var wire 1 5* r0|Cont[4]~25_combout $end
+$var wire 1 6* r0|Cont[4]~26 $end
+$var wire 1 7* r0|Cont[5]~27_combout $end
+$var wire 1 8* r0|Cont[5]~28 $end
+$var wire 1 9* r0|Cont[6]~29_combout $end
+$var wire 1 :* r0|Cont[6]~30 $end
+$var wire 1 ;* r0|Cont[7]~31_combout $end
+$var wire 1 <* r0|Cont[7]~32 $end
+$var wire 1 =* r0|Cont[8]~33_combout $end
+$var wire 1 >* r0|Cont[8]~34 $end
+$var wire 1 ?* r0|Cont[9]~35_combout $end
+$var wire 1 @* r0|Cont[9]~36 $end
+$var wire 1 A* r0|Cont[10]~37_combout $end
+$var wire 1 B* r0|Cont[10]~38 $end
+$var wire 1 C* r0|Cont[11]~39_combout $end
+$var wire 1 D* r0|Cont[11]~40 $end
+$var wire 1 E* r0|Cont[12]~41_combout $end
+$var wire 1 F* r0|Cont[12]~42 $end
+$var wire 1 G* r0|Cont[13]~43_combout $end
+$var wire 1 H* r0|Cont[13]~44 $end
+$var wire 1 I* r0|Cont[14]~45_combout $end
+$var wire 1 J* r0|Cont[14]~46 $end
+$var wire 1 K* r0|Cont[15]~47_combout $end
+$var wire 1 L* r0|Cont[15]~48 $end
+$var wire 1 M* r0|Cont[16]~49_combout $end
+$var wire 1 N* r0|Cont[16]~50 $end
+$var wire 1 O* r0|Cont[17]~51_combout $end
+$var wire 1 P* r0|Cont[17]~52 $end
+$var wire 1 Q* r0|Cont[18]~53_combout $end
+$var wire 1 R* r0|Cont[18]~54 $end
+$var wire 1 S* r0|Cont[19]~55_combout $end
+$var wire 1 T* r0|Equal0~0_combout $end
+$var wire 1 U* r0|Equal0~1_combout $end
+$var wire 1 V* r0|Equal0~2_combout $end
+$var wire 1 W* r0|Equal0~3_combout $end
+$var wire 1 X* r0|Equal0~4_combout $end
+$var wire 1 Y* r0|Equal0~5_combout $end
+$var wire 1 Z* r0|Equal0~6_combout $end
+$var wire 1 [* r0|oRESET~q $end
+$var wire 1 \* p1|altpll_component|pll~FBOUT $end
+$var wire 1 ]* p1|altpll_component|_clk2 $end
+$var wire 1 ^* vga_ins|LTM_ins|Add1~0_combout $end
+$var wire 1 _* vga_ins|LTM_ins|Add1~1 $end
+$var wire 1 `* vga_ins|LTM_ins|Add1~2_combout $end
+$var wire 1 a* vga_ins|LTM_ins|Add1~3 $end
+$var wire 1 b* vga_ins|LTM_ins|Add1~4_combout $end
+$var wire 1 c* vga_ins|LTM_ins|Add1~5 $end
+$var wire 1 d* vga_ins|LTM_ins|Add1~6_combout $end
+$var wire 1 e* vga_ins|LTM_ins|Add1~7 $end
+$var wire 1 f* vga_ins|LTM_ins|Add1~8_combout $end
+$var wire 1 g* vga_ins|LTM_ins|Add1~9 $end
+$var wire 1 h* vga_ins|LTM_ins|Add1~10_combout $end
+$var wire 1 i* vga_ins|LTM_ins|Add1~13 $end
+$var wire 1 j* vga_ins|LTM_ins|Add1~14_combout $end
+$var wire 1 k* vga_ins|LTM_ins|Add1~15 $end
+$var wire 1 l* vga_ins|LTM_ins|Add1~16_combout $end
+$var wire 1 m* vga_ins|LTM_ins|Equal0~1_combout $end
+$var wire 1 n* vga_ins|LTM_ins|Equal0~2_combout $end
+$var wire 1 o* vga_ins|LTM_ins|h_cnt~2_combout $end
+$var wire 1 p* vga_ins|LTM_ins|Add1~17 $end
+$var wire 1 q* vga_ins|LTM_ins|Add1~18_combout $end
+$var wire 1 r* vga_ins|LTM_ins|h_cnt~1_combout $end
+$var wire 1 s* vga_ins|LTM_ins|Add1~19 $end
+$var wire 1 t* vga_ins|LTM_ins|Add1~20_combout $end
+$var wire 1 u* vga_ins|LTM_ins|Equal0~0_combout $end
+$var wire 1 v* vga_ins|LTM_ins|h_cnt~0_combout $end
+$var wire 1 w* vga_ins|LTM_ins|Add1~11 $end
+$var wire 1 x* vga_ins|LTM_ins|Add1~12_combout $end
+$var wire 1 y* vga_ins|LTM_ins|LessThan0~0_combout $end
+$var wire 1 z* vga_ins|LTM_ins|LessThan0~1_combout $end
+$var wire 1 {* vga_ins|LTM_ins|HS~q $end
+$var wire 1 |* vga_ins|oHS~q $end
+$var wire 1 }* vga_ins|LTM_ins|Add0~0_combout $end
+$var wire 1 ~* vga_ins|LTM_ins|LessThan5~0_combout $end
+$var wire 1 !+ vga_ins|LTM_ins|Equal1~0_combout $end
+$var wire 1 "+ vga_ins|LTM_ins|Equal1~1_combout $end
+$var wire 1 #+ vga_ins|LTM_ins|v_cnt~3_combout $end
+$var wire 1 $+ vga_ins|LTM_ins|Equal0~3_combout $end
+$var wire 1 %+ vga_ins|LTM_ins|Add0~1 $end
+$var wire 1 &+ vga_ins|LTM_ins|Add0~2_combout $end
+$var wire 1 '+ vga_ins|LTM_ins|Add0~3 $end
+$var wire 1 (+ vga_ins|LTM_ins|Add0~4_combout $end
+$var wire 1 )+ vga_ins|LTM_ins|v_cnt~2_combout $end
+$var wire 1 *+ vga_ins|LTM_ins|Add0~5 $end
+$var wire 1 ++ vga_ins|LTM_ins|Add0~6_combout $end
+$var wire 1 ,+ vga_ins|LTM_ins|v_cnt~1_combout $end
+$var wire 1 -+ vga_ins|LTM_ins|Add0~7 $end
+$var wire 1 .+ vga_ins|LTM_ins|Add0~8_combout $end
+$var wire 1 /+ vga_ins|LTM_ins|Add0~9 $end
+$var wire 1 0+ vga_ins|LTM_ins|Add0~10_combout $end
+$var wire 1 1+ vga_ins|LTM_ins|Add0~11 $end
+$var wire 1 2+ vga_ins|LTM_ins|Add0~12_combout $end
+$var wire 1 3+ vga_ins|LTM_ins|Add0~13 $end
+$var wire 1 4+ vga_ins|LTM_ins|Add0~14_combout $end
+$var wire 1 5+ vga_ins|LTM_ins|Add0~15 $end
+$var wire 1 6+ vga_ins|LTM_ins|Add0~16_combout $end
+$var wire 1 7+ vga_ins|LTM_ins|Add0~17 $end
+$var wire 1 8+ vga_ins|LTM_ins|Add0~18_combout $end
+$var wire 1 9+ vga_ins|LTM_ins|v_cnt~0_combout $end
+$var wire 1 :+ vga_ins|LTM_ins|LessThan1~0_combout $end
+$var wire 1 ;+ vga_ins|LTM_ins|VS~q $end
+$var wire 1 <+ vga_ins|oVS~q $end
+$var wire 1 =+ vga_ins|LTM_ins|cDEN~0_combout $end
+$var wire 1 >+ vga_ins|LTM_ins|cDEN~1_combout $end
+$var wire 1 ?+ vga_ins|LTM_ins|cDEN~2_combout $end
+$var wire 1 @+ vga_ins|LTM_ins|LessThan5~1_combout $end
+$var wire 1 A+ vga_ins|LTM_ins|LessThan5~2_combout $end
+$var wire 1 B+ vga_ins|LTM_ins|cDEN~3_combout $end
+$var wire 1 C+ vga_ins|LTM_ins|blank_n~q $end
+$var wire 1 D+ vga_ins|oBLANK_n~q $end
+$var wire 1 E+ vga_ins|ADDR[0]~19_combout $end
+$var wire 1 F+ vga_ins|always0~0_combout $end
+$var wire 1 G+ vga_ins|ADDR[0]~20 $end
+$var wire 1 H+ vga_ins|ADDR[1]~21_combout $end
+$var wire 1 I+ vga_ins|ADDR[1]~22 $end
+$var wire 1 J+ vga_ins|ADDR[2]~23_combout $end
+$var wire 1 K+ vga_ins|ADDR[2]~24 $end
+$var wire 1 L+ vga_ins|ADDR[3]~25_combout $end
+$var wire 1 M+ vga_ins|ADDR[3]~26 $end
+$var wire 1 N+ vga_ins|ADDR[4]~27_combout $end
+$var wire 1 O+ vga_ins|ADDR[4]~28 $end
+$var wire 1 P+ vga_ins|ADDR[5]~29_combout $end
+$var wire 1 Q+ vga_ins|ADDR[5]~30 $end
+$var wire 1 R+ vga_ins|ADDR[6]~31_combout $end
+$var wire 1 S+ vga_ins|ADDR[6]~32 $end
+$var wire 1 T+ vga_ins|ADDR[7]~33_combout $end
+$var wire 1 U+ vga_ins|ADDR[7]~34 $end
+$var wire 1 V+ vga_ins|ADDR[8]~35_combout $end
+$var wire 1 W+ vga_ins|ADDR[8]~36 $end
+$var wire 1 X+ vga_ins|ADDR[9]~37_combout $end
+$var wire 1 Y+ vga_ins|ADDR[9]~38 $end
+$var wire 1 Z+ vga_ins|ADDR[10]~39_combout $end
+$var wire 1 [+ vga_ins|ADDR[10]~40 $end
+$var wire 1 \+ vga_ins|ADDR[11]~41_combout $end
+$var wire 1 ]+ vga_ins|ADDR[11]~42 $end
+$var wire 1 ^+ vga_ins|ADDR[12]~43_combout $end
+$var wire 1 _+ vga_ins|ADDR[12]~44 $end
+$var wire 1 `+ vga_ins|ADDR[13]~45_combout $end
+$var wire 1 a+ vga_ins|ADDR[13]~46 $end
+$var wire 1 b+ vga_ins|ADDR[14]~47_combout $end
+$var wire 1 c+ vga_ins|ADDR[14]~48 $end
+$var wire 1 d+ vga_ins|ADDR[15]~49_combout $end
+$var wire 1 e+ vga_ins|ADDR[15]~50 $end
+$var wire 1 f+ vga_ins|ADDR[16]~51_combout $end
+$var wire 1 g+ vga_ins|ADDR[16]~52 $end
+$var wire 1 h+ vga_ins|ADDR[17]~53_combout $end
+$var wire 1 i+ vga_ins|ADDR[17]~54 $end
+$var wire 1 j+ vga_ins|ADDR[18]~55_combout $end
+$var wire 1 k+ vga_ins|img_data_inst|altsyncram_component|auto_generated|mux2|result_node[0]~0_combout $end
+$var wire 1 l+ vga_ins|img_data_inst|altsyncram_component|auto_generated|rden_decode|w_anode1690w[3]~0_combout $end
+$var wire 1 m+ vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a296~portadataout $end
+$var wire 1 n+ vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a288~portadataout $end
+$var wire 1 o+ vga_ins|img_data_inst|altsyncram_component|auto_generated|mux2|result_node[0]~1_combout $end
+$var wire 1 p+ vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a264~portadataout $end
+$var wire 1 q+ vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a272~portadataout $end
+$var wire 1 r+ vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a256~portadataout $end
+$var wire 1 s+ vga_ins|img_data_inst|altsyncram_component|auto_generated|mux2|_~0_combout $end
+$var wire 1 t+ vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a280~portadataout $end
+$var wire 1 u+ vga_ins|img_data_inst|altsyncram_component|auto_generated|mux2|_~1_combout $end
+$var wire 1 v+ vga_ins|img_data_inst|altsyncram_component|auto_generated|rden_decode|w_anode1336w[1]~0_combout $end
+$var wire 1 w+ vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a8~portadataout $end
+$var wire 1 x+ vga_ins|img_data_inst|altsyncram_component|auto_generated|rden_decode|w_anode1366w[3]~0_combout $end
+$var wire 1 y+ vga_ins|img_data_inst|altsyncram_component|auto_generated|rden_decode|w_anode1346w[3]~0_combout $end
+$var wire 1 z+ vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a16~portadataout $end
+$var wire 1 {+ vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a0~portadataout $end
+$var wire 1 |+ vga_ins|img_data_inst|altsyncram_component|auto_generated|mux2|_~2_combout $end
+$var wire 1 }+ vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a24~portadataout $end
+$var wire 1 ~+ vga_ins|img_data_inst|altsyncram_component|auto_generated|mux2|_~3_combout $end
+$var wire 1 !, vga_ins|img_data_inst|altsyncram_component|auto_generated|mux2|result_node[0]~2_combout $end
+$var wire 1 ", vga_ins|img_data_inst|altsyncram_component|auto_generated|mux2|result_node[0]~3_combout $end
+$var wire 1 #, vga_ins|img_data_inst|altsyncram_component|auto_generated|rden_decode|w_anode1408w[2]~0_combout $end
+$var wire 1 $, vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a208~portadataout $end
+$var wire 1 %, vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a192~portadataout $end
+$var wire 1 &, vga_ins|img_data_inst|altsyncram_component|auto_generated|mux2|result_node[0]~4_combout $end
+$var wire 1 ', vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a216~portadataout $end
+$var wire 1 (, vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a200~portadataout $end
+$var wire 1 ), vga_ins|img_data_inst|altsyncram_component|auto_generated|mux2|result_node[0]~5_combout $end
+$var wire 1 *, vga_ins|img_data_inst|altsyncram_component|auto_generated|mux2|result_node[0]~6_combout $end
+$var wire 1 +, vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a240~portadataout $end
+$var wire 1 ,, vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a224~portadataout $end
+$var wire 1 -, vga_ins|img_data_inst|altsyncram_component|auto_generated|mux2|result_node[0]~7_combout $end
+$var wire 1 ., vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a248~portadataout $end
+$var wire 1 /, vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a232~portadataout $end
+$var wire 1 0, vga_ins|img_data_inst|altsyncram_component|auto_generated|mux2|result_node[0]~8_combout $end
+$var wire 1 1, vga_ins|img_data_inst|altsyncram_component|auto_generated|mux2|result_node[0]~9_combout $end
+$var wire 1 2, vga_ins|img_data_inst|altsyncram_component|auto_generated|rden_decode|w_anode1408w[2]~1_combout $end
+$var wire 1 3, vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a80~portadataout $end
+$var wire 1 4, vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a64~portadataout $end
+$var wire 1 5, vga_ins|img_data_inst|altsyncram_component|auto_generated|mux2|result_node[0]~10_combout $end
+$var wire 1 6, vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a88~portadataout $end
+$var wire 1 7, vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a72~portadataout $end
+$var wire 1 8, vga_ins|img_data_inst|altsyncram_component|auto_generated|mux2|result_node[0]~11_combout $end
+$var wire 1 9, vga_ins|img_data_inst|altsyncram_component|auto_generated|mux2|result_node[0]~12_combout $end
+$var wire 1 :, vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a112~portadataout $end
+$var wire 1 ;, vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a96~portadataout $end
+$var wire 1 <, vga_ins|img_data_inst|altsyncram_component|auto_generated|mux2|result_node[0]~13_combout $end
+$var wire 1 =, vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a120~portadataout $end
+$var wire 1 >, vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a104~portadataout $end
+$var wire 1 ?, vga_ins|img_data_inst|altsyncram_component|auto_generated|mux2|result_node[0]~14_combout $end
+$var wire 1 @, vga_ins|img_data_inst|altsyncram_component|auto_generated|mux2|result_node[0]~15_combout $end
+$var wire 1 A, vga_ins|img_data_inst|altsyncram_component|auto_generated|mux2|result_node[0]~16_combout $end
+$var wire 1 B, vga_ins|img_data_inst|altsyncram_component|auto_generated|rden_decode|w_anode1408w[2]~2_combout $end
+$var wire 1 C, vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a168~portadataout $end
+$var wire 1 D, vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a176~portadataout $end
+$var wire 1 E, vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a160~portadataout $end
+$var wire 1 F, vga_ins|img_data_inst|altsyncram_component|auto_generated|mux2|_~4_combout $end
+$var wire 1 G, vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a184~portadataout $end
+$var wire 1 H, vga_ins|img_data_inst|altsyncram_component|auto_generated|mux2|_~5_combout $end
+$var wire 1 I, vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a40~portadataout $end
+$var wire 1 J, vga_ins|img_data_inst|altsyncram_component|auto_generated|rden_decode|w_anode1386w[3]~0_combout $end
+$var wire 1 K, vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a48~portadataout $end
+$var wire 1 L, vga_ins|img_data_inst|altsyncram_component|auto_generated|rden_decode|w_anode1366w[3]~1_combout $end
+$var wire 1 M, vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a32~portadataout $end
+$var wire 1 N, vga_ins|img_data_inst|altsyncram_component|auto_generated|mux2|_~6_combout $end
+$var wire 1 O, vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a56~portadataout $end
+$var wire 1 P, vga_ins|img_data_inst|altsyncram_component|auto_generated|mux2|_~7_combout $end
+$var wire 1 Q, vga_ins|img_data_inst|altsyncram_component|auto_generated|mux2|result_node[0]~17_combout $end
+$var wire 1 R, vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a136~portadataout $end
+$var wire 1 S, vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a144~portadataout $end
+$var wire 1 T, vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a128~portadataout $end
+$var wire 1 U, vga_ins|img_data_inst|altsyncram_component|auto_generated|mux2|_~8_combout $end
+$var wire 1 V, vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a152~portadataout $end
+$var wire 1 W, vga_ins|img_data_inst|altsyncram_component|auto_generated|mux2|_~9_combout $end
+$var wire 1 X, vga_ins|img_data_inst|altsyncram_component|auto_generated|mux2|result_node[0]~18_combout $end
+$var wire 1 Y, vga_ins|img_data_inst|altsyncram_component|auto_generated|mux2|result_node[0]~19_combout $end
+$var wire 1 Z, vga_ins|img_data_inst|altsyncram_component|auto_generated|mux2|result_node[0]~20_combout $end
+$var wire 1 [, vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a297~portadataout $end
+$var wire 1 \, vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a289~portadataout $end
+$var wire 1 ], vga_ins|img_data_inst|altsyncram_component|auto_generated|mux2|result_node[1]~21_combout $end
+$var wire 1 ^, vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a265~portadataout $end
+$var wire 1 _, vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a273~portadataout $end
+$var wire 1 `, vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a257~portadataout $end
+$var wire 1 a, vga_ins|img_data_inst|altsyncram_component|auto_generated|mux2|_~10_combout $end
+$var wire 1 b, vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a281~portadataout $end
+$var wire 1 c, vga_ins|img_data_inst|altsyncram_component|auto_generated|mux2|_~11_combout $end
+$var wire 1 d, vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a9~portadataout $end
+$var wire 1 e, vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a17~portadataout $end
+$var wire 1 f, vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a1~portadataout $end
+$var wire 1 g, vga_ins|img_data_inst|altsyncram_component|auto_generated|mux2|_~12_combout $end
+$var wire 1 h, vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a25~portadataout $end
+$var wire 1 i, vga_ins|img_data_inst|altsyncram_component|auto_generated|mux2|_~13_combout $end
+$var wire 1 j, vga_ins|img_data_inst|altsyncram_component|auto_generated|mux2|result_node[1]~22_combout $end
+$var wire 1 k, vga_ins|img_data_inst|altsyncram_component|auto_generated|mux2|result_node[1]~23_combout $end
+$var wire 1 l, vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a209~portadataout $end
+$var wire 1 m, vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a193~portadataout $end
+$var wire 1 n, vga_ins|img_data_inst|altsyncram_component|auto_generated|mux2|result_node[1]~24_combout $end
+$var wire 1 o, vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a217~portadataout $end
+$var wire 1 p, vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a201~portadataout $end
+$var wire 1 q, vga_ins|img_data_inst|altsyncram_component|auto_generated|mux2|result_node[1]~25_combout $end
+$var wire 1 r, vga_ins|img_data_inst|altsyncram_component|auto_generated|mux2|result_node[1]~26_combout $end
+$var wire 1 s, vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a241~portadataout $end
+$var wire 1 t, vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a225~portadataout $end
+$var wire 1 u, vga_ins|img_data_inst|altsyncram_component|auto_generated|mux2|result_node[1]~27_combout $end
+$var wire 1 v, vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a249~portadataout $end
+$var wire 1 w, vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a233~portadataout $end
+$var wire 1 x, vga_ins|img_data_inst|altsyncram_component|auto_generated|mux2|result_node[1]~28_combout $end
+$var wire 1 y, vga_ins|img_data_inst|altsyncram_component|auto_generated|mux2|result_node[1]~29_combout $end
+$var wire 1 z, vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a81~portadataout $end
+$var wire 1 {, vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a65~portadataout $end
+$var wire 1 |, vga_ins|img_data_inst|altsyncram_component|auto_generated|mux2|result_node[1]~30_combout $end
+$var wire 1 }, vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a89~portadataout $end
+$var wire 1 ~, vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a73~portadataout $end
+$var wire 1 !- vga_ins|img_data_inst|altsyncram_component|auto_generated|mux2|result_node[1]~31_combout $end
+$var wire 1 "- vga_ins|img_data_inst|altsyncram_component|auto_generated|mux2|result_node[1]~32_combout $end
+$var wire 1 #- vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a113~portadataout $end
+$var wire 1 $- vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a97~portadataout $end
+$var wire 1 %- vga_ins|img_data_inst|altsyncram_component|auto_generated|mux2|result_node[1]~33_combout $end
+$var wire 1 &- vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a121~portadataout $end
+$var wire 1 '- vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a105~portadataout $end
+$var wire 1 (- vga_ins|img_data_inst|altsyncram_component|auto_generated|mux2|result_node[1]~34_combout $end
+$var wire 1 )- vga_ins|img_data_inst|altsyncram_component|auto_generated|mux2|result_node[1]~35_combout $end
+$var wire 1 *- vga_ins|img_data_inst|altsyncram_component|auto_generated|mux2|result_node[1]~36_combout $end
+$var wire 1 +- vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a169~portadataout $end
+$var wire 1 ,- vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a177~portadataout $end
+$var wire 1 -- vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a161~portadataout $end
+$var wire 1 .- vga_ins|img_data_inst|altsyncram_component|auto_generated|mux2|_~14_combout $end
+$var wire 1 /- vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a185~portadataout $end
+$var wire 1 0- vga_ins|img_data_inst|altsyncram_component|auto_generated|mux2|_~15_combout $end
+$var wire 1 1- vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a41~portadataout $end
+$var wire 1 2- vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a49~portadataout $end
+$var wire 1 3- vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a33~portadataout $end
+$var wire 1 4- vga_ins|img_data_inst|altsyncram_component|auto_generated|mux2|_~16_combout $end
+$var wire 1 5- vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a57~portadataout $end
+$var wire 1 6- vga_ins|img_data_inst|altsyncram_component|auto_generated|mux2|_~17_combout $end
+$var wire 1 7- vga_ins|img_data_inst|altsyncram_component|auto_generated|mux2|result_node[1]~37_combout $end
+$var wire 1 8- vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a137~portadataout $end
+$var wire 1 9- vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a145~portadataout $end
+$var wire 1 :- vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a129~portadataout $end
+$var wire 1 ;- vga_ins|img_data_inst|altsyncram_component|auto_generated|mux2|_~18_combout $end
+$var wire 1 <- vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a153~portadataout $end
+$var wire 1 =- vga_ins|img_data_inst|altsyncram_component|auto_generated|mux2|_~19_combout $end
+$var wire 1 >- vga_ins|img_data_inst|altsyncram_component|auto_generated|mux2|result_node[1]~38_combout $end
+$var wire 1 ?- vga_ins|img_data_inst|altsyncram_component|auto_generated|mux2|result_node[1]~39_combout $end
+$var wire 1 @- vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a298~portadataout $end
+$var wire 1 A- vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a290~portadataout $end
+$var wire 1 B- vga_ins|img_data_inst|altsyncram_component|auto_generated|mux2|result_node[2]~40_combout $end
+$var wire 1 C- vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a266~portadataout $end
+$var wire 1 D- vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a274~portadataout $end
+$var wire 1 E- vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a258~portadataout $end
+$var wire 1 F- vga_ins|img_data_inst|altsyncram_component|auto_generated|mux2|_~20_combout $end
+$var wire 1 G- vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a282~portadataout $end
+$var wire 1 H- vga_ins|img_data_inst|altsyncram_component|auto_generated|mux2|_~21_combout $end
+$var wire 1 I- vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a10~portadataout $end
+$var wire 1 J- vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a18~portadataout $end
+$var wire 1 K- vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a2~portadataout $end
+$var wire 1 L- vga_ins|img_data_inst|altsyncram_component|auto_generated|mux2|_~22_combout $end
+$var wire 1 M- vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a26~portadataout $end
+$var wire 1 N- vga_ins|img_data_inst|altsyncram_component|auto_generated|mux2|_~23_combout $end
+$var wire 1 O- vga_ins|img_data_inst|altsyncram_component|auto_generated|mux2|result_node[2]~41_combout $end
+$var wire 1 P- vga_ins|img_data_inst|altsyncram_component|auto_generated|mux2|result_node[2]~42_combout $end
+$var wire 1 Q- vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a210~portadataout $end
+$var wire 1 R- vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a194~portadataout $end
+$var wire 1 S- vga_ins|img_data_inst|altsyncram_component|auto_generated|mux2|result_node[2]~43_combout $end
+$var wire 1 T- vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a218~portadataout $end
+$var wire 1 U- vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a202~portadataout $end
+$var wire 1 V- vga_ins|img_data_inst|altsyncram_component|auto_generated|mux2|result_node[2]~44_combout $end
+$var wire 1 W- vga_ins|img_data_inst|altsyncram_component|auto_generated|mux2|result_node[2]~45_combout $end
+$var wire 1 X- vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a242~portadataout $end
+$var wire 1 Y- vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a226~portadataout $end
+$var wire 1 Z- vga_ins|img_data_inst|altsyncram_component|auto_generated|mux2|result_node[2]~46_combout $end
+$var wire 1 [- vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a250~portadataout $end
+$var wire 1 \- vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a234~portadataout $end
+$var wire 1 ]- vga_ins|img_data_inst|altsyncram_component|auto_generated|mux2|result_node[2]~47_combout $end
+$var wire 1 ^- vga_ins|img_data_inst|altsyncram_component|auto_generated|mux2|result_node[2]~48_combout $end
+$var wire 1 _- vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a82~portadataout $end
+$var wire 1 `- vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a66~portadataout $end
+$var wire 1 a- vga_ins|img_data_inst|altsyncram_component|auto_generated|mux2|result_node[2]~49_combout $end
+$var wire 1 b- vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a90~portadataout $end
+$var wire 1 c- vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a74~portadataout $end
+$var wire 1 d- vga_ins|img_data_inst|altsyncram_component|auto_generated|mux2|result_node[2]~50_combout $end
+$var wire 1 e- vga_ins|img_data_inst|altsyncram_component|auto_generated|mux2|result_node[2]~51_combout $end
+$var wire 1 f- vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a114~portadataout $end
+$var wire 1 g- vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a98~portadataout $end
+$var wire 1 h- vga_ins|img_data_inst|altsyncram_component|auto_generated|mux2|result_node[2]~52_combout $end
+$var wire 1 i- vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a122~portadataout $end
+$var wire 1 j- vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a106~portadataout $end
+$var wire 1 k- vga_ins|img_data_inst|altsyncram_component|auto_generated|mux2|result_node[2]~53_combout $end
+$var wire 1 l- vga_ins|img_data_inst|altsyncram_component|auto_generated|mux2|result_node[2]~54_combout $end
+$var wire 1 m- vga_ins|img_data_inst|altsyncram_component|auto_generated|mux2|result_node[2]~55_combout $end
+$var wire 1 n- vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a170~portadataout $end
+$var wire 1 o- vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a178~portadataout $end
+$var wire 1 p- vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a162~portadataout $end
+$var wire 1 q- vga_ins|img_data_inst|altsyncram_component|auto_generated|mux2|_~24_combout $end
+$var wire 1 r- vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a186~portadataout $end
+$var wire 1 s- vga_ins|img_data_inst|altsyncram_component|auto_generated|mux2|_~25_combout $end
+$var wire 1 t- vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a42~portadataout $end
+$var wire 1 u- vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a50~portadataout $end
+$var wire 1 v- vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a34~portadataout $end
+$var wire 1 w- vga_ins|img_data_inst|altsyncram_component|auto_generated|mux2|_~26_combout $end
+$var wire 1 x- vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a58~portadataout $end
+$var wire 1 y- vga_ins|img_data_inst|altsyncram_component|auto_generated|mux2|_~27_combout $end
+$var wire 1 z- vga_ins|img_data_inst|altsyncram_component|auto_generated|mux2|result_node[2]~56_combout $end
+$var wire 1 {- vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a138~portadataout $end
+$var wire 1 |- vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a146~portadataout $end
+$var wire 1 }- vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a130~portadataout $end
+$var wire 1 ~- vga_ins|img_data_inst|altsyncram_component|auto_generated|mux2|_~28_combout $end
+$var wire 1 !. vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a154~portadataout $end
+$var wire 1 ". vga_ins|img_data_inst|altsyncram_component|auto_generated|mux2|_~29_combout $end
+$var wire 1 #. vga_ins|img_data_inst|altsyncram_component|auto_generated|mux2|result_node[2]~57_combout $end
+$var wire 1 $. vga_ins|img_data_inst|altsyncram_component|auto_generated|mux2|result_node[2]~58_combout $end
+$var wire 1 %. vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a299~portadataout $end
+$var wire 1 &. vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a291~portadataout $end
+$var wire 1 '. vga_ins|img_data_inst|altsyncram_component|auto_generated|mux2|result_node[3]~59_combout $end
+$var wire 1 (. vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a267~portadataout $end
+$var wire 1 ). vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a275~portadataout $end
+$var wire 1 *. vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a259~portadataout $end
+$var wire 1 +. vga_ins|img_data_inst|altsyncram_component|auto_generated|mux2|_~30_combout $end
+$var wire 1 ,. vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a283~portadataout $end
+$var wire 1 -. vga_ins|img_data_inst|altsyncram_component|auto_generated|mux2|_~31_combout $end
+$var wire 1 .. vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a11~portadataout $end
+$var wire 1 /. vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a19~portadataout $end
+$var wire 1 0. vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a3~portadataout $end
+$var wire 1 1. vga_ins|img_data_inst|altsyncram_component|auto_generated|mux2|_~32_combout $end
+$var wire 1 2. vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a27~portadataout $end
+$var wire 1 3. vga_ins|img_data_inst|altsyncram_component|auto_generated|mux2|_~33_combout $end
+$var wire 1 4. vga_ins|img_data_inst|altsyncram_component|auto_generated|mux2|result_node[3]~60_combout $end
+$var wire 1 5. vga_ins|img_data_inst|altsyncram_component|auto_generated|mux2|result_node[3]~61_combout $end
+$var wire 1 6. vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a211~portadataout $end
+$var wire 1 7. vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a195~portadataout $end
+$var wire 1 8. vga_ins|img_data_inst|altsyncram_component|auto_generated|mux2|result_node[3]~62_combout $end
+$var wire 1 9. vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a219~portadataout $end
+$var wire 1 :. vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a203~portadataout $end
+$var wire 1 ;. vga_ins|img_data_inst|altsyncram_component|auto_generated|mux2|result_node[3]~63_combout $end
+$var wire 1 <. vga_ins|img_data_inst|altsyncram_component|auto_generated|mux2|result_node[3]~64_combout $end
+$var wire 1 =. vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a243~portadataout $end
+$var wire 1 >. vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a227~portadataout $end
+$var wire 1 ?. vga_ins|img_data_inst|altsyncram_component|auto_generated|mux2|result_node[3]~65_combout $end
+$var wire 1 @. vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a251~portadataout $end
+$var wire 1 A. vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a235~portadataout $end
+$var wire 1 B. vga_ins|img_data_inst|altsyncram_component|auto_generated|mux2|result_node[3]~66_combout $end
+$var wire 1 C. vga_ins|img_data_inst|altsyncram_component|auto_generated|mux2|result_node[3]~67_combout $end
+$var wire 1 D. vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a83~portadataout $end
+$var wire 1 E. vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a67~portadataout $end
+$var wire 1 F. vga_ins|img_data_inst|altsyncram_component|auto_generated|mux2|result_node[3]~68_combout $end
+$var wire 1 G. vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a91~portadataout $end
+$var wire 1 H. vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a75~portadataout $end
+$var wire 1 I. vga_ins|img_data_inst|altsyncram_component|auto_generated|mux2|result_node[3]~69_combout $end
+$var wire 1 J. vga_ins|img_data_inst|altsyncram_component|auto_generated|mux2|result_node[3]~70_combout $end
+$var wire 1 K. vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a115~portadataout $end
+$var wire 1 L. vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a99~portadataout $end
+$var wire 1 M. vga_ins|img_data_inst|altsyncram_component|auto_generated|mux2|result_node[3]~71_combout $end
+$var wire 1 N. vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a123~portadataout $end
+$var wire 1 O. vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a107~portadataout $end
+$var wire 1 P. vga_ins|img_data_inst|altsyncram_component|auto_generated|mux2|result_node[3]~72_combout $end
+$var wire 1 Q. vga_ins|img_data_inst|altsyncram_component|auto_generated|mux2|result_node[3]~73_combout $end
+$var wire 1 R. vga_ins|img_data_inst|altsyncram_component|auto_generated|mux2|result_node[3]~74_combout $end
+$var wire 1 S. vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a171~portadataout $end
+$var wire 1 T. vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a179~portadataout $end
+$var wire 1 U. vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a163~portadataout $end
+$var wire 1 V. vga_ins|img_data_inst|altsyncram_component|auto_generated|mux2|_~34_combout $end
+$var wire 1 W. vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a187~portadataout $end
+$var wire 1 X. vga_ins|img_data_inst|altsyncram_component|auto_generated|mux2|_~35_combout $end
+$var wire 1 Y. vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a43~portadataout $end
+$var wire 1 Z. vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a51~portadataout $end
+$var wire 1 [. vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a35~portadataout $end
+$var wire 1 \. vga_ins|img_data_inst|altsyncram_component|auto_generated|mux2|_~36_combout $end
+$var wire 1 ]. vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a59~portadataout $end
+$var wire 1 ^. vga_ins|img_data_inst|altsyncram_component|auto_generated|mux2|_~37_combout $end
+$var wire 1 _. vga_ins|img_data_inst|altsyncram_component|auto_generated|mux2|result_node[3]~75_combout $end
+$var wire 1 `. vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a139~portadataout $end
+$var wire 1 a. vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a147~portadataout $end
+$var wire 1 b. vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a131~portadataout $end
+$var wire 1 c. vga_ins|img_data_inst|altsyncram_component|auto_generated|mux2|_~38_combout $end
+$var wire 1 d. vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a155~portadataout $end
+$var wire 1 e. vga_ins|img_data_inst|altsyncram_component|auto_generated|mux2|_~39_combout $end
+$var wire 1 f. vga_ins|img_data_inst|altsyncram_component|auto_generated|mux2|result_node[3]~76_combout $end
+$var wire 1 g. vga_ins|img_data_inst|altsyncram_component|auto_generated|mux2|result_node[3]~77_combout $end
+$var wire 1 h. vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a300~portadataout $end
+$var wire 1 i. vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a292~portadataout $end
+$var wire 1 j. vga_ins|img_data_inst|altsyncram_component|auto_generated|mux2|result_node[4]~78_combout $end
+$var wire 1 k. vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a268~portadataout $end
+$var wire 1 l. vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a276~portadataout $end
+$var wire 1 m. vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a260~portadataout $end
+$var wire 1 n. vga_ins|img_data_inst|altsyncram_component|auto_generated|mux2|_~40_combout $end
+$var wire 1 o. vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a284~portadataout $end
+$var wire 1 p. vga_ins|img_data_inst|altsyncram_component|auto_generated|mux2|_~41_combout $end
+$var wire 1 q. vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a12~portadataout $end
+$var wire 1 r. vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a20~portadataout $end
+$var wire 1 s. vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a4~portadataout $end
+$var wire 1 t. vga_ins|img_data_inst|altsyncram_component|auto_generated|mux2|_~42_combout $end
+$var wire 1 u. vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a28~portadataout $end
+$var wire 1 v. vga_ins|img_data_inst|altsyncram_component|auto_generated|mux2|_~43_combout $end
+$var wire 1 w. vga_ins|img_data_inst|altsyncram_component|auto_generated|mux2|result_node[4]~79_combout $end
+$var wire 1 x. vga_ins|img_data_inst|altsyncram_component|auto_generated|mux2|result_node[4]~80_combout $end
+$var wire 1 y. vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a212~portadataout $end
+$var wire 1 z. vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a196~portadataout $end
+$var wire 1 {. vga_ins|img_data_inst|altsyncram_component|auto_generated|mux2|result_node[4]~81_combout $end
+$var wire 1 |. vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a220~portadataout $end
+$var wire 1 }. vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a204~portadataout $end
+$var wire 1 ~. vga_ins|img_data_inst|altsyncram_component|auto_generated|mux2|result_node[4]~82_combout $end
+$var wire 1 !/ vga_ins|img_data_inst|altsyncram_component|auto_generated|mux2|result_node[4]~83_combout $end
+$var wire 1 "/ vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a244~portadataout $end
+$var wire 1 #/ vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a228~portadataout $end
+$var wire 1 $/ vga_ins|img_data_inst|altsyncram_component|auto_generated|mux2|result_node[4]~84_combout $end
+$var wire 1 %/ vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a252~portadataout $end
+$var wire 1 &/ vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a236~portadataout $end
+$var wire 1 '/ vga_ins|img_data_inst|altsyncram_component|auto_generated|mux2|result_node[4]~85_combout $end
+$var wire 1 (/ vga_ins|img_data_inst|altsyncram_component|auto_generated|mux2|result_node[4]~86_combout $end
+$var wire 1 )/ vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a84~portadataout $end
+$var wire 1 */ vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a68~portadataout $end
+$var wire 1 +/ vga_ins|img_data_inst|altsyncram_component|auto_generated|mux2|result_node[4]~87_combout $end
+$var wire 1 ,/ vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a92~portadataout $end
+$var wire 1 -/ vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a76~portadataout $end
+$var wire 1 ./ vga_ins|img_data_inst|altsyncram_component|auto_generated|mux2|result_node[4]~88_combout $end
+$var wire 1 // vga_ins|img_data_inst|altsyncram_component|auto_generated|mux2|result_node[4]~89_combout $end
+$var wire 1 0/ vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a116~portadataout $end
+$var wire 1 1/ vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a100~portadataout $end
+$var wire 1 2/ vga_ins|img_data_inst|altsyncram_component|auto_generated|mux2|result_node[4]~90_combout $end
+$var wire 1 3/ vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a124~portadataout $end
+$var wire 1 4/ vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a108~portadataout $end
+$var wire 1 5/ vga_ins|img_data_inst|altsyncram_component|auto_generated|mux2|result_node[4]~91_combout $end
+$var wire 1 6/ vga_ins|img_data_inst|altsyncram_component|auto_generated|mux2|result_node[4]~92_combout $end
+$var wire 1 7/ vga_ins|img_data_inst|altsyncram_component|auto_generated|mux2|result_node[4]~93_combout $end
+$var wire 1 8/ vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a172~portadataout $end
+$var wire 1 9/ vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a180~portadataout $end
+$var wire 1 :/ vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a164~portadataout $end
+$var wire 1 ;/ vga_ins|img_data_inst|altsyncram_component|auto_generated|mux2|_~44_combout $end
+$var wire 1 </ vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a188~portadataout $end
+$var wire 1 =/ vga_ins|img_data_inst|altsyncram_component|auto_generated|mux2|_~45_combout $end
+$var wire 1 >/ vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a44~portadataout $end
+$var wire 1 ?/ vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a52~portadataout $end
+$var wire 1 @/ vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a36~portadataout $end
+$var wire 1 A/ vga_ins|img_data_inst|altsyncram_component|auto_generated|mux2|_~46_combout $end
+$var wire 1 B/ vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a60~portadataout $end
+$var wire 1 C/ vga_ins|img_data_inst|altsyncram_component|auto_generated|mux2|_~47_combout $end
+$var wire 1 D/ vga_ins|img_data_inst|altsyncram_component|auto_generated|mux2|result_node[4]~94_combout $end
+$var wire 1 E/ vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a140~portadataout $end
+$var wire 1 F/ vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a148~portadataout $end
+$var wire 1 G/ vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a132~portadataout $end
+$var wire 1 H/ vga_ins|img_data_inst|altsyncram_component|auto_generated|mux2|_~48_combout $end
+$var wire 1 I/ vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a156~portadataout $end
+$var wire 1 J/ vga_ins|img_data_inst|altsyncram_component|auto_generated|mux2|_~49_combout $end
+$var wire 1 K/ vga_ins|img_data_inst|altsyncram_component|auto_generated|mux2|result_node[4]~95_combout $end
+$var wire 1 L/ vga_ins|img_data_inst|altsyncram_component|auto_generated|mux2|result_node[4]~96_combout $end
+$var wire 1 M/ vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a301~portadataout $end
+$var wire 1 N/ vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a293~portadataout $end
+$var wire 1 O/ vga_ins|img_data_inst|altsyncram_component|auto_generated|mux2|result_node[5]~97_combout $end
+$var wire 1 P/ vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a269~portadataout $end
+$var wire 1 Q/ vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a277~portadataout $end
+$var wire 1 R/ vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a261~portadataout $end
+$var wire 1 S/ vga_ins|img_data_inst|altsyncram_component|auto_generated|mux2|_~50_combout $end
+$var wire 1 T/ vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a285~portadataout $end
+$var wire 1 U/ vga_ins|img_data_inst|altsyncram_component|auto_generated|mux2|_~51_combout $end
+$var wire 1 V/ vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a13~portadataout $end
+$var wire 1 W/ vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a21~portadataout $end
+$var wire 1 X/ vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a5~portadataout $end
+$var wire 1 Y/ vga_ins|img_data_inst|altsyncram_component|auto_generated|mux2|_~52_combout $end
+$var wire 1 Z/ vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a29~portadataout $end
+$var wire 1 [/ vga_ins|img_data_inst|altsyncram_component|auto_generated|mux2|_~53_combout $end
+$var wire 1 \/ vga_ins|img_data_inst|altsyncram_component|auto_generated|mux2|result_node[5]~98_combout $end
+$var wire 1 ]/ vga_ins|img_data_inst|altsyncram_component|auto_generated|mux2|result_node[5]~99_combout $end
+$var wire 1 ^/ vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a213~portadataout $end
+$var wire 1 _/ vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a197~portadataout $end
+$var wire 1 `/ vga_ins|img_data_inst|altsyncram_component|auto_generated|mux2|result_node[5]~100_combout $end
+$var wire 1 a/ vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a221~portadataout $end
+$var wire 1 b/ vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a205~portadataout $end
+$var wire 1 c/ vga_ins|img_data_inst|altsyncram_component|auto_generated|mux2|result_node[5]~101_combout $end
+$var wire 1 d/ vga_ins|img_data_inst|altsyncram_component|auto_generated|mux2|result_node[5]~102_combout $end
+$var wire 1 e/ vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a245~portadataout $end
+$var wire 1 f/ vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a229~portadataout $end
+$var wire 1 g/ vga_ins|img_data_inst|altsyncram_component|auto_generated|mux2|result_node[5]~103_combout $end
+$var wire 1 h/ vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a253~portadataout $end
+$var wire 1 i/ vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a237~portadataout $end
+$var wire 1 j/ vga_ins|img_data_inst|altsyncram_component|auto_generated|mux2|result_node[5]~104_combout $end
+$var wire 1 k/ vga_ins|img_data_inst|altsyncram_component|auto_generated|mux2|result_node[5]~105_combout $end
+$var wire 1 l/ vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a85~portadataout $end
+$var wire 1 m/ vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a69~portadataout $end
+$var wire 1 n/ vga_ins|img_data_inst|altsyncram_component|auto_generated|mux2|result_node[5]~106_combout $end
+$var wire 1 o/ vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a93~portadataout $end
+$var wire 1 p/ vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a77~portadataout $end
+$var wire 1 q/ vga_ins|img_data_inst|altsyncram_component|auto_generated|mux2|result_node[5]~107_combout $end
+$var wire 1 r/ vga_ins|img_data_inst|altsyncram_component|auto_generated|mux2|result_node[5]~108_combout $end
+$var wire 1 s/ vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a117~portadataout $end
+$var wire 1 t/ vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a101~portadataout $end
+$var wire 1 u/ vga_ins|img_data_inst|altsyncram_component|auto_generated|mux2|result_node[5]~109_combout $end
+$var wire 1 v/ vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a125~portadataout $end
+$var wire 1 w/ vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a109~portadataout $end
+$var wire 1 x/ vga_ins|img_data_inst|altsyncram_component|auto_generated|mux2|result_node[5]~110_combout $end
+$var wire 1 y/ vga_ins|img_data_inst|altsyncram_component|auto_generated|mux2|result_node[5]~111_combout $end
+$var wire 1 z/ vga_ins|img_data_inst|altsyncram_component|auto_generated|mux2|result_node[5]~112_combout $end
+$var wire 1 {/ vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a173~portadataout $end
+$var wire 1 |/ vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a181~portadataout $end
+$var wire 1 }/ vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a165~portadataout $end
+$var wire 1 ~/ vga_ins|img_data_inst|altsyncram_component|auto_generated|mux2|_~54_combout $end
+$var wire 1 !0 vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a189~portadataout $end
+$var wire 1 "0 vga_ins|img_data_inst|altsyncram_component|auto_generated|mux2|_~55_combout $end
+$var wire 1 #0 vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a45~portadataout $end
+$var wire 1 $0 vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a53~portadataout $end
+$var wire 1 %0 vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a37~portadataout $end
+$var wire 1 &0 vga_ins|img_data_inst|altsyncram_component|auto_generated|mux2|_~56_combout $end
+$var wire 1 '0 vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a61~portadataout $end
+$var wire 1 (0 vga_ins|img_data_inst|altsyncram_component|auto_generated|mux2|_~57_combout $end
+$var wire 1 )0 vga_ins|img_data_inst|altsyncram_component|auto_generated|mux2|result_node[5]~113_combout $end
+$var wire 1 *0 vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a141~portadataout $end
+$var wire 1 +0 vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a149~portadataout $end
+$var wire 1 ,0 vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a133~portadataout $end
+$var wire 1 -0 vga_ins|img_data_inst|altsyncram_component|auto_generated|mux2|_~58_combout $end
+$var wire 1 .0 vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a157~portadataout $end
+$var wire 1 /0 vga_ins|img_data_inst|altsyncram_component|auto_generated|mux2|_~59_combout $end
+$var wire 1 00 vga_ins|img_data_inst|altsyncram_component|auto_generated|mux2|result_node[5]~114_combout $end
+$var wire 1 10 vga_ins|img_data_inst|altsyncram_component|auto_generated|mux2|result_node[5]~115_combout $end
+$var wire 1 20 vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a302~portadataout $end
+$var wire 1 30 vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a294~portadataout $end
+$var wire 1 40 vga_ins|img_data_inst|altsyncram_component|auto_generated|mux2|result_node[6]~116_combout $end
+$var wire 1 50 vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a278~portadataout $end
+$var wire 1 60 vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a270~portadataout $end
+$var wire 1 70 vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a262~portadataout $end
+$var wire 1 80 vga_ins|img_data_inst|altsyncram_component|auto_generated|mux2|_~60_combout $end
+$var wire 1 90 vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a286~portadataout $end
+$var wire 1 :0 vga_ins|img_data_inst|altsyncram_component|auto_generated|mux2|_~61_combout $end
+$var wire 1 ;0 vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a14~portadataout $end
+$var wire 1 <0 vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a22~portadataout $end
+$var wire 1 =0 vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a6~portadataout $end
+$var wire 1 >0 vga_ins|img_data_inst|altsyncram_component|auto_generated|mux2|_~62_combout $end
+$var wire 1 ?0 vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a30~portadataout $end
+$var wire 1 @0 vga_ins|img_data_inst|altsyncram_component|auto_generated|mux2|_~63_combout $end
+$var wire 1 A0 vga_ins|img_data_inst|altsyncram_component|auto_generated|mux2|result_node[6]~117_combout $end
+$var wire 1 B0 vga_ins|img_data_inst|altsyncram_component|auto_generated|mux2|result_node[6]~118_combout $end
+$var wire 1 C0 vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a214~portadataout $end
+$var wire 1 D0 vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a198~portadataout $end
+$var wire 1 E0 vga_ins|img_data_inst|altsyncram_component|auto_generated|mux2|result_node[6]~119_combout $end
+$var wire 1 F0 vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a222~portadataout $end
+$var wire 1 G0 vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a206~portadataout $end
+$var wire 1 H0 vga_ins|img_data_inst|altsyncram_component|auto_generated|mux2|result_node[6]~120_combout $end
+$var wire 1 I0 vga_ins|img_data_inst|altsyncram_component|auto_generated|mux2|result_node[6]~121_combout $end
+$var wire 1 J0 vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a246~portadataout $end
+$var wire 1 K0 vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a230~portadataout $end
+$var wire 1 L0 vga_ins|img_data_inst|altsyncram_component|auto_generated|mux2|result_node[6]~122_combout $end
+$var wire 1 M0 vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a254~portadataout $end
+$var wire 1 N0 vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a238~portadataout $end
+$var wire 1 O0 vga_ins|img_data_inst|altsyncram_component|auto_generated|mux2|result_node[6]~123_combout $end
+$var wire 1 P0 vga_ins|img_data_inst|altsyncram_component|auto_generated|mux2|result_node[6]~124_combout $end
+$var wire 1 Q0 vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a86~portadataout $end
+$var wire 1 R0 vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a70~portadataout $end
+$var wire 1 S0 vga_ins|img_data_inst|altsyncram_component|auto_generated|mux2|result_node[6]~125_combout $end
+$var wire 1 T0 vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a94~portadataout $end
+$var wire 1 U0 vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a78~portadataout $end
+$var wire 1 V0 vga_ins|img_data_inst|altsyncram_component|auto_generated|mux2|result_node[6]~126_combout $end
+$var wire 1 W0 vga_ins|img_data_inst|altsyncram_component|auto_generated|mux2|result_node[6]~127_combout $end
+$var wire 1 X0 vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a118~portadataout $end
+$var wire 1 Y0 vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a102~portadataout $end
+$var wire 1 Z0 vga_ins|img_data_inst|altsyncram_component|auto_generated|mux2|result_node[6]~128_combout $end
+$var wire 1 [0 vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a126~portadataout $end
+$var wire 1 \0 vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a110~portadataout $end
+$var wire 1 ]0 vga_ins|img_data_inst|altsyncram_component|auto_generated|mux2|result_node[6]~129_combout $end
+$var wire 1 ^0 vga_ins|img_data_inst|altsyncram_component|auto_generated|mux2|result_node[6]~130_combout $end
+$var wire 1 _0 vga_ins|img_data_inst|altsyncram_component|auto_generated|mux2|result_node[6]~131_combout $end
+$var wire 1 `0 vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a174~portadataout $end
+$var wire 1 a0 vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a182~portadataout $end
+$var wire 1 b0 vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a166~portadataout $end
+$var wire 1 c0 vga_ins|img_data_inst|altsyncram_component|auto_generated|mux2|_~64_combout $end
+$var wire 1 d0 vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a190~portadataout $end
+$var wire 1 e0 vga_ins|img_data_inst|altsyncram_component|auto_generated|mux2|_~65_combout $end
+$var wire 1 f0 vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a54~portadataout $end
+$var wire 1 g0 vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a46~portadataout $end
+$var wire 1 h0 vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a38~portadataout $end
+$var wire 1 i0 vga_ins|img_data_inst|altsyncram_component|auto_generated|mux2|_~66_combout $end
+$var wire 1 j0 vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a62~portadataout $end
+$var wire 1 k0 vga_ins|img_data_inst|altsyncram_component|auto_generated|mux2|_~67_combout $end
+$var wire 1 l0 vga_ins|img_data_inst|altsyncram_component|auto_generated|mux2|result_node[6]~132_combout $end
+$var wire 1 m0 vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a142~portadataout $end
+$var wire 1 n0 vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a150~portadataout $end
+$var wire 1 o0 vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a134~portadataout $end
+$var wire 1 p0 vga_ins|img_data_inst|altsyncram_component|auto_generated|mux2|_~68_combout $end
+$var wire 1 q0 vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a158~portadataout $end
+$var wire 1 r0 vga_ins|img_data_inst|altsyncram_component|auto_generated|mux2|_~69_combout $end
+$var wire 1 s0 vga_ins|img_data_inst|altsyncram_component|auto_generated|mux2|result_node[6]~133_combout $end
+$var wire 1 t0 vga_ins|img_data_inst|altsyncram_component|auto_generated|mux2|result_node[6]~134_combout $end
+$var wire 1 u0 vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a303~portadataout $end
+$var wire 1 v0 vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a295~portadataout $end
+$var wire 1 w0 vga_ins|img_data_inst|altsyncram_component|auto_generated|mux2|result_node[7]~135_combout $end
+$var wire 1 x0 vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a271~portadataout $end
+$var wire 1 y0 vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a279~portadataout $end
+$var wire 1 z0 vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a263~portadataout $end
+$var wire 1 {0 vga_ins|img_data_inst|altsyncram_component|auto_generated|mux2|_~70_combout $end
+$var wire 1 |0 vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a287~portadataout $end
+$var wire 1 }0 vga_ins|img_data_inst|altsyncram_component|auto_generated|mux2|_~71_combout $end
+$var wire 1 ~0 vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a23~portadataout $end
+$var wire 1 !1 vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a15~portadataout $end
+$var wire 1 "1 vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a7~portadataout $end
+$var wire 1 #1 vga_ins|img_data_inst|altsyncram_component|auto_generated|mux2|_~72_combout $end
+$var wire 1 $1 vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a31~portadataout $end
+$var wire 1 %1 vga_ins|img_data_inst|altsyncram_component|auto_generated|mux2|_~73_combout $end
+$var wire 1 &1 vga_ins|img_data_inst|altsyncram_component|auto_generated|mux2|result_node[7]~136_combout $end
+$var wire 1 '1 vga_ins|img_data_inst|altsyncram_component|auto_generated|mux2|result_node[7]~137_combout $end
+$var wire 1 (1 vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a215~portadataout $end
+$var wire 1 )1 vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a199~portadataout $end
+$var wire 1 *1 vga_ins|img_data_inst|altsyncram_component|auto_generated|mux2|result_node[7]~138_combout $end
+$var wire 1 +1 vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a223~portadataout $end
+$var wire 1 ,1 vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a207~portadataout $end
+$var wire 1 -1 vga_ins|img_data_inst|altsyncram_component|auto_generated|mux2|result_node[7]~139_combout $end
+$var wire 1 .1 vga_ins|img_data_inst|altsyncram_component|auto_generated|mux2|result_node[7]~140_combout $end
+$var wire 1 /1 vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a247~portadataout $end
+$var wire 1 01 vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a231~portadataout $end
+$var wire 1 11 vga_ins|img_data_inst|altsyncram_component|auto_generated|mux2|result_node[7]~141_combout $end
+$var wire 1 21 vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a255~portadataout $end
+$var wire 1 31 vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a239~portadataout $end
+$var wire 1 41 vga_ins|img_data_inst|altsyncram_component|auto_generated|mux2|result_node[7]~142_combout $end
+$var wire 1 51 vga_ins|img_data_inst|altsyncram_component|auto_generated|mux2|result_node[7]~143_combout $end
+$var wire 1 61 vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a87~portadataout $end
+$var wire 1 71 vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a71~portadataout $end
+$var wire 1 81 vga_ins|img_data_inst|altsyncram_component|auto_generated|mux2|result_node[7]~144_combout $end
+$var wire 1 91 vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a95~portadataout $end
+$var wire 1 :1 vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a79~portadataout $end
+$var wire 1 ;1 vga_ins|img_data_inst|altsyncram_component|auto_generated|mux2|result_node[7]~145_combout $end
+$var wire 1 <1 vga_ins|img_data_inst|altsyncram_component|auto_generated|mux2|result_node[7]~146_combout $end
+$var wire 1 =1 vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a119~portadataout $end
+$var wire 1 >1 vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a103~portadataout $end
+$var wire 1 ?1 vga_ins|img_data_inst|altsyncram_component|auto_generated|mux2|result_node[7]~147_combout $end
+$var wire 1 @1 vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a127~portadataout $end
+$var wire 1 A1 vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a111~portadataout $end
+$var wire 1 B1 vga_ins|img_data_inst|altsyncram_component|auto_generated|mux2|result_node[7]~148_combout $end
+$var wire 1 C1 vga_ins|img_data_inst|altsyncram_component|auto_generated|mux2|result_node[7]~149_combout $end
+$var wire 1 D1 vga_ins|img_data_inst|altsyncram_component|auto_generated|mux2|result_node[7]~150_combout $end
+$var wire 1 E1 vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a175~portadataout $end
+$var wire 1 F1 vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a183~portadataout $end
+$var wire 1 G1 vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a167~portadataout $end
+$var wire 1 H1 vga_ins|img_data_inst|altsyncram_component|auto_generated|mux2|_~74_combout $end
+$var wire 1 I1 vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a191~portadataout $end
+$var wire 1 J1 vga_ins|img_data_inst|altsyncram_component|auto_generated|mux2|_~75_combout $end
+$var wire 1 K1 vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a47~portadataout $end
+$var wire 1 L1 vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a55~portadataout $end
+$var wire 1 M1 vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a39~portadataout $end
+$var wire 1 N1 vga_ins|img_data_inst|altsyncram_component|auto_generated|mux2|_~76_combout $end
+$var wire 1 O1 vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a63~portadataout $end
+$var wire 1 P1 vga_ins|img_data_inst|altsyncram_component|auto_generated|mux2|_~77_combout $end
+$var wire 1 Q1 vga_ins|img_data_inst|altsyncram_component|auto_generated|mux2|result_node[7]~151_combout $end
+$var wire 1 R1 vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a151~portadataout $end
+$var wire 1 S1 vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a143~portadataout $end
+$var wire 1 T1 vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a135~portadataout $end
+$var wire 1 U1 vga_ins|img_data_inst|altsyncram_component|auto_generated|mux2|_~78_combout $end
+$var wire 1 V1 vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a159~portadataout $end
+$var wire 1 W1 vga_ins|img_data_inst|altsyncram_component|auto_generated|mux2|_~79_combout $end
+$var wire 1 X1 vga_ins|img_data_inst|altsyncram_component|auto_generated|mux2|result_node[7]~152_combout $end
+$var wire 1 Y1 vga_ins|img_data_inst|altsyncram_component|auto_generated|mux2|result_node[7]~153_combout $end
+$var wire 1 Z1 vga_ins|bgr_data [23] $end
+$var wire 1 [1 vga_ins|bgr_data [22] $end
+$var wire 1 \1 vga_ins|bgr_data [21] $end
+$var wire 1 ]1 vga_ins|bgr_data [20] $end
+$var wire 1 ^1 vga_ins|bgr_data [19] $end
+$var wire 1 _1 vga_ins|bgr_data [18] $end
+$var wire 1 `1 vga_ins|bgr_data [17] $end
+$var wire 1 a1 vga_ins|bgr_data [16] $end
+$var wire 1 b1 vga_ins|bgr_data [15] $end
+$var wire 1 c1 vga_ins|bgr_data [14] $end
+$var wire 1 d1 vga_ins|bgr_data [13] $end
+$var wire 1 e1 vga_ins|bgr_data [12] $end
+$var wire 1 f1 vga_ins|bgr_data [11] $end
+$var wire 1 g1 vga_ins|bgr_data [10] $end
+$var wire 1 h1 vga_ins|bgr_data [9] $end
+$var wire 1 i1 vga_ins|bgr_data [8] $end
+$var wire 1 j1 vga_ins|bgr_data [7] $end
+$var wire 1 k1 vga_ins|bgr_data [6] $end
+$var wire 1 l1 vga_ins|bgr_data [5] $end
+$var wire 1 m1 vga_ins|bgr_data [4] $end
+$var wire 1 n1 vga_ins|bgr_data [3] $end
+$var wire 1 o1 vga_ins|bgr_data [2] $end
+$var wire 1 p1 vga_ins|bgr_data [1] $end
+$var wire 1 q1 vga_ins|bgr_data [0] $end
+$var wire 1 r1 vga_ins|img_index_inst|altsyncram_component|auto_generated|q_a [23] $end
+$var wire 1 s1 vga_ins|img_index_inst|altsyncram_component|auto_generated|q_a [22] $end
+$var wire 1 t1 vga_ins|img_index_inst|altsyncram_component|auto_generated|q_a [21] $end
+$var wire 1 u1 vga_ins|img_index_inst|altsyncram_component|auto_generated|q_a [20] $end
+$var wire 1 v1 vga_ins|img_index_inst|altsyncram_component|auto_generated|q_a [19] $end
+$var wire 1 w1 vga_ins|img_index_inst|altsyncram_component|auto_generated|q_a [18] $end
+$var wire 1 x1 vga_ins|img_index_inst|altsyncram_component|auto_generated|q_a [17] $end
+$var wire 1 y1 vga_ins|img_index_inst|altsyncram_component|auto_generated|q_a [16] $end
+$var wire 1 z1 vga_ins|img_index_inst|altsyncram_component|auto_generated|q_a [15] $end
+$var wire 1 {1 vga_ins|img_index_inst|altsyncram_component|auto_generated|q_a [14] $end
+$var wire 1 |1 vga_ins|img_index_inst|altsyncram_component|auto_generated|q_a [13] $end
+$var wire 1 }1 vga_ins|img_index_inst|altsyncram_component|auto_generated|q_a [12] $end
+$var wire 1 ~1 vga_ins|img_index_inst|altsyncram_component|auto_generated|q_a [11] $end
+$var wire 1 !2 vga_ins|img_index_inst|altsyncram_component|auto_generated|q_a [10] $end
+$var wire 1 "2 vga_ins|img_index_inst|altsyncram_component|auto_generated|q_a [9] $end
+$var wire 1 #2 vga_ins|img_index_inst|altsyncram_component|auto_generated|q_a [8] $end
+$var wire 1 $2 vga_ins|img_index_inst|altsyncram_component|auto_generated|q_a [7] $end
+$var wire 1 %2 vga_ins|img_index_inst|altsyncram_component|auto_generated|q_a [6] $end
+$var wire 1 &2 vga_ins|img_index_inst|altsyncram_component|auto_generated|q_a [5] $end
+$var wire 1 '2 vga_ins|img_index_inst|altsyncram_component|auto_generated|q_a [4] $end
+$var wire 1 (2 vga_ins|img_index_inst|altsyncram_component|auto_generated|q_a [3] $end
+$var wire 1 )2 vga_ins|img_index_inst|altsyncram_component|auto_generated|q_a [2] $end
+$var wire 1 *2 vga_ins|img_index_inst|altsyncram_component|auto_generated|q_a [1] $end
+$var wire 1 +2 vga_ins|img_index_inst|altsyncram_component|auto_generated|q_a [0] $end
+$var wire 1 ,2 myps2|last_data_received [7] $end
+$var wire 1 -2 myps2|last_data_received [6] $end
+$var wire 1 .2 myps2|last_data_received [5] $end
+$var wire 1 /2 myps2|last_data_received [4] $end
+$var wire 1 02 myps2|last_data_received [3] $end
+$var wire 1 12 myps2|last_data_received [2] $end
+$var wire 1 22 myps2|last_data_received [1] $end
+$var wire 1 32 myps2|last_data_received [0] $end
+$var wire 1 42 vga_ins|img_data_inst|altsyncram_component|auto_generated|rden_decode|w_anode1514w [3] $end
+$var wire 1 52 vga_ins|img_data_inst|altsyncram_component|auto_generated|rden_decode|w_anode1514w [2] $end
+$var wire 1 62 vga_ins|img_data_inst|altsyncram_component|auto_generated|rden_decode|w_anode1514w [1] $end
+$var wire 1 72 vga_ins|img_data_inst|altsyncram_component|auto_generated|rden_decode|w_anode1514w [0] $end
+$var wire 1 82 vga_ins|img_data_inst|altsyncram_component|auto_generated|address_reg_a [5] $end
+$var wire 1 92 vga_ins|img_data_inst|altsyncram_component|auto_generated|address_reg_a [4] $end
+$var wire 1 :2 vga_ins|img_data_inst|altsyncram_component|auto_generated|address_reg_a [3] $end
+$var wire 1 ;2 vga_ins|img_data_inst|altsyncram_component|auto_generated|address_reg_a [2] $end
+$var wire 1 <2 vga_ins|img_data_inst|altsyncram_component|auto_generated|address_reg_a [1] $end
+$var wire 1 =2 vga_ins|img_data_inst|altsyncram_component|auto_generated|address_reg_a [0] $end
+$var wire 1 >2 mylcd|delay [17] $end
+$var wire 1 ?2 mylcd|delay [16] $end
+$var wire 1 @2 mylcd|delay [15] $end
+$var wire 1 A2 mylcd|delay [14] $end
+$var wire 1 B2 mylcd|delay [13] $end
+$var wire 1 C2 mylcd|delay [12] $end
+$var wire 1 D2 mylcd|delay [11] $end
+$var wire 1 E2 mylcd|delay [10] $end
+$var wire 1 F2 mylcd|delay [9] $end
+$var wire 1 G2 mylcd|delay [8] $end
+$var wire 1 H2 mylcd|delay [7] $end
+$var wire 1 I2 mylcd|delay [6] $end
+$var wire 1 J2 mylcd|delay [5] $end
+$var wire 1 K2 mylcd|delay [4] $end
+$var wire 1 L2 mylcd|delay [3] $end
+$var wire 1 M2 mylcd|delay [2] $end
+$var wire 1 N2 mylcd|delay [1] $end
+$var wire 1 O2 mylcd|delay [0] $end
+$var wire 1 P2 r0|Cont [19] $end
+$var wire 1 Q2 r0|Cont [18] $end
+$var wire 1 R2 r0|Cont [17] $end
+$var wire 1 S2 r0|Cont [16] $end
+$var wire 1 T2 r0|Cont [15] $end
+$var wire 1 U2 r0|Cont [14] $end
+$var wire 1 V2 r0|Cont [13] $end
+$var wire 1 W2 r0|Cont [12] $end
+$var wire 1 X2 r0|Cont [11] $end
+$var wire 1 Y2 r0|Cont [10] $end
+$var wire 1 Z2 r0|Cont [9] $end
+$var wire 1 [2 r0|Cont [8] $end
+$var wire 1 \2 r0|Cont [7] $end
+$var wire 1 ]2 r0|Cont [6] $end
+$var wire 1 ^2 r0|Cont [5] $end
+$var wire 1 _2 r0|Cont [4] $end
+$var wire 1 `2 r0|Cont [3] $end
+$var wire 1 a2 r0|Cont [2] $end
+$var wire 1 b2 r0|Cont [1] $end
+$var wire 1 c2 r0|Cont [0] $end
+$var wire 1 d2 vga_ins|img_data_inst|altsyncram_component|auto_generated|rden_decode|w_anode1535w [3] $end
+$var wire 1 e2 vga_ins|img_data_inst|altsyncram_component|auto_generated|rden_decode|w_anode1535w [2] $end
+$var wire 1 f2 vga_ins|img_data_inst|altsyncram_component|auto_generated|rden_decode|w_anode1535w [1] $end
+$var wire 1 g2 vga_ins|img_data_inst|altsyncram_component|auto_generated|rden_decode|w_anode1535w [0] $end
+$var wire 1 h2 mylcd|lcd_data [7] $end
+$var wire 1 i2 mylcd|lcd_data [6] $end
+$var wire 1 j2 mylcd|lcd_data [5] $end
+$var wire 1 k2 mylcd|lcd_data [4] $end
+$var wire 1 l2 mylcd|lcd_data [3] $end
+$var wire 1 m2 mylcd|lcd_data [2] $end
+$var wire 1 n2 mylcd|lcd_data [1] $end
+$var wire 1 o2 mylcd|lcd_data [0] $end
+$var wire 1 p2 vga_ins|ADDR [18] $end
+$var wire 1 q2 vga_ins|ADDR [17] $end
+$var wire 1 r2 vga_ins|ADDR [16] $end
+$var wire 1 s2 vga_ins|ADDR [15] $end
+$var wire 1 t2 vga_ins|ADDR [14] $end
+$var wire 1 u2 vga_ins|ADDR [13] $end
+$var wire 1 v2 vga_ins|ADDR [12] $end
+$var wire 1 w2 vga_ins|ADDR [11] $end
+$var wire 1 x2 vga_ins|ADDR [10] $end
+$var wire 1 y2 vga_ins|ADDR [9] $end
+$var wire 1 z2 vga_ins|ADDR [8] $end
+$var wire 1 {2 vga_ins|ADDR [7] $end
+$var wire 1 |2 vga_ins|ADDR [6] $end
+$var wire 1 }2 vga_ins|ADDR [5] $end
+$var wire 1 ~2 vga_ins|ADDR [4] $end
+$var wire 1 !3 vga_ins|ADDR [3] $end
+$var wire 1 "3 vga_ins|ADDR [2] $end
+$var wire 1 #3 vga_ins|ADDR [1] $end
+$var wire 1 $3 vga_ins|ADDR [0] $end
+$var wire 1 %3 vga_ins|img_data_inst|altsyncram_component|auto_generated|rden_decode|w_anode1525w [3] $end
+$var wire 1 &3 vga_ins|img_data_inst|altsyncram_component|auto_generated|rden_decode|w_anode1525w [2] $end
+$var wire 1 '3 vga_ins|img_data_inst|altsyncram_component|auto_generated|rden_decode|w_anode1525w [1] $end
+$var wire 1 (3 vga_ins|img_data_inst|altsyncram_component|auto_generated|rden_decode|w_anode1525w [0] $end
+$var wire 1 )3 mylcd|index [5] $end
+$var wire 1 *3 mylcd|index [4] $end
+$var wire 1 +3 mylcd|index [3] $end
+$var wire 1 ,3 mylcd|index [2] $end
+$var wire 1 -3 mylcd|index [1] $end
+$var wire 1 .3 mylcd|index [0] $end
+$var wire 1 /3 vga_ins|img_data_inst|altsyncram_component|auto_generated|rden_decode|w_anode1575w [3] $end
+$var wire 1 03 vga_ins|img_data_inst|altsyncram_component|auto_generated|rden_decode|w_anode1575w [2] $end
+$var wire 1 13 vga_ins|img_data_inst|altsyncram_component|auto_generated|rden_decode|w_anode1575w [1] $end
+$var wire 1 23 vga_ins|img_data_inst|altsyncram_component|auto_generated|rden_decode|w_anode1575w [0] $end
+$var wire 1 33 mylcd|state1 [31] $end
+$var wire 1 43 mylcd|state1 [30] $end
+$var wire 1 53 mylcd|state1 [29] $end
+$var wire 1 63 mylcd|state1 [28] $end
+$var wire 1 73 mylcd|state1 [27] $end
+$var wire 1 83 mylcd|state1 [26] $end
+$var wire 1 93 mylcd|state1 [25] $end
+$var wire 1 :3 mylcd|state1 [24] $end
+$var wire 1 ;3 mylcd|state1 [23] $end
+$var wire 1 <3 mylcd|state1 [22] $end
+$var wire 1 =3 mylcd|state1 [21] $end
+$var wire 1 >3 mylcd|state1 [20] $end
+$var wire 1 ?3 mylcd|state1 [19] $end
+$var wire 1 @3 mylcd|state1 [18] $end
+$var wire 1 A3 mylcd|state1 [17] $end
+$var wire 1 B3 mylcd|state1 [16] $end
+$var wire 1 C3 mylcd|state1 [15] $end
+$var wire 1 D3 mylcd|state1 [14] $end
+$var wire 1 E3 mylcd|state1 [13] $end
+$var wire 1 F3 mylcd|state1 [12] $end
+$var wire 1 G3 mylcd|state1 [11] $end
+$var wire 1 H3 mylcd|state1 [10] $end
+$var wire 1 I3 mylcd|state1 [9] $end
+$var wire 1 J3 mylcd|state1 [8] $end
+$var wire 1 K3 mylcd|state1 [7] $end
+$var wire 1 L3 mylcd|state1 [6] $end
+$var wire 1 M3 mylcd|state1 [5] $end
+$var wire 1 N3 mylcd|state1 [4] $end
+$var wire 1 O3 mylcd|state1 [3] $end
+$var wire 1 P3 mylcd|state1 [2] $end
+$var wire 1 Q3 mylcd|state1 [1] $end
+$var wire 1 R3 mylcd|state1 [0] $end
+$var wire 1 S3 vga_ins|img_data_inst|altsyncram_component|auto_generated|rden_decode|w_anode1585w [3] $end
+$var wire 1 T3 vga_ins|img_data_inst|altsyncram_component|auto_generated|rden_decode|w_anode1585w [2] $end
+$var wire 1 U3 vga_ins|img_data_inst|altsyncram_component|auto_generated|rden_decode|w_anode1585w [1] $end
+$var wire 1 V3 vga_ins|img_data_inst|altsyncram_component|auto_generated|rden_decode|w_anode1585w [0] $end
+$var wire 1 W3 mylcd|state2 [31] $end
+$var wire 1 X3 mylcd|state2 [30] $end
+$var wire 1 Y3 mylcd|state2 [29] $end
+$var wire 1 Z3 mylcd|state2 [28] $end
+$var wire 1 [3 mylcd|state2 [27] $end
+$var wire 1 \3 mylcd|state2 [26] $end
+$var wire 1 ]3 mylcd|state2 [25] $end
+$var wire 1 ^3 mylcd|state2 [24] $end
+$var wire 1 _3 mylcd|state2 [23] $end
+$var wire 1 `3 mylcd|state2 [22] $end
+$var wire 1 a3 mylcd|state2 [21] $end
+$var wire 1 b3 mylcd|state2 [20] $end
+$var wire 1 c3 mylcd|state2 [19] $end
+$var wire 1 d3 mylcd|state2 [18] $end
+$var wire 1 e3 mylcd|state2 [17] $end
+$var wire 1 f3 mylcd|state2 [16] $end
+$var wire 1 g3 mylcd|state2 [15] $end
+$var wire 1 h3 mylcd|state2 [14] $end
+$var wire 1 i3 mylcd|state2 [13] $end
+$var wire 1 j3 mylcd|state2 [12] $end
+$var wire 1 k3 mylcd|state2 [11] $end
+$var wire 1 l3 mylcd|state2 [10] $end
+$var wire 1 m3 mylcd|state2 [9] $end
+$var wire 1 n3 mylcd|state2 [8] $end
+$var wire 1 o3 mylcd|state2 [7] $end
+$var wire 1 p3 mylcd|state2 [6] $end
+$var wire 1 q3 mylcd|state2 [5] $end
+$var wire 1 r3 mylcd|state2 [4] $end
+$var wire 1 s3 mylcd|state2 [3] $end
+$var wire 1 t3 mylcd|state2 [2] $end
+$var wire 1 u3 mylcd|state2 [1] $end
+$var wire 1 v3 mylcd|state2 [0] $end
+$var wire 1 w3 vga_ins|img_data_inst|altsyncram_component|auto_generated|rden_decode|w_anode1491w [3] $end
+$var wire 1 x3 vga_ins|img_data_inst|altsyncram_component|auto_generated|rden_decode|w_anode1491w [2] $end
+$var wire 1 y3 vga_ins|img_data_inst|altsyncram_component|auto_generated|rden_decode|w_anode1491w [1] $end
+$var wire 1 z3 vga_ins|img_data_inst|altsyncram_component|auto_generated|rden_decode|w_anode1491w [0] $end
+$var wire 1 {3 myps2|PS2|PS2_Data_In|received_data [7] $end
+$var wire 1 |3 myps2|PS2|PS2_Data_In|received_data [6] $end
+$var wire 1 }3 myps2|PS2|PS2_Data_In|received_data [5] $end
+$var wire 1 ~3 myps2|PS2|PS2_Data_In|received_data [4] $end
+$var wire 1 !4 myps2|PS2|PS2_Data_In|received_data [3] $end
+$var wire 1 "4 myps2|PS2|PS2_Data_In|received_data [2] $end
+$var wire 1 #4 myps2|PS2|PS2_Data_In|received_data [1] $end
+$var wire 1 $4 myps2|PS2|PS2_Data_In|received_data [0] $end
+$var wire 1 %4 mycounter|cnt [25] $end
+$var wire 1 &4 mycounter|cnt [24] $end
+$var wire 1 '4 mycounter|cnt [23] $end
+$var wire 1 (4 mycounter|cnt [22] $end
+$var wire 1 )4 mycounter|cnt [21] $end
+$var wire 1 *4 mycounter|cnt [20] $end
+$var wire 1 +4 mycounter|cnt [19] $end
+$var wire 1 ,4 mycounter|cnt [18] $end
+$var wire 1 -4 mycounter|cnt [17] $end
+$var wire 1 .4 mycounter|cnt [16] $end
+$var wire 1 /4 mycounter|cnt [15] $end
+$var wire 1 04 mycounter|cnt [14] $end
+$var wire 1 14 mycounter|cnt [13] $end
+$var wire 1 24 mycounter|cnt [12] $end
+$var wire 1 34 mycounter|cnt [11] $end
+$var wire 1 44 mycounter|cnt [10] $end
+$var wire 1 54 mycounter|cnt [9] $end
+$var wire 1 64 mycounter|cnt [8] $end
+$var wire 1 74 mycounter|cnt [7] $end
+$var wire 1 84 mycounter|cnt [6] $end
+$var wire 1 94 mycounter|cnt [5] $end
+$var wire 1 :4 mycounter|cnt [4] $end
+$var wire 1 ;4 mycounter|cnt [3] $end
+$var wire 1 <4 mycounter|cnt [2] $end
+$var wire 1 =4 mycounter|cnt [1] $end
+$var wire 1 >4 mycounter|cnt [0] $end
+$var wire 1 ?4 vga_ins|img_data_inst|altsyncram_component|auto_generated|rden_decode|w_anode1565w [3] $end
+$var wire 1 @4 vga_ins|img_data_inst|altsyncram_component|auto_generated|rden_decode|w_anode1565w [2] $end
+$var wire 1 A4 vga_ins|img_data_inst|altsyncram_component|auto_generated|rden_decode|w_anode1565w [1] $end
+$var wire 1 B4 vga_ins|img_data_inst|altsyncram_component|auto_generated|rden_decode|w_anode1565w [0] $end
+$var wire 1 C4 mylcd|ptr [3] $end
+$var wire 1 D4 mylcd|ptr [2] $end
+$var wire 1 E4 mylcd|ptr [1] $end
+$var wire 1 F4 mylcd|ptr [0] $end
+$var wire 1 G4 vga_ins|img_data_inst|altsyncram_component|auto_generated|rden_decode|w_anode1481w [3] $end
+$var wire 1 H4 vga_ins|img_data_inst|altsyncram_component|auto_generated|rden_decode|w_anode1481w [2] $end
+$var wire 1 I4 vga_ins|img_data_inst|altsyncram_component|auto_generated|rden_decode|w_anode1481w [1] $end
+$var wire 1 J4 vga_ins|img_data_inst|altsyncram_component|auto_generated|rden_decode|w_anode1481w [0] $end
+$var wire 1 K4 myps2|PS2|PS2_Data_In|data_shift_reg [7] $end
+$var wire 1 L4 myps2|PS2|PS2_Data_In|data_shift_reg [6] $end
+$var wire 1 M4 myps2|PS2|PS2_Data_In|data_shift_reg [5] $end
+$var wire 1 N4 myps2|PS2|PS2_Data_In|data_shift_reg [4] $end
+$var wire 1 O4 myps2|PS2|PS2_Data_In|data_shift_reg [3] $end
+$var wire 1 P4 myps2|PS2|PS2_Data_In|data_shift_reg [2] $end
+$var wire 1 Q4 myps2|PS2|PS2_Data_In|data_shift_reg [1] $end
+$var wire 1 R4 myps2|PS2|PS2_Data_In|data_shift_reg [0] $end
+$var wire 1 S4 mylcd|count [4] $end
+$var wire 1 T4 mylcd|count [3] $end
+$var wire 1 U4 mylcd|count [2] $end
+$var wire 1 V4 mylcd|count [1] $end
+$var wire 1 W4 mylcd|count [0] $end
+$var wire 1 X4 vga_ins|img_data_inst|altsyncram_component|auto_generated|rden_decode|w_anode1420w [3] $end
+$var wire 1 Y4 vga_ins|img_data_inst|altsyncram_component|auto_generated|rden_decode|w_anode1420w [2] $end
+$var wire 1 Z4 vga_ins|img_data_inst|altsyncram_component|auto_generated|rden_decode|w_anode1420w [1] $end
+$var wire 1 [4 vga_ins|img_data_inst|altsyncram_component|auto_generated|rden_decode|w_anode1420w [0] $end
+$var wire 1 \4 vga_ins|LTM_ins|h_cnt [10] $end
+$var wire 1 ]4 vga_ins|LTM_ins|h_cnt [9] $end
+$var wire 1 ^4 vga_ins|LTM_ins|h_cnt [8] $end
+$var wire 1 _4 vga_ins|LTM_ins|h_cnt [7] $end
+$var wire 1 `4 vga_ins|LTM_ins|h_cnt [6] $end
+$var wire 1 a4 vga_ins|LTM_ins|h_cnt [5] $end
+$var wire 1 b4 vga_ins|LTM_ins|h_cnt [4] $end
+$var wire 1 c4 vga_ins|LTM_ins|h_cnt [3] $end
+$var wire 1 d4 vga_ins|LTM_ins|h_cnt [2] $end
+$var wire 1 e4 vga_ins|LTM_ins|h_cnt [1] $end
+$var wire 1 f4 vga_ins|LTM_ins|h_cnt [0] $end
+$var wire 1 g4 vga_ins|img_data_inst|altsyncram_component|auto_generated|rden_decode|w_anode1431w [3] $end
+$var wire 1 h4 vga_ins|img_data_inst|altsyncram_component|auto_generated|rden_decode|w_anode1431w [2] $end
+$var wire 1 i4 vga_ins|img_data_inst|altsyncram_component|auto_generated|rden_decode|w_anode1431w [1] $end
+$var wire 1 j4 vga_ins|img_data_inst|altsyncram_component|auto_generated|rden_decode|w_anode1431w [0] $end
+$var wire 1 k4 vga_ins|LTM_ins|v_cnt [9] $end
+$var wire 1 l4 vga_ins|LTM_ins|v_cnt [8] $end
+$var wire 1 m4 vga_ins|LTM_ins|v_cnt [7] $end
+$var wire 1 n4 vga_ins|LTM_ins|v_cnt [6] $end
+$var wire 1 o4 vga_ins|LTM_ins|v_cnt [5] $end
+$var wire 1 p4 vga_ins|LTM_ins|v_cnt [4] $end
+$var wire 1 q4 vga_ins|LTM_ins|v_cnt [3] $end
+$var wire 1 r4 vga_ins|LTM_ins|v_cnt [2] $end
+$var wire 1 s4 vga_ins|LTM_ins|v_cnt [1] $end
+$var wire 1 t4 vga_ins|LTM_ins|v_cnt [0] $end
+$var wire 1 u4 vga_ins|img_data_inst|altsyncram_component|auto_generated|rden_decode|w_anode1753w [3] $end
+$var wire 1 v4 vga_ins|img_data_inst|altsyncram_component|auto_generated|rden_decode|w_anode1753w [2] $end
+$var wire 1 w4 vga_ins|img_data_inst|altsyncram_component|auto_generated|rden_decode|w_anode1753w [1] $end
+$var wire 1 x4 vga_ins|img_data_inst|altsyncram_component|auto_generated|rden_decode|w_anode1753w [0] $end
+$var wire 1 y4 vga_ins|img_data_inst|altsyncram_component|auto_generated|rden_decode|w_anode1743w [3] $end
+$var wire 1 z4 vga_ins|img_data_inst|altsyncram_component|auto_generated|rden_decode|w_anode1743w [2] $end
+$var wire 1 {4 vga_ins|img_data_inst|altsyncram_component|auto_generated|rden_decode|w_anode1743w [1] $end
+$var wire 1 |4 vga_ins|img_data_inst|altsyncram_component|auto_generated|rden_decode|w_anode1743w [0] $end
+$var wire 1 }4 vga_ins|img_data_inst|altsyncram_component|auto_generated|rden_decode|w_anode1713w [3] $end
+$var wire 1 ~4 vga_ins|img_data_inst|altsyncram_component|auto_generated|rden_decode|w_anode1713w [2] $end
+$var wire 1 !5 vga_ins|img_data_inst|altsyncram_component|auto_generated|rden_decode|w_anode1713w [1] $end
+$var wire 1 "5 vga_ins|img_data_inst|altsyncram_component|auto_generated|rden_decode|w_anode1713w [0] $end
+$var wire 1 #5 vga_ins|img_data_inst|altsyncram_component|auto_generated|rden_decode|w_anode1723w [3] $end
+$var wire 1 $5 vga_ins|img_data_inst|altsyncram_component|auto_generated|rden_decode|w_anode1723w [2] $end
+$var wire 1 %5 vga_ins|img_data_inst|altsyncram_component|auto_generated|rden_decode|w_anode1723w [1] $end
+$var wire 1 &5 vga_ins|img_data_inst|altsyncram_component|auto_generated|rden_decode|w_anode1723w [0] $end
+$var wire 1 '5 vga_ins|img_data_inst|altsyncram_component|auto_generated|rden_decode|w_anode1702w [3] $end
+$var wire 1 (5 vga_ins|img_data_inst|altsyncram_component|auto_generated|rden_decode|w_anode1702w [2] $end
+$var wire 1 )5 vga_ins|img_data_inst|altsyncram_component|auto_generated|rden_decode|w_anode1702w [1] $end
+$var wire 1 *5 vga_ins|img_data_inst|altsyncram_component|auto_generated|rden_decode|w_anode1702w [0] $end
+$var wire 1 +5 vga_ins|img_data_inst|altsyncram_component|auto_generated|rden_decode|w_anode1733w [3] $end
+$var wire 1 ,5 vga_ins|img_data_inst|altsyncram_component|auto_generated|rden_decode|w_anode1733w [2] $end
+$var wire 1 -5 vga_ins|img_data_inst|altsyncram_component|auto_generated|rden_decode|w_anode1733w [1] $end
+$var wire 1 .5 vga_ins|img_data_inst|altsyncram_component|auto_generated|rden_decode|w_anode1733w [0] $end
+$var wire 1 /5 vga_ins|img_data_inst|altsyncram_component|auto_generated|rden_decode|w_anode1336w [3] $end
+$var wire 1 05 vga_ins|img_data_inst|altsyncram_component|auto_generated|rden_decode|w_anode1336w [2] $end
+$var wire 1 15 vga_ins|img_data_inst|altsyncram_component|auto_generated|rden_decode|w_anode1336w [1] $end
+$var wire 1 25 vga_ins|img_data_inst|altsyncram_component|auto_generated|rden_decode|w_anode1336w [0] $end
+$var wire 1 35 vga_ins|img_data_inst|altsyncram_component|auto_generated|rden_decode|w_anode1319w [3] $end
+$var wire 1 45 vga_ins|img_data_inst|altsyncram_component|auto_generated|rden_decode|w_anode1319w [2] $end
+$var wire 1 55 vga_ins|img_data_inst|altsyncram_component|auto_generated|rden_decode|w_anode1319w [1] $end
+$var wire 1 65 vga_ins|img_data_inst|altsyncram_component|auto_generated|rden_decode|w_anode1319w [0] $end
+$var wire 1 75 vga_ins|img_data_inst|altsyncram_component|auto_generated|rden_decode|w_anode1356w [3] $end
+$var wire 1 85 vga_ins|img_data_inst|altsyncram_component|auto_generated|rden_decode|w_anode1356w [2] $end
+$var wire 1 95 vga_ins|img_data_inst|altsyncram_component|auto_generated|rden_decode|w_anode1356w [1] $end
+$var wire 1 :5 vga_ins|img_data_inst|altsyncram_component|auto_generated|rden_decode|w_anode1356w [0] $end
+$var wire 1 ;5 vga_ins|img_data_inst|altsyncram_component|auto_generated|rden_decode|w_anode1629w [3] $end
+$var wire 1 <5 vga_ins|img_data_inst|altsyncram_component|auto_generated|rden_decode|w_anode1629w [2] $end
+$var wire 1 =5 vga_ins|img_data_inst|altsyncram_component|auto_generated|rden_decode|w_anode1629w [1] $end
+$var wire 1 >5 vga_ins|img_data_inst|altsyncram_component|auto_generated|rden_decode|w_anode1629w [0] $end
+$var wire 1 ?5 vga_ins|img_data_inst|altsyncram_component|auto_generated|rden_decode|w_anode1608w [3] $end
+$var wire 1 @5 vga_ins|img_data_inst|altsyncram_component|auto_generated|rden_decode|w_anode1608w [2] $end
+$var wire 1 A5 vga_ins|img_data_inst|altsyncram_component|auto_generated|rden_decode|w_anode1608w [1] $end
+$var wire 1 B5 vga_ins|img_data_inst|altsyncram_component|auto_generated|rden_decode|w_anode1608w [0] $end
+$var wire 1 C5 vga_ins|img_data_inst|altsyncram_component|auto_generated|rden_decode|w_anode1639w [3] $end
+$var wire 1 D5 vga_ins|img_data_inst|altsyncram_component|auto_generated|rden_decode|w_anode1639w [2] $end
+$var wire 1 E5 vga_ins|img_data_inst|altsyncram_component|auto_generated|rden_decode|w_anode1639w [1] $end
+$var wire 1 F5 vga_ins|img_data_inst|altsyncram_component|auto_generated|rden_decode|w_anode1639w [0] $end
+$var wire 1 G5 vga_ins|img_data_inst|altsyncram_component|auto_generated|rden_decode|w_anode1619w [3] $end
+$var wire 1 H5 vga_ins|img_data_inst|altsyncram_component|auto_generated|rden_decode|w_anode1619w [2] $end
+$var wire 1 I5 vga_ins|img_data_inst|altsyncram_component|auto_generated|rden_decode|w_anode1619w [1] $end
+$var wire 1 J5 vga_ins|img_data_inst|altsyncram_component|auto_generated|rden_decode|w_anode1619w [0] $end
+$var wire 1 K5 vga_ins|img_data_inst|altsyncram_component|auto_generated|rden_decode|w_anode1669w [3] $end
+$var wire 1 L5 vga_ins|img_data_inst|altsyncram_component|auto_generated|rden_decode|w_anode1669w [2] $end
+$var wire 1 M5 vga_ins|img_data_inst|altsyncram_component|auto_generated|rden_decode|w_anode1669w [1] $end
+$var wire 1 N5 vga_ins|img_data_inst|altsyncram_component|auto_generated|rden_decode|w_anode1669w [0] $end
+$var wire 1 O5 vga_ins|img_data_inst|altsyncram_component|auto_generated|rden_decode|w_anode1649w [3] $end
+$var wire 1 P5 vga_ins|img_data_inst|altsyncram_component|auto_generated|rden_decode|w_anode1649w [2] $end
+$var wire 1 Q5 vga_ins|img_data_inst|altsyncram_component|auto_generated|rden_decode|w_anode1649w [1] $end
+$var wire 1 R5 vga_ins|img_data_inst|altsyncram_component|auto_generated|rden_decode|w_anode1649w [0] $end
+$var wire 1 S5 vga_ins|img_data_inst|altsyncram_component|auto_generated|rden_decode|w_anode1679w [3] $end
+$var wire 1 T5 vga_ins|img_data_inst|altsyncram_component|auto_generated|rden_decode|w_anode1679w [2] $end
+$var wire 1 U5 vga_ins|img_data_inst|altsyncram_component|auto_generated|rden_decode|w_anode1679w [1] $end
+$var wire 1 V5 vga_ins|img_data_inst|altsyncram_component|auto_generated|rden_decode|w_anode1679w [0] $end
+$var wire 1 W5 vga_ins|img_data_inst|altsyncram_component|auto_generated|rden_decode|w_anode1659w [3] $end
+$var wire 1 X5 vga_ins|img_data_inst|altsyncram_component|auto_generated|rden_decode|w_anode1659w [2] $end
+$var wire 1 Y5 vga_ins|img_data_inst|altsyncram_component|auto_generated|rden_decode|w_anode1659w [1] $end
+$var wire 1 Z5 vga_ins|img_data_inst|altsyncram_component|auto_generated|rden_decode|w_anode1659w [0] $end
+$var wire 1 [5 vga_ins|img_data_inst|altsyncram_component|auto_generated|rden_decode|w_anode1441w [3] $end
+$var wire 1 \5 vga_ins|img_data_inst|altsyncram_component|auto_generated|rden_decode|w_anode1441w [2] $end
+$var wire 1 ]5 vga_ins|img_data_inst|altsyncram_component|auto_generated|rden_decode|w_anode1441w [1] $end
+$var wire 1 ^5 vga_ins|img_data_inst|altsyncram_component|auto_generated|rden_decode|w_anode1441w [0] $end
+$var wire 1 _5 vga_ins|img_data_inst|altsyncram_component|auto_generated|rden_decode|w_anode1451w [3] $end
+$var wire 1 `5 vga_ins|img_data_inst|altsyncram_component|auto_generated|rden_decode|w_anode1451w [2] $end
+$var wire 1 a5 vga_ins|img_data_inst|altsyncram_component|auto_generated|rden_decode|w_anode1451w [1] $end
+$var wire 1 b5 vga_ins|img_data_inst|altsyncram_component|auto_generated|rden_decode|w_anode1451w [0] $end
+$var wire 1 c5 vga_ins|img_data_inst|altsyncram_component|auto_generated|rden_decode|w_anode1461w [3] $end
+$var wire 1 d5 vga_ins|img_data_inst|altsyncram_component|auto_generated|rden_decode|w_anode1461w [2] $end
+$var wire 1 e5 vga_ins|img_data_inst|altsyncram_component|auto_generated|rden_decode|w_anode1461w [1] $end
+$var wire 1 f5 vga_ins|img_data_inst|altsyncram_component|auto_generated|rden_decode|w_anode1461w [0] $end
+$var wire 1 g5 myps2|PS2|PS2_Data_In|data_count [3] $end
+$var wire 1 h5 myps2|PS2|PS2_Data_In|data_count [2] $end
+$var wire 1 i5 myps2|PS2|PS2_Data_In|data_count [1] $end
+$var wire 1 j5 myps2|PS2|PS2_Data_In|data_count [0] $end
+$var wire 1 k5 vga_ins|img_data_inst|altsyncram_component|auto_generated|rden_decode|w_anode1471w [3] $end
+$var wire 1 l5 vga_ins|img_data_inst|altsyncram_component|auto_generated|rden_decode|w_anode1471w [2] $end
+$var wire 1 m5 vga_ins|img_data_inst|altsyncram_component|auto_generated|rden_decode|w_anode1471w [1] $end
+$var wire 1 n5 vga_ins|img_data_inst|altsyncram_component|auto_generated|rden_decode|w_anode1471w [0] $end
+$var wire 1 o5 vga_ins|img_data_inst|altsyncram_component|auto_generated|rden_decode|w_anode1555w [3] $end
+$var wire 1 p5 vga_ins|img_data_inst|altsyncram_component|auto_generated|rden_decode|w_anode1555w [2] $end
+$var wire 1 q5 vga_ins|img_data_inst|altsyncram_component|auto_generated|rden_decode|w_anode1555w [1] $end
+$var wire 1 r5 vga_ins|img_data_inst|altsyncram_component|auto_generated|rden_decode|w_anode1555w [0] $end
+$var wire 1 s5 vga_ins|img_data_inst|altsyncram_component|auto_generated|rden_decode|w_anode1376w [3] $end
+$var wire 1 t5 vga_ins|img_data_inst|altsyncram_component|auto_generated|rden_decode|w_anode1376w [2] $end
+$var wire 1 u5 vga_ins|img_data_inst|altsyncram_component|auto_generated|rden_decode|w_anode1376w [1] $end
+$var wire 1 v5 vga_ins|img_data_inst|altsyncram_component|auto_generated|rden_decode|w_anode1376w [0] $end
+$var wire 1 w5 vga_ins|img_data_inst|altsyncram_component|auto_generated|rden_decode|w_anode1396w [3] $end
+$var wire 1 x5 vga_ins|img_data_inst|altsyncram_component|auto_generated|rden_decode|w_anode1396w [2] $end
+$var wire 1 y5 vga_ins|img_data_inst|altsyncram_component|auto_generated|rden_decode|w_anode1396w [1] $end
+$var wire 1 z5 vga_ins|img_data_inst|altsyncram_component|auto_generated|rden_decode|w_anode1396w [0] $end
+$var wire 1 {5 vga_ins|img_data_inst|altsyncram_component|auto_generated|rden_decode|w_anode1545w [3] $end
+$var wire 1 |5 vga_ins|img_data_inst|altsyncram_component|auto_generated|rden_decode|w_anode1545w [2] $end
+$var wire 1 }5 vga_ins|img_data_inst|altsyncram_component|auto_generated|rden_decode|w_anode1545w [1] $end
+$var wire 1 ~5 vga_ins|img_data_inst|altsyncram_component|auto_generated|rden_decode|w_anode1545w [0] $end
+$var wire 1 !6 p1|altpll_component|pll_CLK_bus [4] $end
+$var wire 1 "6 p1|altpll_component|pll_CLK_bus [3] $end
+$var wire 1 #6 p1|altpll_component|pll_CLK_bus [2] $end
+$var wire 1 $6 p1|altpll_component|pll_CLK_bus [1] $end
+$var wire 1 %6 p1|altpll_component|pll_CLK_bus [0] $end
+$var wire 1 &6 vga_ins|img_index_inst|altsyncram_component|auto_generated|ram_block1a0_PORTADATAOUT_bus [0] $end
+$var wire 1 '6 vga_ins|img_index_inst|altsyncram_component|auto_generated|ram_block1a1_PORTADATAOUT_bus [0] $end
+$var wire 1 (6 vga_ins|img_index_inst|altsyncram_component|auto_generated|ram_block1a2_PORTADATAOUT_bus [0] $end
+$var wire 1 )6 vga_ins|img_index_inst|altsyncram_component|auto_generated|ram_block1a3_PORTADATAOUT_bus [0] $end
+$var wire 1 *6 vga_ins|img_index_inst|altsyncram_component|auto_generated|ram_block1a4_PORTADATAOUT_bus [0] $end
+$var wire 1 +6 vga_ins|img_index_inst|altsyncram_component|auto_generated|ram_block1a5_PORTADATAOUT_bus [0] $end
+$var wire 1 ,6 vga_ins|img_index_inst|altsyncram_component|auto_generated|ram_block1a6_PORTADATAOUT_bus [0] $end
+$var wire 1 -6 vga_ins|img_index_inst|altsyncram_component|auto_generated|ram_block1a7_PORTADATAOUT_bus [0] $end
+$var wire 1 .6 vga_ins|img_index_inst|altsyncram_component|auto_generated|ram_block1a8_PORTADATAOUT_bus [0] $end
+$var wire 1 /6 vga_ins|img_index_inst|altsyncram_component|auto_generated|ram_block1a9_PORTADATAOUT_bus [0] $end
+$var wire 1 06 vga_ins|img_index_inst|altsyncram_component|auto_generated|ram_block1a10_PORTADATAOUT_bus [0] $end
+$var wire 1 16 vga_ins|img_index_inst|altsyncram_component|auto_generated|ram_block1a11_PORTADATAOUT_bus [0] $end
+$var wire 1 26 vga_ins|img_index_inst|altsyncram_component|auto_generated|ram_block1a12_PORTADATAOUT_bus [0] $end
+$var wire 1 36 vga_ins|img_index_inst|altsyncram_component|auto_generated|ram_block1a13_PORTADATAOUT_bus [0] $end
+$var wire 1 46 vga_ins|img_index_inst|altsyncram_component|auto_generated|ram_block1a14_PORTADATAOUT_bus [0] $end
+$var wire 1 56 vga_ins|img_index_inst|altsyncram_component|auto_generated|ram_block1a15_PORTADATAOUT_bus [0] $end
+$var wire 1 66 vga_ins|img_index_inst|altsyncram_component|auto_generated|ram_block1a16_PORTADATAOUT_bus [0] $end
+$var wire 1 76 vga_ins|img_index_inst|altsyncram_component|auto_generated|ram_block1a17_PORTADATAOUT_bus [0] $end
+$var wire 1 86 vga_ins|img_index_inst|altsyncram_component|auto_generated|ram_block1a18_PORTADATAOUT_bus [0] $end
+$var wire 1 96 vga_ins|img_index_inst|altsyncram_component|auto_generated|ram_block1a19_PORTADATAOUT_bus [0] $end
+$var wire 1 :6 vga_ins|img_index_inst|altsyncram_component|auto_generated|ram_block1a20_PORTADATAOUT_bus [0] $end
+$var wire 1 ;6 vga_ins|img_index_inst|altsyncram_component|auto_generated|ram_block1a21_PORTADATAOUT_bus [0] $end
+$var wire 1 <6 vga_ins|img_index_inst|altsyncram_component|auto_generated|ram_block1a22_PORTADATAOUT_bus [0] $end
+$var wire 1 =6 vga_ins|img_index_inst|altsyncram_component|auto_generated|ram_block1a23_PORTADATAOUT_bus [0] $end
+$var wire 1 >6 vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a296_PORTADATAOUT_bus [0] $end
+$var wire 1 ?6 vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a288_PORTADATAOUT_bus [0] $end
+$var wire 1 @6 vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a264_PORTADATAOUT_bus [0] $end
+$var wire 1 A6 vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a272_PORTADATAOUT_bus [0] $end
+$var wire 1 B6 vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a256_PORTADATAOUT_bus [0] $end
+$var wire 1 C6 vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a280_PORTADATAOUT_bus [0] $end
+$var wire 1 D6 vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a8_PORTADATAOUT_bus [0] $end
+$var wire 1 E6 vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a16_PORTADATAOUT_bus [0] $end
+$var wire 1 F6 vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a0_PORTADATAOUT_bus [0] $end
+$var wire 1 G6 vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a24_PORTADATAOUT_bus [0] $end
+$var wire 1 H6 vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a208_PORTADATAOUT_bus [0] $end
+$var wire 1 I6 vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a192_PORTADATAOUT_bus [0] $end
+$var wire 1 J6 vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a216_PORTADATAOUT_bus [0] $end
+$var wire 1 K6 vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a200_PORTADATAOUT_bus [0] $end
+$var wire 1 L6 vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a240_PORTADATAOUT_bus [0] $end
+$var wire 1 M6 vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a224_PORTADATAOUT_bus [0] $end
+$var wire 1 N6 vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a248_PORTADATAOUT_bus [0] $end
+$var wire 1 O6 vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a232_PORTADATAOUT_bus [0] $end
+$var wire 1 P6 vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a80_PORTADATAOUT_bus [0] $end
+$var wire 1 Q6 vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a64_PORTADATAOUT_bus [0] $end
+$var wire 1 R6 vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a88_PORTADATAOUT_bus [0] $end
+$var wire 1 S6 vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a72_PORTADATAOUT_bus [0] $end
+$var wire 1 T6 vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a112_PORTADATAOUT_bus [0] $end
+$var wire 1 U6 vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a96_PORTADATAOUT_bus [0] $end
+$var wire 1 V6 vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a120_PORTADATAOUT_bus [0] $end
+$var wire 1 W6 vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a104_PORTADATAOUT_bus [0] $end
+$var wire 1 X6 vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a168_PORTADATAOUT_bus [0] $end
+$var wire 1 Y6 vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a176_PORTADATAOUT_bus [0] $end
+$var wire 1 Z6 vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a160_PORTADATAOUT_bus [0] $end
+$var wire 1 [6 vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a184_PORTADATAOUT_bus [0] $end
+$var wire 1 \6 vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a40_PORTADATAOUT_bus [0] $end
+$var wire 1 ]6 vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a48_PORTADATAOUT_bus [0] $end
+$var wire 1 ^6 vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a32_PORTADATAOUT_bus [0] $end
+$var wire 1 _6 vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a56_PORTADATAOUT_bus [0] $end
+$var wire 1 `6 vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a136_PORTADATAOUT_bus [0] $end
+$var wire 1 a6 vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a144_PORTADATAOUT_bus [0] $end
+$var wire 1 b6 vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a128_PORTADATAOUT_bus [0] $end
+$var wire 1 c6 vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a152_PORTADATAOUT_bus [0] $end
+$var wire 1 d6 vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a297_PORTADATAOUT_bus [0] $end
+$var wire 1 e6 vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a289_PORTADATAOUT_bus [0] $end
+$var wire 1 f6 vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a265_PORTADATAOUT_bus [0] $end
+$var wire 1 g6 vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a273_PORTADATAOUT_bus [0] $end
+$var wire 1 h6 vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a257_PORTADATAOUT_bus [0] $end
+$var wire 1 i6 vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a281_PORTADATAOUT_bus [0] $end
+$var wire 1 j6 vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a9_PORTADATAOUT_bus [0] $end
+$var wire 1 k6 vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a17_PORTADATAOUT_bus [0] $end
+$var wire 1 l6 vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a1_PORTADATAOUT_bus [0] $end
+$var wire 1 m6 vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a25_PORTADATAOUT_bus [0] $end
+$var wire 1 n6 vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a209_PORTADATAOUT_bus [0] $end
+$var wire 1 o6 vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a193_PORTADATAOUT_bus [0] $end
+$var wire 1 p6 vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a217_PORTADATAOUT_bus [0] $end
+$var wire 1 q6 vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a201_PORTADATAOUT_bus [0] $end
+$var wire 1 r6 vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a241_PORTADATAOUT_bus [0] $end
+$var wire 1 s6 vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a225_PORTADATAOUT_bus [0] $end
+$var wire 1 t6 vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a249_PORTADATAOUT_bus [0] $end
+$var wire 1 u6 vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a233_PORTADATAOUT_bus [0] $end
+$var wire 1 v6 vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a81_PORTADATAOUT_bus [0] $end
+$var wire 1 w6 vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a65_PORTADATAOUT_bus [0] $end
+$var wire 1 x6 vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a89_PORTADATAOUT_bus [0] $end
+$var wire 1 y6 vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a73_PORTADATAOUT_bus [0] $end
+$var wire 1 z6 vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a113_PORTADATAOUT_bus [0] $end
+$var wire 1 {6 vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a97_PORTADATAOUT_bus [0] $end
+$var wire 1 |6 vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a121_PORTADATAOUT_bus [0] $end
+$var wire 1 }6 vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a105_PORTADATAOUT_bus [0] $end
+$var wire 1 ~6 vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a169_PORTADATAOUT_bus [0] $end
+$var wire 1 !7 vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a177_PORTADATAOUT_bus [0] $end
+$var wire 1 "7 vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a161_PORTADATAOUT_bus [0] $end
+$var wire 1 #7 vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a185_PORTADATAOUT_bus [0] $end
+$var wire 1 $7 vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a41_PORTADATAOUT_bus [0] $end
+$var wire 1 %7 vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a49_PORTADATAOUT_bus [0] $end
+$var wire 1 &7 vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a33_PORTADATAOUT_bus [0] $end
+$var wire 1 '7 vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a57_PORTADATAOUT_bus [0] $end
+$var wire 1 (7 vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a137_PORTADATAOUT_bus [0] $end
+$var wire 1 )7 vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a145_PORTADATAOUT_bus [0] $end
+$var wire 1 *7 vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a129_PORTADATAOUT_bus [0] $end
+$var wire 1 +7 vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a153_PORTADATAOUT_bus [0] $end
+$var wire 1 ,7 vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a298_PORTADATAOUT_bus [0] $end
+$var wire 1 -7 vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a290_PORTADATAOUT_bus [0] $end
+$var wire 1 .7 vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a266_PORTADATAOUT_bus [0] $end
+$var wire 1 /7 vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a274_PORTADATAOUT_bus [0] $end
+$var wire 1 07 vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a258_PORTADATAOUT_bus [0] $end
+$var wire 1 17 vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a282_PORTADATAOUT_bus [0] $end
+$var wire 1 27 vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a10_PORTADATAOUT_bus [0] $end
+$var wire 1 37 vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a18_PORTADATAOUT_bus [0] $end
+$var wire 1 47 vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a2_PORTADATAOUT_bus [0] $end
+$var wire 1 57 vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a26_PORTADATAOUT_bus [0] $end
+$var wire 1 67 vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a210_PORTADATAOUT_bus [0] $end
+$var wire 1 77 vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a194_PORTADATAOUT_bus [0] $end
+$var wire 1 87 vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a218_PORTADATAOUT_bus [0] $end
+$var wire 1 97 vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a202_PORTADATAOUT_bus [0] $end
+$var wire 1 :7 vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a242_PORTADATAOUT_bus [0] $end
+$var wire 1 ;7 vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a226_PORTADATAOUT_bus [0] $end
+$var wire 1 <7 vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a250_PORTADATAOUT_bus [0] $end
+$var wire 1 =7 vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a234_PORTADATAOUT_bus [0] $end
+$var wire 1 >7 vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a82_PORTADATAOUT_bus [0] $end
+$var wire 1 ?7 vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a66_PORTADATAOUT_bus [0] $end
+$var wire 1 @7 vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a90_PORTADATAOUT_bus [0] $end
+$var wire 1 A7 vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a74_PORTADATAOUT_bus [0] $end
+$var wire 1 B7 vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a114_PORTADATAOUT_bus [0] $end
+$var wire 1 C7 vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a98_PORTADATAOUT_bus [0] $end
+$var wire 1 D7 vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a122_PORTADATAOUT_bus [0] $end
+$var wire 1 E7 vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a106_PORTADATAOUT_bus [0] $end
+$var wire 1 F7 vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a170_PORTADATAOUT_bus [0] $end
+$var wire 1 G7 vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a178_PORTADATAOUT_bus [0] $end
+$var wire 1 H7 vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a162_PORTADATAOUT_bus [0] $end
+$var wire 1 I7 vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a186_PORTADATAOUT_bus [0] $end
+$var wire 1 J7 vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a42_PORTADATAOUT_bus [0] $end
+$var wire 1 K7 vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a50_PORTADATAOUT_bus [0] $end
+$var wire 1 L7 vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a34_PORTADATAOUT_bus [0] $end
+$var wire 1 M7 vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a58_PORTADATAOUT_bus [0] $end
+$var wire 1 N7 vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a138_PORTADATAOUT_bus [0] $end
+$var wire 1 O7 vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a146_PORTADATAOUT_bus [0] $end
+$var wire 1 P7 vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a130_PORTADATAOUT_bus [0] $end
+$var wire 1 Q7 vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a154_PORTADATAOUT_bus [0] $end
+$var wire 1 R7 vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a299_PORTADATAOUT_bus [0] $end
+$var wire 1 S7 vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a291_PORTADATAOUT_bus [0] $end
+$var wire 1 T7 vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a267_PORTADATAOUT_bus [0] $end
+$var wire 1 U7 vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a275_PORTADATAOUT_bus [0] $end
+$var wire 1 V7 vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a259_PORTADATAOUT_bus [0] $end
+$var wire 1 W7 vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a283_PORTADATAOUT_bus [0] $end
+$var wire 1 X7 vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a11_PORTADATAOUT_bus [0] $end
+$var wire 1 Y7 vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a19_PORTADATAOUT_bus [0] $end
+$var wire 1 Z7 vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a3_PORTADATAOUT_bus [0] $end
+$var wire 1 [7 vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a27_PORTADATAOUT_bus [0] $end
+$var wire 1 \7 vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a211_PORTADATAOUT_bus [0] $end
+$var wire 1 ]7 vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a195_PORTADATAOUT_bus [0] $end
+$var wire 1 ^7 vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a219_PORTADATAOUT_bus [0] $end
+$var wire 1 _7 vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a203_PORTADATAOUT_bus [0] $end
+$var wire 1 `7 vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a243_PORTADATAOUT_bus [0] $end
+$var wire 1 a7 vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a227_PORTADATAOUT_bus [0] $end
+$var wire 1 b7 vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a251_PORTADATAOUT_bus [0] $end
+$var wire 1 c7 vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a235_PORTADATAOUT_bus [0] $end
+$var wire 1 d7 vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a83_PORTADATAOUT_bus [0] $end
+$var wire 1 e7 vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a67_PORTADATAOUT_bus [0] $end
+$var wire 1 f7 vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a91_PORTADATAOUT_bus [0] $end
+$var wire 1 g7 vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a75_PORTADATAOUT_bus [0] $end
+$var wire 1 h7 vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a115_PORTADATAOUT_bus [0] $end
+$var wire 1 i7 vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a99_PORTADATAOUT_bus [0] $end
+$var wire 1 j7 vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a123_PORTADATAOUT_bus [0] $end
+$var wire 1 k7 vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a107_PORTADATAOUT_bus [0] $end
+$var wire 1 l7 vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a171_PORTADATAOUT_bus [0] $end
+$var wire 1 m7 vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a179_PORTADATAOUT_bus [0] $end
+$var wire 1 n7 vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a163_PORTADATAOUT_bus [0] $end
+$var wire 1 o7 vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a187_PORTADATAOUT_bus [0] $end
+$var wire 1 p7 vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a43_PORTADATAOUT_bus [0] $end
+$var wire 1 q7 vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a51_PORTADATAOUT_bus [0] $end
+$var wire 1 r7 vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a35_PORTADATAOUT_bus [0] $end
+$var wire 1 s7 vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a59_PORTADATAOUT_bus [0] $end
+$var wire 1 t7 vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a139_PORTADATAOUT_bus [0] $end
+$var wire 1 u7 vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a147_PORTADATAOUT_bus [0] $end
+$var wire 1 v7 vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a131_PORTADATAOUT_bus [0] $end
+$var wire 1 w7 vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a155_PORTADATAOUT_bus [0] $end
+$var wire 1 x7 vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a300_PORTADATAOUT_bus [0] $end
+$var wire 1 y7 vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a292_PORTADATAOUT_bus [0] $end
+$var wire 1 z7 vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a268_PORTADATAOUT_bus [0] $end
+$var wire 1 {7 vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a276_PORTADATAOUT_bus [0] $end
+$var wire 1 |7 vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a260_PORTADATAOUT_bus [0] $end
+$var wire 1 }7 vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a284_PORTADATAOUT_bus [0] $end
+$var wire 1 ~7 vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a12_PORTADATAOUT_bus [0] $end
+$var wire 1 !8 vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a20_PORTADATAOUT_bus [0] $end
+$var wire 1 "8 vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a4_PORTADATAOUT_bus [0] $end
+$var wire 1 #8 vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a28_PORTADATAOUT_bus [0] $end
+$var wire 1 $8 vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a212_PORTADATAOUT_bus [0] $end
+$var wire 1 %8 vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a196_PORTADATAOUT_bus [0] $end
+$var wire 1 &8 vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a220_PORTADATAOUT_bus [0] $end
+$var wire 1 '8 vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a204_PORTADATAOUT_bus [0] $end
+$var wire 1 (8 vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a244_PORTADATAOUT_bus [0] $end
+$var wire 1 )8 vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a228_PORTADATAOUT_bus [0] $end
+$var wire 1 *8 vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a252_PORTADATAOUT_bus [0] $end
+$var wire 1 +8 vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a236_PORTADATAOUT_bus [0] $end
+$var wire 1 ,8 vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a84_PORTADATAOUT_bus [0] $end
+$var wire 1 -8 vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a68_PORTADATAOUT_bus [0] $end
+$var wire 1 .8 vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a92_PORTADATAOUT_bus [0] $end
+$var wire 1 /8 vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a76_PORTADATAOUT_bus [0] $end
+$var wire 1 08 vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a116_PORTADATAOUT_bus [0] $end
+$var wire 1 18 vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a100_PORTADATAOUT_bus [0] $end
+$var wire 1 28 vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a124_PORTADATAOUT_bus [0] $end
+$var wire 1 38 vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a108_PORTADATAOUT_bus [0] $end
+$var wire 1 48 vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a172_PORTADATAOUT_bus [0] $end
+$var wire 1 58 vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a180_PORTADATAOUT_bus [0] $end
+$var wire 1 68 vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a164_PORTADATAOUT_bus [0] $end
+$var wire 1 78 vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a188_PORTADATAOUT_bus [0] $end
+$var wire 1 88 vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a44_PORTADATAOUT_bus [0] $end
+$var wire 1 98 vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a52_PORTADATAOUT_bus [0] $end
+$var wire 1 :8 vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a36_PORTADATAOUT_bus [0] $end
+$var wire 1 ;8 vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a60_PORTADATAOUT_bus [0] $end
+$var wire 1 <8 vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a140_PORTADATAOUT_bus [0] $end
+$var wire 1 =8 vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a148_PORTADATAOUT_bus [0] $end
+$var wire 1 >8 vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a132_PORTADATAOUT_bus [0] $end
+$var wire 1 ?8 vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a156_PORTADATAOUT_bus [0] $end
+$var wire 1 @8 vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a301_PORTADATAOUT_bus [0] $end
+$var wire 1 A8 vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a293_PORTADATAOUT_bus [0] $end
+$var wire 1 B8 vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a269_PORTADATAOUT_bus [0] $end
+$var wire 1 C8 vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a277_PORTADATAOUT_bus [0] $end
+$var wire 1 D8 vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a261_PORTADATAOUT_bus [0] $end
+$var wire 1 E8 vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a285_PORTADATAOUT_bus [0] $end
+$var wire 1 F8 vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a13_PORTADATAOUT_bus [0] $end
+$var wire 1 G8 vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a21_PORTADATAOUT_bus [0] $end
+$var wire 1 H8 vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a5_PORTADATAOUT_bus [0] $end
+$var wire 1 I8 vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a29_PORTADATAOUT_bus [0] $end
+$var wire 1 J8 vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a213_PORTADATAOUT_bus [0] $end
+$var wire 1 K8 vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a197_PORTADATAOUT_bus [0] $end
+$var wire 1 L8 vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a221_PORTADATAOUT_bus [0] $end
+$var wire 1 M8 vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a205_PORTADATAOUT_bus [0] $end
+$var wire 1 N8 vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a245_PORTADATAOUT_bus [0] $end
+$var wire 1 O8 vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a229_PORTADATAOUT_bus [0] $end
+$var wire 1 P8 vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a253_PORTADATAOUT_bus [0] $end
+$var wire 1 Q8 vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a237_PORTADATAOUT_bus [0] $end
+$var wire 1 R8 vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a85_PORTADATAOUT_bus [0] $end
+$var wire 1 S8 vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a69_PORTADATAOUT_bus [0] $end
+$var wire 1 T8 vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a93_PORTADATAOUT_bus [0] $end
+$var wire 1 U8 vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a77_PORTADATAOUT_bus [0] $end
+$var wire 1 V8 vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a117_PORTADATAOUT_bus [0] $end
+$var wire 1 W8 vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a101_PORTADATAOUT_bus [0] $end
+$var wire 1 X8 vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a125_PORTADATAOUT_bus [0] $end
+$var wire 1 Y8 vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a109_PORTADATAOUT_bus [0] $end
+$var wire 1 Z8 vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a173_PORTADATAOUT_bus [0] $end
+$var wire 1 [8 vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a181_PORTADATAOUT_bus [0] $end
+$var wire 1 \8 vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a165_PORTADATAOUT_bus [0] $end
+$var wire 1 ]8 vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a189_PORTADATAOUT_bus [0] $end
+$var wire 1 ^8 vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a45_PORTADATAOUT_bus [0] $end
+$var wire 1 _8 vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a53_PORTADATAOUT_bus [0] $end
+$var wire 1 `8 vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a37_PORTADATAOUT_bus [0] $end
+$var wire 1 a8 vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a61_PORTADATAOUT_bus [0] $end
+$var wire 1 b8 vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a141_PORTADATAOUT_bus [0] $end
+$var wire 1 c8 vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a149_PORTADATAOUT_bus [0] $end
+$var wire 1 d8 vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a133_PORTADATAOUT_bus [0] $end
+$var wire 1 e8 vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a157_PORTADATAOUT_bus [0] $end
+$var wire 1 f8 vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a302_PORTADATAOUT_bus [0] $end
+$var wire 1 g8 vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a294_PORTADATAOUT_bus [0] $end
+$var wire 1 h8 vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a278_PORTADATAOUT_bus [0] $end
+$var wire 1 i8 vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a270_PORTADATAOUT_bus [0] $end
+$var wire 1 j8 vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a262_PORTADATAOUT_bus [0] $end
+$var wire 1 k8 vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a286_PORTADATAOUT_bus [0] $end
+$var wire 1 l8 vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a14_PORTADATAOUT_bus [0] $end
+$var wire 1 m8 vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a22_PORTADATAOUT_bus [0] $end
+$var wire 1 n8 vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a6_PORTADATAOUT_bus [0] $end
+$var wire 1 o8 vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a30_PORTADATAOUT_bus [0] $end
+$var wire 1 p8 vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a214_PORTADATAOUT_bus [0] $end
+$var wire 1 q8 vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a198_PORTADATAOUT_bus [0] $end
+$var wire 1 r8 vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a222_PORTADATAOUT_bus [0] $end
+$var wire 1 s8 vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a206_PORTADATAOUT_bus [0] $end
+$var wire 1 t8 vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a246_PORTADATAOUT_bus [0] $end
+$var wire 1 u8 vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a230_PORTADATAOUT_bus [0] $end
+$var wire 1 v8 vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a254_PORTADATAOUT_bus [0] $end
+$var wire 1 w8 vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a238_PORTADATAOUT_bus [0] $end
+$var wire 1 x8 vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a86_PORTADATAOUT_bus [0] $end
+$var wire 1 y8 vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a70_PORTADATAOUT_bus [0] $end
+$var wire 1 z8 vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a94_PORTADATAOUT_bus [0] $end
+$var wire 1 {8 vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a78_PORTADATAOUT_bus [0] $end
+$var wire 1 |8 vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a118_PORTADATAOUT_bus [0] $end
+$var wire 1 }8 vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a102_PORTADATAOUT_bus [0] $end
+$var wire 1 ~8 vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a126_PORTADATAOUT_bus [0] $end
+$var wire 1 !9 vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a110_PORTADATAOUT_bus [0] $end
+$var wire 1 "9 vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a174_PORTADATAOUT_bus [0] $end
+$var wire 1 #9 vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a182_PORTADATAOUT_bus [0] $end
+$var wire 1 $9 vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a166_PORTADATAOUT_bus [0] $end
+$var wire 1 %9 vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a190_PORTADATAOUT_bus [0] $end
+$var wire 1 &9 vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a54_PORTADATAOUT_bus [0] $end
+$var wire 1 '9 vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a46_PORTADATAOUT_bus [0] $end
+$var wire 1 (9 vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a38_PORTADATAOUT_bus [0] $end
+$var wire 1 )9 vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a62_PORTADATAOUT_bus [0] $end
+$var wire 1 *9 vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a142_PORTADATAOUT_bus [0] $end
+$var wire 1 +9 vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a150_PORTADATAOUT_bus [0] $end
+$var wire 1 ,9 vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a134_PORTADATAOUT_bus [0] $end
+$var wire 1 -9 vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a158_PORTADATAOUT_bus [0] $end
+$var wire 1 .9 vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a303_PORTADATAOUT_bus [0] $end
+$var wire 1 /9 vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a295_PORTADATAOUT_bus [0] $end
+$var wire 1 09 vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a271_PORTADATAOUT_bus [0] $end
+$var wire 1 19 vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a279_PORTADATAOUT_bus [0] $end
+$var wire 1 29 vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a263_PORTADATAOUT_bus [0] $end
+$var wire 1 39 vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a287_PORTADATAOUT_bus [0] $end
+$var wire 1 49 vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a23_PORTADATAOUT_bus [0] $end
+$var wire 1 59 vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a15_PORTADATAOUT_bus [0] $end
+$var wire 1 69 vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a7_PORTADATAOUT_bus [0] $end
+$var wire 1 79 vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a31_PORTADATAOUT_bus [0] $end
+$var wire 1 89 vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a215_PORTADATAOUT_bus [0] $end
+$var wire 1 99 vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a199_PORTADATAOUT_bus [0] $end
+$var wire 1 :9 vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a223_PORTADATAOUT_bus [0] $end
+$var wire 1 ;9 vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a207_PORTADATAOUT_bus [0] $end
+$var wire 1 <9 vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a247_PORTADATAOUT_bus [0] $end
+$var wire 1 =9 vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a231_PORTADATAOUT_bus [0] $end
+$var wire 1 >9 vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a255_PORTADATAOUT_bus [0] $end
+$var wire 1 ?9 vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a239_PORTADATAOUT_bus [0] $end
+$var wire 1 @9 vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a87_PORTADATAOUT_bus [0] $end
+$var wire 1 A9 vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a71_PORTADATAOUT_bus [0] $end
+$var wire 1 B9 vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a95_PORTADATAOUT_bus [0] $end
+$var wire 1 C9 vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a79_PORTADATAOUT_bus [0] $end
+$var wire 1 D9 vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a119_PORTADATAOUT_bus [0] $end
+$var wire 1 E9 vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a103_PORTADATAOUT_bus [0] $end
+$var wire 1 F9 vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a127_PORTADATAOUT_bus [0] $end
+$var wire 1 G9 vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a111_PORTADATAOUT_bus [0] $end
+$var wire 1 H9 vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a175_PORTADATAOUT_bus [0] $end
+$var wire 1 I9 vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a183_PORTADATAOUT_bus [0] $end
+$var wire 1 J9 vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a167_PORTADATAOUT_bus [0] $end
+$var wire 1 K9 vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a191_PORTADATAOUT_bus [0] $end
+$var wire 1 L9 vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a47_PORTADATAOUT_bus [0] $end
+$var wire 1 M9 vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a55_PORTADATAOUT_bus [0] $end
+$var wire 1 N9 vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a39_PORTADATAOUT_bus [0] $end
+$var wire 1 O9 vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a63_PORTADATAOUT_bus [0] $end
+$var wire 1 P9 vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a151_PORTADATAOUT_bus [0] $end
+$var wire 1 Q9 vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a143_PORTADATAOUT_bus [0] $end
+$var wire 1 R9 vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a135_PORTADATAOUT_bus [0] $end
+$var wire 1 S9 vga_ins|img_data_inst|altsyncram_component|auto_generated|ram_block1a159_PORTADATAOUT_bus [0] $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+0!
+z"
+z#
+x$
+0,
+0+
+0*
+0)
+0(
+0'
+0&
+0%
+0-
+0.
+06
+05
+04
+03
+02
+01
+00
+0/
+07
+0?
+0>
+0=
+0<
+0;
+0:
+09
+08
+0@
+0A
+0B
+0N
+0M
+0L
+0K
+0J
+0I
+0H
+0G
+0F
+0E
+0D
+0C
+0n
+0m
+0l
+0k
+0j
+0i
+0h
+0g
+0f
+0e
+0d
+0c
+0b
+0a
+0`
+0_
+0^
+0]
+0\
+0[
+0Z
+0Y
+0X
+0W
+0V
+0U
+0T
+0S
+0R
+0Q
+0P
+0O
+1o
+0w
+0v
+0u
+0t
+0s
+0r
+0q
+0p
+0x
+1y
+0z
+0{
+1%!
+1$!
+0#!
+1"!
+0!!
+1~
+0}
+0|
+z&!
+z'!
+0.!
+0-!
+0,!
+0+!
+0*!
+0)!
+1(!
+05!
+04!
+03!
+02!
+01!
+00!
+1/!
+0<!
+0;!
+0:!
+09!
+08!
+07!
+16!
+0C!
+0B!
+0A!
+0@!
+0?!
+0>!
+1=!
+0J!
+0I!
+0H!
+0G!
+0F!
+0E!
+1D!
+0Q!
+0P!
+0O!
+0N!
+0M!
+0L!
+1K!
+0X!
+0W!
+0V!
+0U!
+0T!
+0S!
+1R!
+0_!
+0^!
+0]!
+0\!
+0[!
+0Z!
+1Y!
+0`!
+1a!
+xb!
+1c!
+1d!
+1e!
+0f!
+0g!
+0h!
+0i!
+0j!
+1k!
+0l!
+0m!
+0n!
+1o!
+0p!
+0q!
+0r!
+0s!
+0t!
+1u!
+0v!
+0w!
+0x!
+1y!
+0z!
+0{!
+0|!
+1}!
+1~!
+0!"
+0""
+0#"
+1$"
+0%"
+0&"
+0'"
+1("
+1)"
+0*"
+0+"
+0,"
+1-"
+0."
+0/"
+00"
+11"
+02"
+13"
+04"
+05"
+06"
+17"
+08"
+09"
+0:"
+1;"
+1<"
+0="
+0>"
+0?"
+1@"
+0A"
+0B"
+0C"
+1D"
+1E"
+0F"
+0G"
+0H"
+1I"
+0J"
+0K"
+xL"
+zM"
+xN"
+0O"
+0P"
+zQ"
+xR"
+0S"
+xT"
+0U"
+0V"
+0W"
+0X"
+1Y"
+0Z"
+0["
+0\"
+0]"
+0^"
+0_"
+0`"
+0a"
+0b"
+0c"
+0d"
+0e"
+0f"
+0g"
+0h"
+0i"
+1j"
+0k"
+0l"
+0m"
+0n"
+0o"
+xp"
+0q"
+0r"
+0s"
+0t"
+0u"
+0v"
+0w"
+0x"
+xy"
+0z"
+x{"
+0|"
+0}"
+0~"
+1!#
+0"#
+0##
+0$#
+0%#
+0&#
+0'#
+0(#
+0)#
+0*#
+0+#
+0,#
+0-#
+0.#
+0/#
+00#
+01#
+02#
+03#
+14#
+15#
+06#
+07#
+08#
+09#
+1:#
+1;#
+0<#
+1=#
+0>#
+0?#
+0@#
+0A#
+1B#
+0C#
+0D#
+0E#
+0F#
+0G#
+0H#
+0I#
+0J#
+0K#
+0L#
+1M#
+0N#
+1O#
+0P#
+1Q#
+0R#
+0S#
+0T#
+1U#
+0V#
+0W#
+0X#
+1Y#
+0Z#
+1[#
+0\#
+0]#
+1^#
+0_#
+0`#
+0a#
+1b#
+0c#
+1d#
+0e#
+0f#
+1g#
+0h#
+0i#
+0j#
+1k#
+0l#
+1m#
+0n#
+0o#
+1p#
+0q#
+0r#
+0s#
+1t#
+0u#
+1v#
+1w#
+0x#
+0y#
+0z#
+1{#
+1|#
+0}#
+0~#
+0!$
+0"$
+0#$
+0$$
+0%$
+1&$
+0'$
+0($
+0)$
+0*$
+0+$
+1,$
+0-$
+0.$
+1/$
+00$
+01$
+02$
+03$
+04$
+05$
+06$
+07$
+08$
+09$
+0:$
+0;$
+0<$
+0=$
+0>$
+0?$
+0@$
+0A$
+0B$
+0C$
+0D$
+0E$
+0F$
+0G$
+0H$
+0I$
+0J$
+0K$
+0L$
+0M$
+0N$
+0O$
+0P$
+0Q$
+0R$
+0S$
+0T$
+0U$
+0V$
+0W$
+0X$
+0Y$
+0Z$
+0[$
+0\$
+0]$
+0^$
+0_$
+0`$
+0a$
+0b$
+0c$
+0d$
+0e$
+0f$
+0g$
+0h$
+0i$
+0j$
+0k$
+0l$
+0m$
+0n$
+0o$
+0p$
+0q$
+0r$
+0s$
+0t$
+0u$
+0v$
+0w$
+0x$
+0y$
+0z$
+0{$
+0|$
+0}$
+0~$
+0!%
+0"%
+0#%
+0$%
+0%%
+0&%
+0'%
+0(%
+0)%
+0*%
+0+%
+0,%
+0-%
+0.%
+0/%
+00%
+01%
+02%
+03%
+04%
+05%
+06%
+07%
+08%
+09%
+0:%
+0;%
+0<%
+0=%
+0>%
+0?%
+0@%
+1A%
+1B%
+0C%
+1D%
+1E%
+0F%
+0G%
+0H%
+0I%
+1J%
+0K%
+0L%
+0M%
+0N%
+0O%
+0P%
+0Q%
+0R%
+0S%
+0T%
+0U%
+0V%
+0W%
+0X%
+0Y%
+0Z%
+0[%
+0\%
+0]%
+0^%
+0_%
+0`%
+0a%
+0b%
+0c%
+0d%
+0e%
+0f%
+0g%
+0h%
+0i%
+0j%
+0k%
+0l%
+0m%
+0n%
+0o%
+0p%
+0q%
+0r%
+0s%
+0t%
+0u%
+0v%
+0w%
+0x%
+0y%
+0z%
+0{%
+0|%
+0}%
+0~%
+0!&
+0"&
+0#&
+0$&
+0%&
+0&&
+0'&
+0(&
+0)&
+0*&
+0+&
+0,&
+0-&
+0.&
+0/&
+00&
+01&
+02&
+03&
+04&
+05&
+06&
+07&
+08&
+09&
+0:&
+0;&
+0<&
+0=&
+0>&
+0?&
+0@&
+0A&
+0B&
+0C&
+0D&
+0E&
+0F&
+0G&
+0H&
+0I&
+0J&
+0K&
+0L&
+0M&
+0N&
+0O&
+0P&
+0Q&
+0R&
+0S&
+0T&
+0U&
+0V&
+0W&
+0X&
+0Y&
+0Z&
+0[&
+0\&
+0]&
+0^&
+0_&
+0`&
+0a&
+0b&
+0c&
+0d&
+0e&
+0f&
+0g&
+0h&
+0i&
+0j&
+0k&
+0l&
+0m&
+0n&
+0o&
+0p&
+0q&
+0r&
+0s&
+0t&
+0u&
+0v&
+0w&
+0x&
+0y&
+0z&
+0{&
+0|&
+0}&
+0~&
+0!'
+0"'
+0#'
+0$'
+0%'
+0&'
+0''
+0('
+0)'
+0*'
+0+'
+0,'
+0-'
+0.'
+0/'
+00'
+01'
+02'
+03'
+04'
+05'
+06'
+07'
+08'
+09'
+0:'
+0;'
+0<'
+0='
+0>'
+0?'
+0@'
+0A'
+0B'
+0C'
+0D'
+0E'
+1F'
+0G'
+0H'
+0I'
+0J'
+0K'
+0L'
+0M'
+0N'
+0O'
+0P'
+0Q'
+0R'
+0S'
+0T'
+0U'
+0V'
+0W'
+0X'
+0Y'
+0Z'
+0['
+0\'
+0]'
+0^'
+0_'
+0`'
+1a'
+1b'
+0c'
+0d'
+0e'
+0f'
+0g'
+0h'
+0i'
+0j'
+0k'
+0l'
+0m'
+0n'
+0o'
+0p'
+0q'
+0r'
+0s'
+0t'
+0u'
+0v'
+0w'
+0x'
+0y'
+0z'
+0{'
+0|'
+0}'
+0~'
+0!(
+0"(
+0#(
+0$(
+0%(
+0&(
+0'(
+0((
+0)(
+0*(
+0+(
+0,(
+0-(
+0.(
+1/(
+00(
+01(
+02(
+03(
+04(
+05(
+06(
+07(
+08(
+09(
+0:(
+0;(
+0<(
+0=(
+0>(
+0?(
+0@(
+0A(
+0B(
+0C(
+0D(
+0E(
+0F(
+0G(
+0H(
+0I(
+1J(
+0K(
+0L(
+0M(
+0N(
+0O(
+0P(
+1Q(
+0R(
+0S(
+1T(
+0U(
+0V(
+0W(
+0X(
+0Y(
+0Z(
+1[(
+0\(
+0](
+1^(
+0_(
+0`(
+0a(
+0b(
+0c(
+0d(
+1e(
+0f(
+0g(
+1h(
+1i(
+0j(
+0k(
+0l(
+0m(
+0n(
+0o(
+1p(
+0q(
+0r(
+1s(
+1t(
+1u(
+0v(
+0w(
+0x(
+1y(
+0z(
+1{(
+0|(
+0}(
+0~(
+1!)
+0")
+1#)
+0$)
+0%)
+0&)
+1')
+0()
+1))
+1*)
+0+)
+0,)
+0-)
+1.)
+0/)
+10)
+11)
+12)
+03)
+04)
+05)
+06)
+07)
+08)
+09)
+0:)
+0;)
+0<)
+0=)
+0>)
+0?)
+0@)
+0A)
+0B)
+0C)
+0D)
+0E)
+0F)
+0G)
+0H)
+0I)
+0J)
+0K)
+0L)
+0M)
+0N)
+0O)
+0P)
+0Q)
+0R)
+0S)
+0T)
+0U)
+0V)
+0W)
+0X)
+0Y)
+0Z)
+0[)
+0\)
+0])
+0^)
+0_)
+0`)
+0a)
+0b)
+0c)
+0d)
+0e)
+0f)
+0g)
+0h)
+0i)
+0j)
+0k)
+0l)
+0m)
+0n)
+0o)
+0p)
+0q)
+0r)
+0s)
+0t)
+0u)
+0v)
+0w)
+0x)
+1y)
+0z)
+0{)
+0|)
+0})
+0~)
+0!*
+0"*
+0#*
+0$*
+0%*
+0&*
+0'*
+0(*
+0)*
+0**
+0+*
+0,*
+0-*
+1.*
+0/*
+00*
+01*
+12*
+03*
+04*
+05*
+16*
+07*
+08*
+09*
+1:*
+0;*
+0<*
+0=*
+1>*
+0?*
+0@*
+0A*
+1B*
+0C*
+0D*
+0E*
+1F*
+0G*
+0H*
+0I*
+1J*
+0K*
+0L*
+0M*
+1N*
+0O*
+0P*
+0Q*
+1R*
+0S*
+0T*
+0U*
+0V*
+0W*
+0X*
+0Y*
+0Z*
+0[*
+0\*
+0]*
+1^*
+0_*
+0`*
+1a*
+0b*
+0c*
+0d*
+1e*
+0f*
+0g*
+0h*
+0i*
+0j*
+1k*
+0l*
+0m*
+0n*
+0o*
+0p*
+0q*
+0r*
+1s*
+0t*
+1u*
+0v*
+1w*
+0x*
+1y*
+0z*
+0{*
+0|*
+1}*
+1~*
+1!+
+0"+
+1#+
+0$+
+0%+
+0&+
+1'+
+0(+
+0)+
+0*+
+0++
+0,+
+1-+
+0.+
+0/+
+00+
+11+
+02+
+03+
+04+
+15+
+06+
+07+
+08+
+09+
+0:+
+0;+
+0<+
+1=+
+0>+
+0?+
+1@+
+1A+
+0B+
+0C+
+0D+
+0E+
+1F+
+0G+
+0H+
+1I+
+0J+
+0K+
+0L+
+1M+
+0N+
+0O+
+0P+
+1Q+
+0R+
+0S+
+0T+
+1U+
+0V+
+0W+
+0X+
+1Y+
+0Z+
+0[+
+0\+
+1]+
+0^+
+0_+
+0`+
+1a+
+0b+
+0c+
+0d+
+1e+
+0f+
+0g+
+0h+
+1i+
+0j+
+0k+
+0l+
+0m+
+0n+
+0o+
+0p+
+0q+
+0r+
+0s+
+0t+
+0u+
+0v+
+0w+
+1x+
+0y+
+0z+
+0{+
+0|+
+0}+
+0~+
+0!,
+0",
+0#,
+0$,
+0%,
+0&,
+0',
+0(,
+0),
+0*,
+0+,
+0,,
+0-,
+0.,
+0/,
+00,
+01,
+02,
+03,
+04,
+05,
+06,
+07,
+08,
+09,
+0:,
+0;,
+0<,
+0=,
+0>,
+0?,
+0@,
+0A,
+0B,
+0C,
+0D,
+0E,
+0F,
+0G,
+0H,
+0I,
+0J,
+0K,
+0L,
+0M,
+0N,
+0O,
+0P,
+0Q,
+0R,
+0S,
+0T,
+0U,
+0V,
+0W,
+0X,
+0Y,
+0Z,
+0[,
+0\,
+0],
+0^,
+0_,
+0`,
+0a,
+0b,
+0c,
+0d,
+0e,
+0f,
+0g,
+0h,
+0i,
+0j,
+0k,
+0l,
+0m,
+0n,
+0o,
+0p,
+0q,
+0r,
+0s,
+0t,
+0u,
+0v,
+0w,
+0x,
+0y,
+0z,
+0{,
+0|,
+0},
+0~,
+0!-
+0"-
+0#-
+0$-
+0%-
+0&-
+0'-
+0(-
+0)-
+0*-
+0+-
+0,-
+0--
+0.-
+0/-
+00-
+01-
+02-
+03-
+04-
+05-
+06-
+07-
+08-
+09-
+0:-
+0;-
+0<-
+0=-
+0>-
+0?-
+0@-
+0A-
+0B-
+0C-
+0D-
+0E-
+0F-
+0G-
+0H-
+0I-
+0J-
+0K-
+0L-
+0M-
+0N-
+0O-
+0P-
+0Q-
+0R-
+0S-
+0T-
+0U-
+0V-
+0W-
+0X-
+0Y-
+0Z-
+0[-
+0\-
+0]-
+0^-
+0_-
+0`-
+0a-
+0b-
+0c-
+0d-
+0e-
+0f-
+0g-
+0h-
+0i-
+0j-
+0k-
+0l-
+0m-
+0n-
+0o-
+0p-
+0q-
+0r-
+0s-
+0t-
+0u-
+0v-
+0w-
+0x-
+0y-
+0z-
+0{-
+0|-
+0}-
+0~-
+0!.
+0".
+0#.
+0$.
+0%.
+0&.
+0'.
+0(.
+0).
+0*.
+0+.
+0,.
+0-.
+0..
+0/.
+00.
+01.
+02.
+03.
+04.
+05.
+06.
+07.
+08.
+09.
+0:.
+0;.
+0<.
+0=.
+0>.
+0?.
+0@.
+0A.
+0B.
+0C.
+0D.
+0E.
+0F.
+0G.
+0H.
+0I.
+0J.
+0K.
+0L.
+0M.
+0N.
+0O.
+0P.
+0Q.
+0R.
+0S.
+0T.
+0U.
+0V.
+0W.
+0X.
+0Y.
+0Z.
+0[.
+0\.
+0].
+0^.
+0_.
+0`.
+0a.
+0b.
+0c.
+0d.
+0e.
+0f.
+0g.
+0h.
+0i.
+0j.
+0k.
+0l.
+0m.
+0n.
+0o.
+0p.
+0q.
+0r.
+0s.
+0t.
+0u.
+0v.
+0w.
+0x.
+0y.
+0z.
+0{.
+0|.
+0}.
+0~.
+0!/
+0"/
+0#/
+0$/
+0%/
+0&/
+0'/
+0(/
+0)/
+0*/
+0+/
+0,/
+0-/
+0./
+0//
+00/
+01/
+02/
+03/
+04/
+05/
+06/
+07/
+08/
+09/
+0:/
+0;/
+0</
+0=/
+0>/
+0?/
+0@/
+0A/
+0B/
+0C/
+0D/
+0E/
+0F/
+0G/
+0H/
+0I/
+0J/
+0K/
+0L/
+0M/
+0N/
+0O/
+0P/
+0Q/
+0R/
+0S/
+0T/
+0U/
+0V/
+0W/
+0X/
+0Y/
+0Z/
+0[/
+0\/
+0]/
+0^/
+0_/
+0`/
+0a/
+0b/
+0c/
+0d/
+0e/
+0f/
+0g/
+0h/
+0i/
+0j/
+0k/
+0l/
+0m/
+0n/
+0o/
+0p/
+0q/
+0r/
+0s/
+0t/
+0u/
+0v/
+0w/
+0x/
+0y/
+0z/
+0{/
+0|/
+0}/
+0~/
+0!0
+0"0
+0#0
+0$0
+0%0
+0&0
+0'0
+0(0
+0)0
+0*0
+0+0
+0,0
+0-0
+0.0
+0/0
+000
+010
+020
+030
+040
+050
+060
+070
+080
+090
+0:0
+0;0
+0<0
+0=0
+0>0
+0?0
+0@0
+0A0
+0B0
+0C0
+0D0
+0E0
+0F0
+0G0
+0H0
+0I0
+0J0
+0K0
+0L0
+0M0
+0N0
+0O0
+0P0
+0Q0
+0R0
+0S0
+0T0
+0U0
+0V0
+0W0
+0X0
+0Y0
+0Z0
+0[0
+0\0
+0]0
+0^0
+0_0
+0`0
+0a0
+0b0
+0c0
+0d0
+0e0
+0f0
+0g0
+0h0
+0i0
+0j0
+0k0
+0l0
+0m0
+0n0
+0o0
+0p0
+0q0
+0r0
+0s0
+0t0
+0u0
+0v0
+0w0
+0x0
+0y0
+0z0
+0{0
+0|0
+0}0
+0~0
+0!1
+0"1
+0#1
+0$1
+0%1
+0&1
+0'1
+0(1
+0)1
+0*1
+0+1
+0,1
+0-1
+0.1
+0/1
+001
+011
+021
+031
+041
+051
+061
+071
+081
+091
+0:1
+0;1
+0<1
+0=1
+0>1
+0?1
+0@1
+0A1
+0B1
+0C1
+0D1
+0E1
+0F1
+0G1
+0H1
+0I1
+0J1
+0K1
+0L1
+0M1
+0N1
+0O1
+0P1
+0Q1
+0R1
+0S1
+0T1
+0U1
+0V1
+0W1
+0X1
+0Y1
+0q1
+0p1
+0o1
+0n1
+0m1
+0l1
+0k1
+0j1
+0i1
+0h1
+0g1
+0f1
+0e1
+0d1
+0c1
+0b1
+0a1
+0`1
+0_1
+0^1
+0]1
+0\1
+0[1
+0Z1
+0+2
+0*2
+0)2
+0(2
+0'2
+0&2
+0%2
+0$2
+0#2
+0"2
+0!2
+0~1
+0}1
+0|1
+0{1
+0z1
+0y1
+0x1
+0w1
+0v1
+0u1
+0t1
+0s1
+0r1
+032
+022
+012
+002
+0/2
+0.2
+0-2
+0,2
+z72
+z62
+z52
+042
+0=2
+0<2
+0;2
+0:2
+092
+082
+0O2
+0N2
+0M2
+0L2
+0K2
+0J2
+0I2
+0H2
+0G2
+0F2
+0E2
+0D2
+0C2
+0B2
+0A2
+0@2
+0?2
+0>2
+0c2
+0b2
+0a2
+0`2
+0_2
+0^2
+0]2
+0\2
+0[2
+0Z2
+0Y2
+0X2
+0W2
+0V2
+0U2
+0T2
+0S2
+0R2
+0Q2
+0P2
+zg2
+zf2
+ze2
+0d2
+0o2
+0n2
+0m2
+0l2
+0k2
+0j2
+0i2
+0h2
+0$3
+0#3
+0"3
+0!3
+0~2
+0}2
+0|2
+0{2
+0z2
+0y2
+0x2
+0w2
+0v2
+0u2
+0t2
+0s2
+0r2
+0q2
+0p2
+z(3
+z'3
+z&3
+0%3
+0.3
+0-3
+0,3
+0+3
+0*3
+0)3
+z23
+z13
+z03
+0/3
+0R3
+0Q3
+zP3
+zO3
+zN3
+zM3
+zL3
+zK3
+zJ3
+zI3
+zH3
+zG3
+zF3
+zE3
+zD3
+zC3
+zB3
+zA3
+z@3
+z?3
+z>3
+z=3
+z<3
+z;3
+z:3
+z93
+z83
+z73
+z63
+z53
+z43
+z33
+zV3
+zU3
+zT3
+0S3
+0v3
+0u3
+zt3
+zs3
+zr3
+zq3
+zp3
+zo3
+zn3
+zm3
+zl3
+zk3
+zj3
+zi3
+zh3
+zg3
+zf3
+ze3
+zd3
+zc3
+zb3
+za3
+z`3
+z_3
+z^3
+z]3
+z\3
+z[3
+zZ3
+zY3
+zX3
+zW3
+zz3
+zy3
+zx3
+0w3
+0$4
+0#4
+0"4
+0!4
+0~3
+0}3
+0|3
+0{3
+0>4
+0=4
+0<4
+0;4
+0:4
+094
+084
+074
+064
+054
+044
+034
+024
+014
+004
+0/4
+0.4
+0-4
+0,4
+0+4
+0*4
+0)4
+0(4
+0'4
+0&4
+0%4
+zB4
+zA4
+z@4
+0?4
+0F4
+0E4
+0D4
+0C4
+zJ4
+zI4
+zH4
+0G4
+0R4
+0Q4
+0P4
+0O4
+0N4
+0M4
+0L4
+0K4
+0W4
+0V4
+0U4
+0T4
+0S4
+z[4
+zZ4
+zY4
+0X4
+0f4
+0e4
+0d4
+0c4
+0b4
+0a4
+0`4
+0_4
+0^4
+0]4
+0\4
+zj4
+zi4
+zh4
+0g4
+0t4
+0s4
+0r4
+0q4
+0p4
+0o4
+0n4
+0m4
+0l4
+0k4
+zx4
+zw4
+zv4
+0u4
+z|4
+z{4
+zz4
+0y4
+z"5
+z!5
+z~4
+0}4
+z&5
+z%5
+z$5
+0#5
+z*5
+z)5
+z(5
+0'5
+z.5
+z-5
+z,5
+0+5
+z25
+z15
+z05
+0/5
+z65
+z55
+z45
+135
+z:5
+z95
+z85
+075
+z>5
+z=5
+z<5
+0;5
+zB5
+zA5
+z@5
+0?5
+zF5
+zE5
+zD5
+0C5
+zJ5
+zI5
+zH5
+0G5
+zN5
+zM5
+zL5
+0K5
+zR5
+zQ5
+zP5
+0O5
+zV5
+zU5
+zT5
+0S5
+zZ5
+zY5
+zX5
+0W5
+z^5
+z]5
+z\5
+0[5
+zb5
+za5
+z`5
+0_5
+zf5
+ze5
+zd5
+0c5
+0j5
+0i5
+0h5
+0g5
+zn5
+zm5
+zl5
+0k5
+zr5
+zq5
+zp5
+0o5
+zv5
+zu5
+zt5
+0s5
+zz5
+zy5
+zx5
+0w5
+z~5
+z}5
+z|5
+0{5
+0%6
+0$6
+0#6
+0"6
+0!6
+0&6
+0'6
+0(6
+0)6
+0*6
+0+6
+0,6
+0-6
+0.6
+0/6
+006
+016
+026
+036
+046
+056
+066
+076
+086
+096
+0:6
+0;6
+0<6
+0=6
+0>6
+0?6
+0@6
+0A6
+0B6
+0C6
+0D6
+0E6
+0F6
+0G6
+0H6
+0I6
+0J6
+0K6
+0L6
+0M6
+0N6
+0O6
+0P6
+0Q6
+0R6
+0S6
+0T6
+0U6
+0V6
+0W6
+0X6
+0Y6
+0Z6
+0[6
+0\6
+0]6
+0^6
+0_6
+0`6
+0a6
+0b6
+0c6
+0d6
+0e6
+0f6
+0g6
+0h6
+0i6
+0j6
+0k6
+0l6
+0m6
+0n6
+0o6
+0p6
+0q6
+0r6
+0s6
+0t6
+0u6
+0v6
+0w6
+0x6
+0y6
+0z6
+0{6
+0|6
+0}6
+0~6
+0!7
+0"7
+0#7
+0$7
+0%7
+0&7
+0'7
+0(7
+0)7
+0*7
+0+7
+0,7
+0-7
+0.7
+0/7
+007
+017
+027
+037
+047
+057
+067
+077
+087
+097
+0:7
+0;7
+0<7
+0=7
+0>7
+0?7
+0@7
+0A7
+0B7
+0C7
+0D7
+0E7
+0F7
+0G7
+0H7
+0I7
+0J7
+0K7
+0L7
+0M7
+0N7
+0O7
+0P7
+0Q7
+0R7
+0S7
+0T7
+0U7
+0V7
+0W7
+0X7
+0Y7
+0Z7
+0[7
+0\7
+0]7
+0^7
+0_7
+0`7
+0a7
+0b7
+0c7
+0d7
+0e7
+0f7
+0g7
+0h7
+0i7
+0j7
+0k7
+0l7
+0m7
+0n7
+0o7
+0p7
+0q7
+0r7
+0s7
+0t7
+0u7
+0v7
+0w7
+0x7
+0y7
+0z7
+0{7
+0|7
+0}7
+0~7
+0!8
+0"8
+0#8
+0$8
+0%8
+0&8
+0'8
+0(8
+0)8
+0*8
+0+8
+0,8
+0-8
+0.8
+0/8
+008
+018
+028
+038
+048
+058
+068
+078
+088
+098
+0:8
+0;8
+0<8
+0=8
+0>8
+0?8
+0@8
+0A8
+0B8
+0C8
+0D8
+0E8
+0F8
+0G8
+0H8
+0I8
+0J8
+0K8
+0L8
+0M8
+0N8
+0O8
+0P8
+0Q8
+0R8
+0S8
+0T8
+0U8
+0V8
+0W8
+0X8
+0Y8
+0Z8
+0[8
+0\8
+0]8
+0^8
+0_8
+0`8
+0a8
+0b8
+0c8
+0d8
+0e8
+0f8
+0g8
+0h8
+0i8
+0j8
+0k8
+0l8
+0m8
+0n8
+0o8
+0p8
+0q8
+0r8
+0s8
+0t8
+0u8
+0v8
+0w8
+0x8
+0y8
+0z8
+0{8
+0|8
+0}8
+0~8
+0!9
+0"9
+0#9
+0$9
+0%9
+0&9
+0'9
+0(9
+0)9
+0*9
+0+9
+0,9
+0-9
+0.9
+0/9
+009
+019
+029
+039
+049
+059
+069
+079
+089
+099
+0:9
+0;9
+0<9
+0=9
+0>9
+0?9
+0@9
+0A9
+0B9
+0C9
+0D9
+0E9
+0F9
+0G9
+0H9
+0I9
+0J9
+0K9
+0L9
+0M9
+0N9
+0O9
+0P9
+0Q9
+0R9
+0S9
+$end
+#10000
+1!
+1j!
+1c2
+1>4
+1l!
+1/*
+0.*
+0k!
+1m!
+1n!
+#20000
+0!
+0j!
+#30000
+1!
+1j!
+1b2
+0c2
+1=4
+0>4
+0o!
+0m!
+0l!
+1.*
+1k!
+1p!
+1o!
+1m!
+0n!
+0p!
+1q!
+1n!
+0q!
+#40000
+0!
+0j!
+#50000
+1!
+1j!
+1c2
+1>4
+10*
+1l!
+0/*
+0.*
+0k!
+0o!
+0m!
+11*
+1p!
+0n!
+1q!
+#60000
+0!
+0j!
+#70000
+1!
+1j!
+1a2
+0b2
+0c2
+1<4
+0=4
+0>4
+02*
+00*
+1r!
+0p!
+1o!
+1m!
+0l!
+01*
+1.*
+1k!
+12*
+0r!
+1p!
+0m!
+13*
+11*
+1s!
+0q!
+1n!
+03*
+0s!
+1q!
+0n!
+#80000
+0!
+0j!
+#90000
+1!
+1j!
+1c2
+1>4
+1t!
+1l!
+1/*
+0.*
+0k!
+12"
+1m!
+1J"
+1n!
+0q!
+0n!
+#100000
+0!
+0j!
+#110000
+1!
+1j!
+1b2
+0c2
+0<4
+0>4
+1K"
+1B
+0t!
+0p!
+0l!
+1.*
+1k!
+02"
+0m!
+0J"
+xU"
+xS"
+xO"
+x_"
+xV"
+xP"
+xh"
+xf"
+#120000
+0!
+0j!
+#130000
+1!
+1j!
+1c2
+1>4
+0K"
+0B
+10*
+1l!
+0/*
+0.*
+0k!
+02*
+1m!
+01*
+13*
+1n!
+#140000
+0!
+0j!
+#150000
+1!
+1j!
+1`2
+0a2
+0b2
+0c2
+1=4
+0>4
+14*
+12*
+00*
+0o!
+0m!
+0l!
+03*
+11*
+1.*
+1k!
+04*
+1p!
+1o!
+1m!
+15*
+13*
+01*
+0n!
+0p!
+05*
+1q!
+1n!
+0q!
+#160000
+0!
+0j!
+#170000
+1!
+1j!
+1c2
+1>4
+1l!
+1/*
+0.*
+0k!
+0o!
+0m!
+1p!
+0n!
+1q!
+#180000
+0!
+0j!
+#190000
+1!
+1j!
+1b2
+0c2
+1<4
+0=4
+0>4
+1r!
+0p!
+1o!
+1m!
+0l!
+1.*
+1k!
+0r!
+1p!
+0m!
+1s!
+0q!
+1n!
+0s!
+1q!
+0n!
+#200000
+0!
+0j!
+#210000
+1!
+1j!
+1c2
+1>4
+10*
+1t!
+1l!
+0/*
+0.*
+0k!
+12"
+1m!
+11*
+1J"
+1n!
+0q!
+0n!
+#220000
+0!
+0j!
+#230000
+1!
+1j!
+1a2
+0b2
+0c2
+0<4
+0>4
+1K"
+1B
+02*
+00*
+0t!
+0p!
+0l!
+01*
+1.*
+1k!
+14*
+12*
+02"
+0m!
+03*
+11*
+04*
+15*
+13*
+0J"
+05*
+xg"
+#240000
+0!
+0j!
+#250000
+1!
+1j!
+1c2
+1>4
+0K"
+0B
+1l!
+1/*
+0.*
+0k!
+1m!
+1n!
+#260000
+0!
+0j!
+#270000
+1!
+1j!
+1b2
+0c2
+1=4
+0>4
+0o!
+0m!
+0l!
+1.*
+1k!
+1p!
+1o!
+1m!
+0n!
+0p!
+1q!
+1n!
+0q!
+#280000
+0!
+0j!
+#290000
+1!
+1j!
+1c2
+1>4
+1U*
+10*
+1l!
+0/*
+0.*
+0k!
+02*
+0o!
+0m!
+01*
+14*
+1p!
+03*
+0n!
+15*
+1q!
+#300000
+0!
+0j!
+#310000
+1!
+1j!
+1_2
+0`2
+0a2
+0b2
+0c2
+1<4
+0=4
+0>4
+06*
+0U*
+04*
+12*
+00*
+1r!
+0p!
+1o!
+1m!
+0l!
+05*
+13*
+11*
+1.*
+1k!
+16*
+0r!
+1p!
+0m!
+17*
+15*
+03*
+01*
+1s!
+0q!
+1n!
+07*
+0s!
+1q!
+0n!
+#320000
+0!
+0j!
+#330000
+1!
+1j!
+1c2
+1>4
+1t!
+1l!
+1/*
+0.*
+0k!
+12"
+1m!
+1J"
+1n!
+0q!
+0n!
+#340000
+0!
+0j!
+#350000
+1!
+1j!
+1b2
+0c2
+0<4
+0>4
+1K"
+1B
+0t!
+0p!
+0l!
+1.*
+1k!
+02"
+0m!
+0J"
+#360000
+0!
+0j!
+#370000
+1!
+1j!
+1c2
+1>4
+0K"
+0B
+10*
+1l!
+0/*
+0.*
+0k!
+1m!
+11*
+1n!
+#380000
+0!
+0j!
+#390000
+1!
+1j!
+1a2
+0b2
+0c2
+1=4
+0>4
+02*
+00*
+0o!
+0m!
+0l!
+01*
+1.*
+1k!
+12*
+1p!
+1o!
+1m!
+13*
+11*
+0n!
+0p!
+03*
+1q!
+1n!
+0q!
+#400000
+0!
+0j!
+#410000
+1!
+1j!
+1c2
+1>4
+1l!
+1/*
+0.*
+0k!
+0o!
+0m!
+1p!
+0n!
+1q!
+#420000
+0!
+0j!
+#430000
+1!
+1j!
+1b2
+0c2
+1<4
+0=4
+0>4
+1r!
+0p!
+1o!
+1m!
+0l!
+1.*
+1k!
+0r!
+1p!
+0m!
+1s!
+0q!
+1n!
+0s!
+1q!
+0n!
+#440000
+0!
+0j!
+#450000
+1!
+1j!
+1c2
+1>4
+10*
+1t!
+1l!
+0/*
+0.*
+0k!
+02*
+12"
+1m!
+01*
+13*
+1J"
+1n!
+0q!
+0n!
+#460000
+0!
+0j!
+#470000
+1!
+1j!
+1`2
+0a2
+0b2
+0c2
+0<4
+0>4
+1K"
+1B
+14*
+12*
+00*
+0t!
+0p!
+0l!
+03*
+11*
+1.*
+1k!
+06*
+04*
+02"
+0m!
+05*
+13*
+01*
+16*
+17*
+15*
+0J"
+07*
+#480000
+0!
+0j!
+#490000
+1!
+1j!
+1c2
+1>4
+0K"
+0B
+1l!
+1/*
+0.*
+0k!
+1m!
+1n!
+#500000
+0!
+0j!
+#510000
+1!
+1j!
+1b2
+0c2
+1=4
+0>4
+0o!
+0m!
+0l!
+1.*
+1k!
+1p!
+1o!
+1m!
+0n!
+0p!
+1q!
+1n!
+0q!
+#520000
+0!
+0j!
+#530000
+1!
+1j!
+1c2
+1>4
+10*
+1l!
+0/*
+0.*
+0k!
+0o!
+0m!
+11*
+1p!
+0n!
+1q!
+#540000
+0!
+0j!
+#550000
+1!
+1j!
+1a2
+0b2
+0c2
+1<4
+0=4
+0>4
+02*
+00*
+1r!
+0p!
+1o!
+1m!
+0l!
+01*
+1.*
+1k!
+14*
+12*
+0r!
+1p!
+0m!
+03*
+11*
+1s!
+0q!
+1n!
+06*
+04*
+05*
+13*
+0s!
+1q!
+0n!
+16*
+17*
+15*
+07*
+#560000
+0!
+0j!
+#570000
+1!
+1j!
+1c2
+1>4
+1t!
+1l!
+1/*
+0.*
+0k!
+12"
+1m!
+1J"
+1n!
+0q!
+0n!
+#580000
+0!
+0j!
+#590000
+1!
+1j!
+1b2
+0c2
+0<4
+0>4
+1K"
+1B
+0t!
+0p!
+0l!
+1.*
+1k!
+02"
+0m!
+0J"
+#600000
+0!
+0j!
+#610000
+1!
+1j!
+1c2
+1>4
+0K"
+0B
+1U*
+10*
+1l!
+0/*
+0.*
+0k!
+02*
+1m!
+01*
+14*
+03*
+1n!
+06*
+05*
+17*
+#620000
+0!
+0j!
+#630000
+1!
+1j!
+1^2
+0_2
+0`2
+0a2
+0b2
+0c2
+1=4
+0>4
+18*
+16*
+0U*
+04*
+12*
+00*
+0o!
+0m!
+0l!
+07*
+15*
+13*
+11*
+1.*
+1k!
+08*
+1p!
+1o!
+1m!
+19*
+17*
+05*
+03*
+01*
+0n!
+0p!
+09*
+1q!
+1n!
+0q!
+#640000
+0!
+0j!
+#650000
+1!
+1j!
+1c2
+1>4
+1l!
+1/*
+0.*
+0k!
+0o!
+0m!
+1p!
+0n!
+1q!
+#660000
+0!
+0j!
+#670000
+1!
+1j!
+1b2
+0c2
+1<4
+0=4
+0>4
+1r!
+0p!
+1o!
+1m!
+0l!
+1.*
+1k!
+0r!
+1p!
+0m!
+1s!
+0q!
+1n!
+0s!
+1q!
+0n!
+#680000
+0!
+0j!
+#690000
+1!
+1j!
+1c2
+1>4
+10*
+1t!
+1l!
+0/*
+0.*
+0k!
+12"
+1m!
+11*
+1J"
+1n!
+0q!
+0n!
+#700000
+0!
+0j!
+#710000
+1!
+1j!
+1a2
+0b2
+0c2
+0<4
+0>4
+1K"
+1B
+02*
+00*
+0t!
+0p!
+0l!
+01*
+1.*
+1k!
+12*
+02"
+0m!
+13*
+11*
+03*
+0J"
+#720000
+0!
+0j!
+#730000
+1!
+1j!
+1c2
+1>4
+0K"
+0B
+1l!
+1/*
+0.*
+0k!
+1m!
+1n!
+#740000
+0!
+0j!
+#750000
+1!
+1j!
+1b2
+0c2
+1=4
+0>4
+0o!
+0m!
+0l!
+1.*
+1k!
+1p!
+1o!
+1m!
+0n!
+0p!
+1q!
+1n!
+0q!
+#760000
+0!
+0j!
+#770000
+1!
+1j!
+1c2
+1>4
+10*
+1l!
+0/*
+0.*
+0k!
+02*
+0o!
+0m!
+01*
+1p!
+13*
+0n!
+1q!
+#780000
+0!
+0j!
+#790000
+1!
+1j!
+1`2
+0a2
+0b2
+0c2
+1<4
+0=4
+0>4
+14*
+12*
+00*
+1r!
+0p!
+1o!
+1m!
+0l!
+03*
+11*
+1.*
+1k!
+04*
+0r!
+1p!
+0m!
+15*
+13*
+01*
+1s!
+0q!
+1n!
+05*
+0s!
+1q!
+0n!
+#800000
+0!
+0j!
+#810000
+1!
+1j!
+1c2
+1>4
+1t!
+1l!
+1/*
+0.*
+0k!
+12"
+1m!
+1J"
+1n!
+0q!
+0n!
+#820000
+0!
+0j!
+#830000
+1!
+1j!
+1b2
+0c2
+0<4
+0>4
+1K"
+1B
+0t!
+0p!
+0l!
+1.*
+1k!
+02"
+0m!
+0J"
+#840000
+0!
+0j!
+#850000
+1!
+1j!
+1c2
+1>4
+0K"
+0B
+10*
+1l!
+0/*
+0.*
+0k!
+1m!
+11*
+1n!
+#860000
+0!
+0j!
+#870000
+1!
+1j!
+1a2
+0b2
+0c2
+1=4
+0>4
+02*
+00*
+0o!
+0m!
+0l!
+01*
+1.*
+1k!
+14*
+12*
+1p!
+1o!
+1m!
+03*
+11*
+0n!
+04*
+0p!
+15*
+13*
+1q!
+1n!
+05*
+0q!
+#880000
+0!
+0j!
+#890000
+1!
+1j!
+1c2
+1>4
+1l!
+1/*
+0.*
+0k!
+0o!
+0m!
+1p!
+0n!
+1q!
+#900000
+0!
+0j!
+#910000
+1!
+1j!
+1b2
+0c2
+1<4
+0=4
+0>4
+1r!
+0p!
+1o!
+1m!
+0l!
+1.*
+1k!
+0r!
+1p!
+0m!
+1s!
+0q!
+1n!
+0s!
+1q!
+0n!
+#920000
+0!
+0j!
+#930000
+1!
+1j!
+1c2
+1>4
+1U*
+10*
+1t!
+1l!
+0/*
+0.*
+0k!
+02*
+12"
+1m!
+01*
+14*
+03*
+1J"
+1n!
+15*
+0q!
+0n!
+#940000
+0!
+0j!
+#950000
+1!
+1j!
+1_2
+0`2
+0a2
+0b2
+0c2
+0<4
+0>4
+1K"
+1B
+1V*
+06*
+0U*
+04*
+12*
+00*
+0t!
+0p!
+0l!
+05*
+13*
+11*
+1.*
+1k!
+18*
+16*
+02"
+0m!
+07*
+15*
+03*
+01*
+08*
+19*
+17*
+0J"
+09*
+#960000
+0!
+0j!
+#970000
+1!
+1j!
+1c2
+1>4
+0K"
+0B
+1l!
+1/*
+0.*
+0k!
+1m!
+1n!
+#980000
+0!
+0j!
+#990000
+1!
+1j!
+1b2
+0c2
+1=4
+0>4
+0o!
+0m!
+0l!
+1.*
+1k!
+1p!
+1o!
+1m!
+0n!
+0p!
+1q!
+1n!
+0q!
+#1000000

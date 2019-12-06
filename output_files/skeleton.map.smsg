@@ -1,0 +1,8 @@
+Warning (10273): Verilog HDL warning at regfile.v(44): extended using "x" or "z" File: C:/Users/Haimeng Zhang/Desktop/xuanzhuanluanshi/myTer/myTer/processor/regfile.v Line: 44
+Warning (10273): Verilog HDL warning at regfile.v(45): extended using "x" or "z" File: C:/Users/Haimeng Zhang/Desktop/xuanzhuanluanshi/myTer/myTer/processor/regfile.v Line: 45
+Info (10281): Verilog HDL Declaration information at processor.v(129): object "ALUsrc" differs only in case from object "alusrc" in the same scope File: C:/Users/Haimeng Zhang/Desktop/xuanzhuanluanshi/myTer/myTer/processor/processor.v Line: 129
+Info (10281): Verilog HDL Declaration information at processor.v(99): object "pc_T" differs only in case from object "pc_t" in the same scope File: C:/Users/Haimeng Zhang/Desktop/xuanzhuanluanshi/myTer/myTer/processor/processor.v Line: 99
+Warning (10268): Verilog HDL information at my_vga_controller.v(116): always construct contains both blocking and non-blocking assignments File: C:/Users/Haimeng Zhang/Desktop/xuanzhuanluanshi/myTer/myTer/my_vga_controller.v Line: 116
+Warning (10268): Verilog HDL information at my_vga_controller.v(142): always construct contains both blocking and non-blocking assignments File: C:/Users/Haimeng Zhang/Desktop/xuanzhuanluanshi/myTer/myTer/my_vga_controller.v Line: 142
+Warning (10268): Verilog HDL information at my_vga_controller.v(168): always construct contains both blocking and non-blocking assignments File: C:/Users/Haimeng Zhang/Desktop/xuanzhuanluanshi/myTer/myTer/my_vga_controller.v Line: 168
+Warning (10268): Verilog HDL information at convertNum.v(11): always construct contains both blocking and non-blocking assignments File: C:/Users/Haimeng Zhang/Desktop/xuanzhuanluanshi/myTer/myTer/convertNum.v Line: 11

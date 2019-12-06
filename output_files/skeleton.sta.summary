@@ -1,0 +1,245 @@
+------------------------------------------------------------
+TimeQuest Timing Analyzer Summary
+------------------------------------------------------------
+
+Type  : Slow 1200mV 85C Model Setup 'ClkDividerNew:comb_4|clk_div'
+Slack : -72.888
+TNS   : -12083.407
+
+Type  : Slow 1200mV 85C Model Setup 'p1|altpll_component|pll|clk[2]'
+Slack : -60.789
+TNS   : -172.423
+
+Type  : Slow 1200mV 85C Model Setup 'CLOCK_50'
+Slack : -59.171
+TNS   : -1097.459
+
+Type  : Slow 1200mV 85C Model Setup 'divider_2:div2|clk_out'
+Slack : -24.112
+TNS   : -24323.013
+
+Type  : Slow 1200mV 85C Model Setup 'PS2_Interface:myps2|PS2_Controller:PS2|Altera_UP_PS2_Data_In:PS2_Data_In|received_data_en'
+Slack : -2.353
+TNS   : -50.127
+
+Type  : Slow 1200mV 85C Model Setup 'signal'
+Slack : -1.212
+TNS   : -32.157
+
+Type  : Slow 1200mV 85C Model Hold 'CLOCK_50'
+Slack : -1.193
+TNS   : -3.077
+
+Type  : Slow 1200mV 85C Model Hold 'ClkDividerNew:comb_4|clk_div'
+Slack : 0.401
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'PS2_Interface:myps2|PS2_Controller:PS2|Altera_UP_PS2_Data_In:PS2_Data_In|received_data_en'
+Slack : 0.412
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'divider_2:div2|clk_out'
+Slack : 0.445
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'p1|altpll_component|pll|clk[2]'
+Slack : 0.635
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'signal'
+Slack : 0.747
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Recovery 'p1|altpll_component|pll|clk[2]'
+Slack : 12.199
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Removal 'p1|altpll_component|pll|clk[2]'
+Slack : 5.771
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'divider_2:div2|clk_out'
+Slack : -2.693
+TNS   : -1530.597
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'ClkDividerNew:comb_4|clk_div'
+Slack : -1.285
+TNS   : -444.610
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'PS2_Interface:myps2|PS2_Controller:PS2|Altera_UP_PS2_Data_In:PS2_Data_In|received_data_en'
+Slack : -1.285
+TNS   : -41.120
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'signal'
+Slack : -1.285
+TNS   : -41.120
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'CLOCK_50'
+Slack : 9.749
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'p1|altpll_component|pll|clk[2]'
+Slack : 19.709
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Setup 'ClkDividerNew:comb_4|clk_div'
+Slack : -65.620
+TNS   : -11027.944
+
+Type  : Slow 1200mV 0C Model Setup 'CLOCK_50'
+Slack : -53.359
+TNS   : -986.474
+
+Type  : Slow 1200mV 0C Model Setup 'p1|altpll_component|pll|clk[2]'
+Slack : -52.823
+TNS   : -149.736
+
+Type  : Slow 1200mV 0C Model Setup 'divider_2:div2|clk_out'
+Slack : -21.996
+TNS   : -22165.423
+
+Type  : Slow 1200mV 0C Model Setup 'PS2_Interface:myps2|PS2_Controller:PS2|Altera_UP_PS2_Data_In:PS2_Data_In|received_data_en'
+Slack : -1.992
+TNS   : -41.522
+
+Type  : Slow 1200mV 0C Model Setup 'signal'
+Slack : -0.989
+TNS   : -26.037
+
+Type  : Slow 1200mV 0C Model Hold 'CLOCK_50'
+Slack : -1.073
+TNS   : -2.797
+
+Type  : Slow 1200mV 0C Model Hold 'ClkDividerNew:comb_4|clk_div'
+Slack : 0.352
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'PS2_Interface:myps2|PS2_Controller:PS2|Altera_UP_PS2_Data_In:PS2_Data_In|received_data_en'
+Slack : 0.368
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'divider_2:div2|clk_out'
+Slack : 0.398
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'p1|altpll_component|pll|clk[2]'
+Slack : 0.586
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'signal'
+Slack : 0.659
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Recovery 'p1|altpll_component|pll|clk[2]'
+Slack : 13.011
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Removal 'p1|altpll_component|pll|clk[2]'
+Slack : 5.201
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'divider_2:div2|clk_out'
+Slack : -2.649
+TNS   : -1527.781
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'ClkDividerNew:comb_4|clk_div'
+Slack : -1.285
+TNS   : -444.610
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'PS2_Interface:myps2|PS2_Controller:PS2|Altera_UP_PS2_Data_In:PS2_Data_In|received_data_en'
+Slack : -1.285
+TNS   : -41.120
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'signal'
+Slack : -1.285
+TNS   : -41.120
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'CLOCK_50'
+Slack : 9.774
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'p1|altpll_component|pll|clk[2]'
+Slack : 19.710
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Setup 'ClkDividerNew:comb_4|clk_div'
+Slack : -34.913
+TNS   : -5904.844
+
+Type  : Fast 1200mV 0C Model Setup 'CLOCK_50'
+Slack : -27.465
+TNS   : -488.002
+
+Type  : Fast 1200mV 0C Model Setup 'p1|altpll_component|pll|clk[2]'
+Slack : -18.939
+TNS   : -51.737
+
+Type  : Fast 1200mV 0C Model Setup 'divider_2:div2|clk_out'
+Slack : -11.247
+TNS   : -11292.229
+
+Type  : Fast 1200mV 0C Model Setup 'PS2_Interface:myps2|PS2_Controller:PS2|Altera_UP_PS2_Data_In:PS2_Data_In|received_data_en'
+Slack : -0.691
+TNS   : -9.316
+
+Type  : Fast 1200mV 0C Model Setup 'signal'
+Slack : -0.116
+TNS   : -0.439
+
+Type  : Fast 1200mV 0C Model Hold 'CLOCK_50'
+Slack : -0.780
+TNS   : -2.057
+
+Type  : Fast 1200mV 0C Model Hold 'ClkDividerNew:comb_4|clk_div'
+Slack : 0.179
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'PS2_Interface:myps2|PS2_Controller:PS2|Altera_UP_PS2_Data_In:PS2_Data_In|received_data_en'
+Slack : 0.191
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'divider_2:div2|clk_out'
+Slack : 0.208
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'signal'
+Slack : 0.265
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'p1|altpll_component|pll|clk[2]'
+Slack : 0.273
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Recovery 'p1|altpll_component|pll|clk[2]'
+Slack : 15.744
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Removal 'p1|altpll_component|pll|clk[2]'
+Slack : 2.883
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'divider_2:div2|clk_out'
+Slack : -1.000
+TNS   : -1121.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'ClkDividerNew:comb_4|clk_div'
+Slack : -1.000
+TNS   : -346.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'PS2_Interface:myps2|PS2_Controller:PS2|Altera_UP_PS2_Data_In:PS2_Data_In|received_data_en'
+Slack : -1.000
+TNS   : -32.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'signal'
+Slack : -1.000
+TNS   : -32.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'CLOCK_50'
+Slack : 9.413
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'p1|altpll_component|pll|clk[2]'
+Slack : 19.749
+TNS   : 0.000
+
+------------------------------------------------------------

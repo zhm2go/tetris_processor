@@ -1,0 +1,42 @@
+module ClkDividerRand (clk, para, clk_div);
+    input clk;
+	 input [31:0] para;
+    output clk_div;
+	 reg clk_div;
+	 
+	 reg [31:0] count;
+ 
+	always @ (posedge clk)
+	begin
+   
+	if (count == para - 1)
+        count <= 32'b0;
+   else
+        count <= count + 1;
+	end
+	
+	always @ (posedge clk)
+	begin
+    if (count == para - 1)
+        clk_div <= ~clk_div;
+    else
+        clk_div <= clk_div;
+	end
+ 
+endmodule
+
+module ps2_debounce(ps2_key_pressed, clk_50, out);
+	input ps2_key_pressed, clk_50;
+	reg [31:0] count;
+	reg out;
+	reg pressed;
+	
+	always @(posedge clk_50) begin
+		count = count + 1;
+	end
+		
+	always @(posedge ps2_key_pressed, clk_50) begin
+		pressed = 1;
+		count = 0;
+	end
+end
